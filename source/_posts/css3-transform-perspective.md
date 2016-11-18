@@ -24,18 +24,13 @@ CCS3中的Transform是设置界面样式和动画的一大利器。而且在Chro
 
 镜头距离z=0平面的不同距离的效果。
 
-[![perspective](http://bcs.duapp.com/xiaopihai/2013/09/perspective-359x400.jpg)](http://bcs.duapp.com/xiaopihai/2013/09/perspective.jpg)
+![perspective](/images/perspective.jpg)
 
 镜头在z坐标固定时，x和y坐标（perspective-origin）变化时的差别。
 
-[![perspective-origin](http://bcs.duapp.com/xiaopihai/2013/09/perspective-origin-240x148.jpg)](http://bcs.duapp.com/xiaopihai/2013/09/perspective-origin.jpg)
+![perspective-origin](/images/perspective-origin.jpg)
 
 在FireFox中也是这种情况。
 
 在mozilla的文档上也没有说明这个情况。现在还不确定是设计如此还是Bug。总之大家用的时候就将prespective放在前面好了。
 
-附坐标系图：
-
-[![3d_axes](http://bcs.duapp.com/xiaopihai/2013/09/3d_axes-240x150.jpg)](http://bcs.duapp.com/xiaopihai/2013/09/3d_axes.jpg)
-
-&nbsp;
