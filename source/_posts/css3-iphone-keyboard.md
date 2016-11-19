@@ -1,5 +1,6 @@
 ---
 title: CSS3模拟的iphone键盘
+description: 用css3和图形字体实现的iphone手机键盘效果
 tags:
   - css3
   - iphone

@@ -1,5 +1,6 @@
 ---
 title: Keycode对照表
+description: javascript中常用到的一些keycode对照表，做个记录以后做参考。
 id: 663
 categories:
   - javascript

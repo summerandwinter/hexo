@@ -11,6 +11,7 @@ date: 2013-09-04 15:35:28
 ---
 
 又是一个外国的牛人做的，前面那个css3做的iphone就是借鉴这个人的作品写出来的。
+<!--more-->
 
 [![css-ios-icons](http://bcs.duapp.com/xiaopihai/2013/09/css-ios-icons-560x318.jpg)](http://bcs.duapp.com/xiaopihai/2013/09/css-ios-icons.jpg)
 

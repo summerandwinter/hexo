@@ -1,5 +1,6 @@
 ---
 title: 用canvas实现图片滤镜效果
+description: 介绍一些利用canvas失效的图片滤镜效果的算法原理
 tags:
   - canvas
   - html5

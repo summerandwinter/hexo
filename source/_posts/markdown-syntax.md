@@ -3,6 +3,7 @@ title: markdown语法
 date: 2016-11-17 15:28:03
 tags:
 - markdown
+description: markdown语法介绍，记录了一些基本的用法，后面慢慢补充
 ---
 
 # 标题

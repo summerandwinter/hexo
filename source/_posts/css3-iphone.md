@@ -9,7 +9,8 @@ categories:
 date: 2013-09-03 06:13:42
 ---
 
-# <span style="font-family: 'arial black', 'avant garde'; font-size: x-small;">用3395行 CSS代码 与 335行 JaveScript代码(使用JQURY框架) 页面支持用户互动，按开关或home按</span><span style="font-size: x-small;">钮、解锁屏幕。</span>
+用3395行 CSS代码 与 335行 JaveScript代码(使用JQURY框架) 页面支持用户互动，按开关或home按钮、解锁屏幕。
+<!--more-->
 
 屏幕锁定时的式样
 

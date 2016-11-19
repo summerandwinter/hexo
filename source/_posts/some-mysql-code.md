@@ -1,5 +1,6 @@
 ---
 title: 一些mysql代码片段
+description: 记录一些实用的mysql代码片段
 tags:
   - mysql
   - 代码片段

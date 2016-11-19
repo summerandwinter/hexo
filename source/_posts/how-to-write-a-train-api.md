@@ -1,5 +1,6 @@
 ---
 title: 火车查询API接口
+description: 通过12306网站提供的接口实现火车票余票查询，现在官网已经把这个接口封了，这篇文章留在这里做个记录。
 id: 296
 categories:
   - PHP
@@ -9,7 +10,7 @@ tags:
 
 1.获取火车余票信息：
 
-使用铁路局官网提供的接口：<!--more-->
+使用铁路局官网提供的接口：
 
 http://dynamic.12306.cn/otsquery/query/queryRemanentTicketAction.do?method=queryLeftTicket
 

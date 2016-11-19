@@ -1,5 +1,6 @@
 ---
 title: mybatis学习笔记
+description: 记录一些mybatis学习过程中经常用到的知识点，很简单常用到但是又记不住，做个记录后面慢慢补充
 id: 666
 categories:
   - Java

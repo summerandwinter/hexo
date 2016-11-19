@@ -1,5 +1,6 @@
 ---
 title: 用canvas实现图片滤镜效果详解之灰度效果
+description: 利用用canvas技术和计算机图形原理实现图片灰度滤镜效果
 tags:
   - canvas
   - html5
