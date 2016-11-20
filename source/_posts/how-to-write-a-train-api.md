@@ -6,6 +6,7 @@ categories:
   - PHP
 date: 2013-09-09 13:37:27
 tags:
+permalink: how-to-write-a-train-api
 ---
 
 1.获取火车余票信息：

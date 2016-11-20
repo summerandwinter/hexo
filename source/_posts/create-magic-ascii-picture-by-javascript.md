@@ -9,6 +9,7 @@ id: 546
 categories:
   - 前端设计
 date: 2013-10-23 23:56:01
+permalink: create-magic-ascii-picture-by-javascript
 ---
 
 

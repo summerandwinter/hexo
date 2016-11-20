@@ -9,6 +9,7 @@ tags:
   - tomcat
   - 负载均衡
   - 集群
+permalink: apachetomcatloadbalancingandclustering
 ---
 
 

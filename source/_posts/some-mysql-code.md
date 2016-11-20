@@ -1,5 +1,5 @@
 ---
-title: 一些mysql代码片段
+title: 一些MySQL代码片段
 description: 记录一些实用的mysql代码片段
 tags:
   - mysql
@@ -9,6 +9,7 @@ id: 659
 categories:
   - mysql
 date: 2013-11-14 16:27:49
+permalink: some-mysql-code
 ---
 
 # 获取表结构

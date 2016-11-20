@@ -7,6 +7,7 @@ id: 1
 categories:
   - CSS3
 date: 2013-09-03 06:13:42
+permalink: css3-iphone
 ---
 
 用3395行 CSS代码 与 335行 JaveScript代码(使用JQURY框架) 页面支持用户互动，按开关或home按钮、解锁屏幕。

@@ -6,6 +6,9 @@ categories:
   - javascript
 date: 2013-11-27 09:58:25
 tags:
+  - keycode
+  - javascript
+permalink: javascript-event-keycode
 ---
 {% cq %} **字母和数字键的键码值(keyCode)** {% endcq %}
 

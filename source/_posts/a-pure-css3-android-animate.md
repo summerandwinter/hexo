@@ -9,6 +9,8 @@ id: 336
 categories:
   - CSS3
 date: 2013-09-16 23:22:09
+permalink: a-pure-css3-android-animate
+
 ---
 
 随着css3的发展，越来越多的负责绚丽的效果可以由纯css来完成了。用css3实现的动画效果丝毫不必js实现的逊色，而且浏览器对css渲染的速度远比js快，大多数时候css的体积也不js小。其中css3中的动画效果可以实现流畅而强大的动画效果，下面我们来看看css3的能量吧。

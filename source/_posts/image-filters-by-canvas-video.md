@@ -1,5 +1,5 @@
 ---
-title: 用canvas实现图片滤镜效果详解之视频效果
+title: 用Canvas实现图片滤镜效果详解之视频效果
 tags:
   - html5
   - javascript
@@ -10,6 +10,7 @@ id: 652
 categories:
   - 前端设计
 date: 2013-11-04 23:24:54
+permalink: image-filters-by-canvas-video
 ---
 
 这是一个很有意思的特效，模拟摄像机拍摄电视屏幕画面时出现点状颗粒的效果。颗粒的大小通过变换矩阵实现，可以任意调节，有兴趣研究的朋友可以尝试更多的效果，代码没有经过优化，只是一个粗糙的Demo，大家可以自行改进。
@@ -18,7 +19,7 @@ date: 2013-11-04 23:24:54
 # 获取图像数据
 
 ```javascript
-img.src = ’http://bloglaotou.duapp.com/wp-content/themes/frontopen2/tools/filter/image2.jpg’;  
+img.src = ’original.jpg’;  
 canvas.width = img.width;  
 canvas.height = img.height;  
 var context = canvas.getContext(“2d”);  
@@ -136,146 +137,17 @@ context.putImageData(canvasData, 0, 0);
 ```
 
 # 效果预览
+**原图**
 
-```javascript
-<html>
-<head>
-<script>
-fclamp0255=function(value)
-{
-    if(value>255)
-    {
-        return 255;
-    }else if(value<0)
-    {
-        return 0;
-    }else
-    {
-        return value;
-    }
-}
-  window.onload = function() {
-    var canvas = document.getElementById("myCanvas");
-    var context = canvas.getContext("2d");
-    var img = new Image();
-    img.src = 'http://bloglaotou.duapp.com/wp-content/themes/frontopen2/tools/filter/image2.jpg';  
-    img.onload=function(){
+![原图](/demo/filters/video/original.jpg)
 
-        canvas.width  = img.width;  
-        canvas.height = img.height;   
+**效果图**
 
-        context.drawImage(img, 0, 0);  
-        var canvasData = context.getImageData(0, 0, canvas.width, canvas.height); 
-        var m_VideoType=0;
-        var pattern=new Array();
-        switch (m_VideoType)
-        {
-            case 0://VIDEO_TYPE.VIDEO_STAGGERED:
-            {
-                pattern = [
-                    0, 1,
-                    0, 2,
-                    1, 2,
-                    1, 0,
-                    2, 0,
-                    2, 1,
-                ];
-                break;
-            }
-            case 1://VIDEO_TYPE.VIDEO_TRIPED:
-            {
-                pattern = [   
-                    0,
-                    1,
-                    2,
-                ];
-                break;
-            }
-            case 2://VIDEO_TYPE.VIDEO_3X3:
-            {
-                pattern = 
-                [
-                    0, 1, 2,
-                    2, 0, 1,
-                    1, 2, 0,
-                ];
-                break;
-            }
-            default:
-            {
-                pattern = 
-                [
-                    0, 1, 2, 0, 0,
-                    1, 1, 1, 2, 0,
-                    0, 1, 2, 2, 2,
-                    0, 0, 1, 2, 0,
-                    0, 1, 1, 1, 2,
-                    2, 0, 1, 2, 2,
-                    0, 0, 0, 1, 2,
-                    2, 0, 1, 1, 1,
-                    2, 2, 0, 1, 2,
-                    2, 0, 0, 0, 1,
-                    1, 2, 0, 1, 1,
-                    2, 2, 2, 0, 1,
-                    1, 2, 0, 0, 0,
-                    1, 1, 2, 0, 1,
-                    1, 2, 2, 2, 0,
-                ];
-                break;
-            }
-        }
-        var pattern_width = [ 2, 1, 3, 5 ];
-        var pattern_height = [6, 3, 3, 15 ];
-        //  1.灰度效果  
-        //计算公式 .299 * r + .587 * g + .114 * b;  
-        // calculate gray scale value  
+![效果图](/demo/filters/video/filter.jpg)
 
-         for ( var x = 0; x < canvasData.width; x++) {  
-             for ( var y = 0; y < canvasData.height; y++) {  
+查看**[示例][demo]**
 
-               // Index of the pixel in the array  
-               var idx = (x + y * canvasData.width) * 4;  
-               var r = canvasData.data[idx + 0];  
-               var g = canvasData.data[idx + 1];  
-               var b = canvasData.data[idx + 2];  
-               var nWidth = pattern_width[m_VideoType];
-               var nHeight = pattern_height[m_VideoType];
-               var index = nWidth * (y % nHeight) + (x % nWidth);
-
-               index = pattern[index];
-               if (index == 0)
-                var   r = fclamp0255(2 * r);
-               if (index == 1)
-                var   g = fclamp0255(2 * g);
-               if (index == 2)
-                var   b = fclamp0255(2 * b);
-
-                // assign gray scale value  
-                canvasData.data[idx + 0] = r; // Red channel  
-                canvasData.data[idx + 1] = g; // Green channel  
-                canvasData.data[idx + 2] = b; // Blue channel  
-                canvasData.data[idx + 3] = 255; // Alpha channel  
-                // 加上黑色的边框  
-                if(x < 8 || y < 8 || x > (canvasData.width - 8) || y > (canvasData.height - 8))   
-                {  
-                  canvasData.data[idx + 0] = 0;  
-                  canvasData.data[idx + 1] = 0;  
-                  canvasData.data[idx + 2] = 0;  
-                }  
-             }  
-        }  
-         context.putImageData(canvasData, 0, 0);  
-    }
-  }
-
-</script>
-</head>
-<body>
-  <canvas id="myCanvas" >Gray Filter</canvas>
-  <canvas id="cv" >Gray Filter</canvas>
-</body>
-</html>
-```
+[demo]:  /demo/filters/video/index.html
 
 # 参考资料
 

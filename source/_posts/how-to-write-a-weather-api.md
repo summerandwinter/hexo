@@ -9,6 +9,7 @@ id: 270
 categories:
   - PHP
 date: 2013-09-08 20:33:09
+permalink: how-to-write-a-weather-api
 ---
 
 **中国气象局提供了三个天气查询的API接口：**

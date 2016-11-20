@@ -11,6 +11,8 @@ id: 451
 categories:
   - HTML5
 date: 2013-10-16 21:57:31
+permalink: a-html5-love-theme2
+
 ---
 
 第二版在<span style="color: #008000;">**[<span style="color: #008000;">第一版</span>](http://bloglaotou.duapp.com/a-html5-love-theme.html "基于Html5的爱情主题网站–表白神器")**</span>的基础上增加了一个动态3D的白云效果背景，鼠标悬浮在页面上云朵会向屏幕Z轴方向运动，在第一人称视角看来向着云朵方向前进的，由此形成一个伪3D效果。有点绕，直接看demo就能理解了。3D白云效果是基于<span style="color: #008000;">**[<span style="color: #008000;">threejs</span>](http://threejs.org/ "threejs.")**</span>框架做的。<!--more-->

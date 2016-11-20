@@ -8,6 +8,7 @@ id: 178
 categories:
   - CSS3
 date: 2013-09-04 15:35:28
+permalink: css3-iphone-icons
 ---
 
 又是一个外国的牛人做的，前面那个css3做的iphone就是借鉴这个人的作品写出来的。

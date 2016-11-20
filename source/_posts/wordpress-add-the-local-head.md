@@ -7,6 +7,7 @@ id: 234
 categories:
   - wordpress
 date: 2013-09-04 23:58:20
+permalink: wordpress-add-local-head
 ---
 
 因为本博客的文章分类比较复杂，所以有不少没有网站的网友搜到此地，留言的时候就没有gravatar头像，系统自带的头像又太难看，所以就打算自定义gravatar头像，因为比较喜欢QQ的头像，所以就用QQ头像作为默认头像，那如何实现了？

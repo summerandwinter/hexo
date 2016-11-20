@@ -8,6 +8,7 @@ id: 305
 categories:
   - CSS3
 date: 2013-09-10 23:05:51
+permalink: css3-transform-perspective
 ---
 
 CCS3中的Transform是设置界面样式和动画的一大利器。而且在Chrome和FF中还支持3D变换。IE9不支持，IE10支持。

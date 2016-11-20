@@ -10,6 +10,7 @@ id: 323
 categories:
   - CSS3
 date: 2013-09-14 14:11:02
+permalink: pure-css3-animated-navigation
 ---
 
 随着互联网的发展，网页能表现的东西越来越多。由最开始单纯的文字和链接构成的网页，到后来的表格布局，再到div+css模式，现在发展到了html+css3。网页能表达的东西越来越多，css3兴起已经很多年了，不多由于国内网站要求对IE的兼容，html5+css3的发展很缓慢。<!--more-->

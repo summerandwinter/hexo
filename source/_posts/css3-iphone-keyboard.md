@@ -9,6 +9,7 @@ id: 11
 categories:
   - CSS3
 date: 2013-09-03 15:09:54
+permalink: css3-iphone-keyboard
 ---
 
 最终的效果图（仅支持FF 3.6、Chrome 4、Safari 4）：

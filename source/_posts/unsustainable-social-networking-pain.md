@@ -6,6 +6,7 @@ id: 391
 categories:
   - 看点
 date: 2013-09-30 11:22:35
+permalink: unsustainable-social-networking-pain
 ---
 
 ![无法承受的社交网络之痛——嫉妒、伪装、恶毒、孤独](http://u.img.huxiu.com/portal/201309/28/105407yx4eiiez1edeiy11.jpg)

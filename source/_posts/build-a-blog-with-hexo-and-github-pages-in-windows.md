@@ -2,6 +2,8 @@
 title: Windows环境安装Hexo并基于GitHub Pages搭建博客
 description: 介绍在Windows环境下安装Hexo静态博客系统，并且用户GitHub Page 搭建免费的个人博客
 date: 2016-11-17 15:26:39
+categories:
+- Hexo
 tags:
 - Blog
 - Hexo
