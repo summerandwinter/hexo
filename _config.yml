@@ -67,6 +67,9 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 Plugins: 
 - hexo-generator-feed
+#- hexo-html-minifier
+#- hexo-clean-css
+#- hexo-uglify
 
 ## Themes: https://hexo.io/themes/
 theme: next
@@ -83,3 +86,54 @@ feed:
   type: atom
   path: atom.xml
   limit: 20
+
+html_minifier:
+  enable: false
+  exclude: 
+
+css_minifier:
+  enable: false
+  exclude: 
+    - '*.min.css'  
+
+js_minifier:
+  enable: false
+  mangle: true
+  output:
+  compress:
+  exclude: 
+    - '*.min.js'
+
+image_minifier:
+  enable: false
+  interlaced: false
+  multipass: false
+  optimizationLevel: 2
+  pngquant: false
+  progressive: false        
+# HTML压缩
+#html_minifier:
+#  enable: true
+#  exclude:     
+# css压缩
+#clean_css:
+#  enable: true
+#  exclude: 
+#    - '*.min.css'
+
+# js压缩   
+#uglify:
+#  mangle: true
+#  output:
+#  compress:
+#  exclude: 
+#    - '*.min.js'
+
+# image压缩    
+#imagemin:
+#  enable     : true
+#  interlaced : false
+#  multipass  : false
+#  optimizationLevel: 2
+#  pngquant   : false
+#  progressive: false  
