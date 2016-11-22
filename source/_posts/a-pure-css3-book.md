@@ -15,7 +15,7 @@ permalink: a-pure-css3-book
 <!--more-->
 
 下面贴一个纯css3实现的仿真图书翻页效果，只是一个很粗糙的雏形，后续会慢慢完善。欢迎大家提供宝贵的意见。
-
+![](http://sanyecao.qiniudn.com/assets/images/lab/css3-book.jpg)
 
 **<span style="color: #339966;">下面是源码：</span>**
 
@@ -217,7 +217,11 @@ footer a:hover{
 <img src=“2.jpg”/>   
 </div>   
 </div>   
-<footer>Tutorial by &nbsp;&nbsp;<a href=“http://bloglaotou.duapp.com” target=“_blank”>sanyecao</a>&nbsp;&nbsp;©2013&nbsp;&nbsp;</footer>   
+<footer>Tutorial by &nbsp;&nbsp;<a href=“http://sanyecao.me” target=“_blank”>sanyecao</a>&nbsp;&nbsp;©2013&nbsp;&nbsp;</footer>   
 </body>   
 </html> 
 ```
+
+[查看示例][demo]
+
+[demo]:   http://sanyecao.me/lab/css3-book/index.html "纯css3仿真图书翻页效果"

@@ -143,7 +143,7 @@ context.putImageData(canvasData, 0, 0);
 
 **效果图**
 
-![效果图](http://sanyecao.qiniudn.com/assets/images/filter/imagefilter-video.jpg)
+![效果图](http://sanyecao.qiniudn.com/assets/images/filter/video.jpg)
 
 查看**[示例][demo]**
 

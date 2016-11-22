@@ -19,13 +19,12 @@ permalink: css3-iphone
 
 # 
 
-[![css3-iphone4-close](http://bcs.duapp.com/xiaopihai/2013/09/css3-iphone4-close-557x400.png)](http://bcs.duapp.com/xiaopihai/2013/09/css3-iphone4-close.png)
+![css3-iphone4-close](http://sanyecao.qiniudn.com/assets/images/lab/css3-iphone4s-close.jpg)
 
-# 
 
 #   <span style="font-size: x-small; font-family: 'andale mono', times;">  <!--more--> 屏幕解锁时的式样</span>
 
-[![css2-iphone4-open](http://bcs.duapp.com/xiaopihai/2013/09/css2-iphone4-open-466x400.png)](http://bcs.duapp.com/xiaopihai/2013/09/css2-iphone4-open.png)
+![css2-iphone4-open](http://sanyecao.qiniudn.com/assets/images/lab/css3-iphone4s-open.jpg)
 [download id="3"]
 <div id="demo">[查看示例](http://tutorial.duapp.com/lab/iphone-css3/index.htm "点此查看Demo")</div>
 <div><span style="text-indent: 2em;"> </span>[作者博客链接](http://tjrus.com/iphone/ "作者博客链接")</div>

@@ -14,7 +14,10 @@ permalink: css3-iphone-keyboard
 
 最终的效果图（仅支持FF 3.6、Chrome 4、Safari 4）：
 
-[![css3-iphone-keyboard12](http://bcs.duapp.com/xiaopihai/2013/09/css3-iphone-keyboard12-240x150.jpg)<!--more-->](http://bcs.duapp.com/xiaopihai/2013/09/css3-iphone-keyboard12.jpg)
+![css3-iphone4s-keyboard](http://sanyecao.qiniudn.com/assets/images/lab/css3-iphone4s-keyboard.jpg)
+
+<!--more-->
+
 ```html
 <!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>   
 <html xmlns=“http://www.w3.org/1999/xhtml”>   
@@ -29,7 +32,7 @@ permalink: css3-iphone-keyboard
 <style type=“text/css”>   
 @font-face {   
     font-family: ’iPhone keyboard’;   
-    src: url(http://cahty.googlecode.com/svn/trunk/css/iphone-keyboard.ttf);   
+    src: url(https://github.com/fiznool/Alinea-iPad-Demo/blob/master/public/css/fonts/iphone-keyboard.ttf);   
 }   
   
 body {   

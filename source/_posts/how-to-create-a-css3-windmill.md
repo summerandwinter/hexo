@@ -16,6 +16,8 @@ permalink: how-to-create-a-css3-windmill
 
 
 下面简单介绍一下我是如何用纯css3实现一个风车的动画效果的，
+效果图
+![css3实现风车效果图](http://sanyecao.qiniudn.com/assets/images/lab/css3-windmill.jpg)
 
 # 画出风车的柱子
 
@@ -81,3 +83,5 @@ border-color: white transparent transparent ;
 至此我们的风车已经基本上完成啦，前面的代码都是兼容webkit核心浏览器（chrome,safari）,接下来实现对其他浏览器的兼容，并且加上一个鼠标悬浮加快转动的效果我们的风车就算完成啦。
 
 css3的表现在各个浏览器下的表现不尽相同，chrome浏览器下效果最佳，safari下风车的柱子会有像素失真的问题（同是webkit核心，不知道为什么表现那么不一样），后续会尝试解决这个问题。
+[查看示例][demo]
+[demo]:   http://sanyecao.me/lab/css3-windmill/index.html

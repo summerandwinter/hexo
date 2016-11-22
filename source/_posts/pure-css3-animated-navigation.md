@@ -21,11 +21,11 @@ html5+css3的出现给前端开发者提供了更多的可能性，以前很多�
 
 下面是效果图：
 
-![pure-css3-animated-navigation](/images/pure-css3-animated-navigation.jpg)
+![pure-css3-animated-navigation](http://sanyecao.qiniudn.com/assets/images/lab/pure-css3-animated-navigation.jpg)
 
 &nbsp;
 
-[查看示例](http://tutorial.duapp.com/lab/navigation/index.htm)（**<span style="color: #339966;">请在支持css3的浏览器中查看效果，最新版的chrome浏览器下效果最佳。</span>**）
+[查看示例](http://sanyecao.me/lab/navigation/index.html)（**<span style="color: #339966;">请在支持css3的浏览器中查看效果，最新版的chrome浏览器下效果最佳。</span>**）
 
 
 
