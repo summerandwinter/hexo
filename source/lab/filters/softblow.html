@@ -1,0 +1,97 @@
+<html>
+<head>
+<script>
+  //高亮柔白
+  window.onload = function() {
+    var canvas = document.getElementById("myCanvas");
+    var image = document.getElementById("imageSource");
+
+    // re-size the canvas deminsion
+    canvas.width  = image.width;
+    canvas.height = image.height;
+    
+    // get 2D render object
+    var context = canvas.getContext("2d");
+    context.drawImage(image, 0, 0);
+    var canvasData = context.getImageData(0, 0, canvas.width, canvas.height);
+    var BrightnessFactor=.25;
+    var ContrastFactor=0;
+    // Convert to integer factors
+    var bfi = BrightnessFactor * 255;
+    var cf = 1 + ContrastFactor;
+    cf *= cf;
+    var cfi =  (cf * 32768) + 1;
+
+
+    for ( var x = 0; x < canvasData.width; x++) {
+      for ( var y = 0; y < canvasData.height; y++) {
+    	  
+
+
+          // Index of the pixel in the array
+          var idx = (x + y * canvasData.width) * 4;
+           var r = canvasData.data[idx + 0];
+          var g = canvasData.data[idx + 1];
+          var b = canvasData.data[idx + 2];
+          if (bfi != 0) {
+              // Add brightness
+              var ri = r + bfi;
+              var gi = g + bfi;
+              var bi = b + bfi;
+              // Clamp to byte boundaries
+              r = ri > 255 ? 255 : (ri < 0 ? 0 : ri);
+              g = gi > 255 ? 255 : (gi < 0 ? 0 : gi);
+              b = bi > 255 ? 255 : (bi < 0 ? 0 : bi);
+      }
+      // Modifiy contrast (multiplication)
+      if (cfi != 32769) {
+              // Transform to range [-128, 127]
+              var ri = r - 128;
+              var gi = g - 128;
+              var bi = b - 128;
+
+              // Multiply contrast factor
+              ri = (ri * cfi) >> 15;
+              gi = (gi * cfi) >> 15;
+              bi = (bi * cfi) >> 15;
+
+              // Transform back to range [0, 255]
+              ri = ri + 128;
+              gi = gi + 128;
+              bi = bi + 128;
+
+              // Clamp to byte boundaries
+              r = ri > 255 ? 255 : (ri < 0 ? 0 : ri);
+              g = gi > 255 ? 255 : (gi < 0 ? 0 : gi);
+              b = bi > 255 ? 255 : (bi < 0 ? 0 : bi);
+      }
+    
+        
+        // assign gray scale value
+        canvasData.data[idx + 0] = r; // Red channel
+        canvasData.data[idx + 1] = g; // Green channel
+        canvasData.data[idx + 2] = b; // Blue channel
+        canvasData.data[idx + 3] = 255; // Alpha channel 
+        
+
+        // add black border
+/*        if(x < 8 || y < 8 || x > (canvasData.width - 8) || y > (canvasData.height - 8)) 
+        {
+          canvasData.data[idx + 0] = 0;
+          canvasData.data[idx + 1] = 0;
+          canvasData.data[idx + 2] = 0;
+        }*/
+      }
+    }
+
+    context.putImageData(canvasData, 0, 0); // at coords 0,0
+  };
+</script>
+</head>
+<body>
+  <p>原图</p>
+  <img id="imageSource" src="original.jpg" alt="Canvas Source" />
+  <p>效果图</p>
+  <canvas id="myCanvas" >Gray Filter</canvas>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<head>
+<script>
+//灰度效果 
+  window.onload = function() {
+    var cv = document.getElementById('cv');
+    var c = cv.getContext('2d');
+    var canvas = document.getElementById("myCanvas");
+    var context = canvas.getContext("2d");
+    var img = new Image();
+    img.src = 'original.jpg';  
+    img.onload=function(){
+
+        canvas.width  = img.width;  
+      canvas.height = img.height;   
+
+      context.drawImage(img, 0, 0);  
+      var canvasData = context.getImageData(0, 0, canvas.width, canvas.height); 
+        //  1.灰度效果  
+      //计算公式 .299 * r + .587 * g + .114 * b;  
+      // calculate gray scale value  
+
+       for ( var x = 0; x < canvasData.width; x++) {  
+           for ( var y = 0; y < canvasData.height; y++) {  
+
+             // Index of the pixel in the array  
+             var idx = (x + y * canvasData.width) * 4;  
+             var r = canvasData.data[idx + 0];  
+             var g = canvasData.data[idx + 1];  
+             var b = canvasData.data[idx + 2];  
+             var gray = .299 * r + .587 * g + .114 * b;  
+
+              // assign gray scale value  
+              canvasData.data[idx + 0] = gray; // Red channel  
+              canvasData.data[idx + 1] = gray; // Green channel  
+              canvasData.data[idx + 2] = gray; // Blue channel  
+              canvasData.data[idx + 3] = 255; // Alpha channel  
+              // 加上黑色的边框  
+              /**
+              if(x < 8 || y < 8 || x > (canvasData.width - 8) || y > (canvasData.height - 8))   
+              {  
+                canvasData.data[idx + 0] = 0;  
+                canvasData.data[idx + 1] = 0;  
+                canvasData.data[idx + 2] = 0;  
+              }  
+              */
+           }  
+      }  
+       context.putImageData(canvasData, 0, 0);  
+    }
+  }
+
+</script>
+</head>
+<body>
+<p>原图</p>
+<img src="original.jpg"/>
+<p>效果图</p>
+  <canvas id="myCanvas" >Gray Filter</canvas>
+  <canvas id="cv" >Gray Filter</canvas>
+</body>
+</html>

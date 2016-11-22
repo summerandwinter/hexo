@@ -1,0 +1,57 @@
+<html>
+<head>
+<script>
+//油画效果
+  window.onload = function() {
+    var canvas = document.getElementById("myCanvas");
+    var context = canvas.getContext("2d");
+    var img = new Image();
+    img.src = 'original.jpg';  
+    img.onload=function(){    	    	
+        canvas.width  = img.width;  
+    	canvas.height = img.height;   
+        var width=canvas.width;
+        var height=canvas.height;
+    	context.drawImage(img, 0, 0);  
+    	var canvasData = context.getImageData(0, 0, width, height); 
+    	var Model = 3;
+    	var r = 0, g = 0, b = 0, xx = 0, yy = 0;
+    	 for ( var x = 0; x < width; x++) {  
+    	     for ( var y = 0; y < height; y++) {      	
+    	      var pos = Math.floor(Math.random() * 10000) % Model;
+           	  xx = (x + pos) < width ? (x + pos) : (x - pos) >= 0 ? (x - pos) : x;
+           	  yy = (y + pos) < height ? (y + pos) : (y - pos) >= 0 ? (y - pos) : y;  
+
+
+                var idxx = (xx + yy * width) * 4; 
+     	        var r = canvasData.data[idxx + 0];  
+    	        var g = canvasData.data[idxx + 1];  
+    	        var b = canvasData.data[idxx + 2];  
+ 	    	    var idx = (x + y * width) * 4;   
+    	        // assign gray scale value  
+    	        canvasData.data[idx + 0] = r; // Red channel  
+    	        canvasData.data[idx + 1] = g; // Green channel  
+    	        canvasData.data[idx + 2] = b; // Blue channel  
+    	        canvasData.data[idx + 3] = 255; // Alpha channel  
+    	        // 加上黑色的边框  
+/*    	        if(x < 8 || y < 8 || x > (width - 8) || y > (height - 8))   
+    	        {  
+    	          canvasData.data[idx + 0] = 0;  
+    	          canvasData.data[idx + 1] = 0;  
+    	          canvasData.data[idx + 2] = 0;  
+    	        }  */
+    	     }  
+    	}  
+    	 context.putImageData(canvasData, 0, 0);  
+    }
+  }
+
+</script>
+</head>
+<p>原图</p>
+<img src="original.jpg"/>
+<p>效果图</p>
+  <canvas id="myCanvas" >Gray Filter</canvas>
+  <canvas id="cv" >Gray Filter</canvas>
+</body>
+</html>
