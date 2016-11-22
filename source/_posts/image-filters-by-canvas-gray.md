@@ -68,12 +68,12 @@ context.putImageData(canvasData, 0, 0);
 
 **原图**
 
-![原图](/demo/filters/gray/original.jpg)
+![原图](http://sanyecao.qiniudn.com/assets/images/filter/original.jpg)
 
 **效果图**
 
-![效果图](/demo/filters/gray/filter.jpg)
+![效果图](http://sanyecao.qiniudn.com/assets/images/filter/imagefilter-gray.jpg)
 
 查看**[示例][demo]**
 
-[demo]:  /demo/filters/gray/index.html
+[demo]:  /lab/filters/gray/index.html

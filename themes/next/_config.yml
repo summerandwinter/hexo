@@ -152,7 +152,7 @@ social_icons:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-avatar: /images/avatar.jpeg
+avatar: /images/avatar.jpg
 
 
 # Table Of Contents in the Sidebar
@@ -263,8 +263,8 @@ mathjax:
 # Baidu Analytics ID
 #baidu_analytics:
 
-# Duoshuo ShortName    mnie: ummerandwinter
-duoshuo_shortname: 
+# Duoshuo ShortName    mnie: summerandwinter
+duoshuo_shortname: summerandwinter
 
 # Disqus
 #disqus_shortname:
@@ -305,10 +305,11 @@ duoshuo_shortname:
 # Make duoshuo show UA
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
+# 6353867193179964161
 duoshuo_info:
-  ua_enable: false
+  ua_enable: true
   admin_enable: false
-  user_id: 6353867193179964161
+  user_id: 6353867193179964161 
   admin_nickname: Winter
 
 

@@ -29,16 +29,16 @@ gulp.task('minify-js', function() {
   .pipe(uglify())
   .pipe(gulp.dest('./public'));
 });
-// 压缩 public/uploads 目录内图片
+// 压缩 public/assets 目录内图片
 gulp.task('minify-images', function() {
-    gulp.src('./public/demo/**/*.*')
+    gulp.src('./public/assets/**/*.*')
         .pipe(imagemin({
            optimizationLevel: 5, //类型：Number  默认：3  取值范围：0-7（优化等级）
            progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
            interlaced: false, //类型：Boolean 默认：false 隔行扫描gif进行渲染
            multipass: false, //类型：Boolean 默认：false 多次优化svg直到完全优化
         }))
-        .pipe(gulp.dest('./public/uploads'));
+        .pipe(gulp.dest('./public/assets'));
 });
 
 // 默认任务

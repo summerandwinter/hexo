@@ -139,15 +139,15 @@ context.putImageData(canvasData, 0, 0);
 # 效果预览
 **原图**
 
-![原图](/demo/filters/video/original.jpg)
+![原图](http://sanyecao.qiniudn.com/assets/images/filter/original.jpg)
 
 **效果图**
 
-![效果图](/demo/filters/video/filter.jpg)
+![效果图](http://sanyecao.qiniudn.com/assets/images/filter/imagefilter-video.jpg)
 
 查看**[示例][demo]**
 
-[demo]:  /demo/filters/video/index.html
+[demo]:  /lab/filters/video/index.html
 
 # 参考资料
 

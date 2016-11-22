@@ -5,14 +5,14 @@
 # Site
 title: Winter`s Nots
 subtitle: Summer&Winter
-description: 岁月静好 一生何求
+description: 岁月静好
 author: Winter
 language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://sanyecao.me
 root: /
 #permalink: :year/:month/:day/:title.html
 permalink: :title.html
@@ -27,8 +27,8 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
-    - 'demo/*.html'
-    - 'demo/**'
+    - 'lab/*.html'
+    - 'lab/**'
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -67,9 +67,6 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 Plugins: 
 - hexo-generator-feed
-#- hexo-html-minifier
-#- hexo-clean-css
-#- hexo-uglify
 
 ## Themes: https://hexo.io/themes/
 theme: next
@@ -88,16 +85,16 @@ feed:
   limit: 20
 
 html_minifier:
-  enable: false
+  enable: true
   exclude: 
 
 css_minifier:
-  enable: false
+  enable: true
   exclude: 
     - '*.min.css'  
 
 js_minifier:
-  enable: false
+  enable: true
   mangle: true
   output:
   compress:
@@ -105,35 +102,9 @@ js_minifier:
     - '*.min.js'
 
 image_minifier:
-  enable: false
+  enable: true
   interlaced: false
   multipass: false
   optimizationLevel: 2
   pngquant: false
   progressive: false        
-# HTML压缩
-#html_minifier:
-#  enable: true
-#  exclude:     
-# css压缩
-#clean_css:
-#  enable: true
-#  exclude: 
-#    - '*.min.css'
-
-# js压缩   
-#uglify:
-#  mangle: true
-#  output:
-#  compress:
-#  exclude: 
-#    - '*.min.js'
-
-# image压缩    
-#imagemin:
-#  enable     : true
-#  interlaced : false
-#  multipass  : false
-#  optimizationLevel: 2
-#  pngquant   : false
-#  progressive: false  
