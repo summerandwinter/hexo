@@ -15,17 +15,16 @@ permalink: css3-iphone
 
 屏幕锁定时的式样
 
-&nbsp;
 
-# 
+
+
 
 ![css3-iphone4-close](http://sanyecao.qiniudn.com/assets/images/lab/css3-iphone4s-close.jpg)
 
-
-#   <span style="font-size: x-small; font-family: 'andale mono', times;">  <!--more--> 屏幕解锁时的式样</span>
+ <!--more--> 
+ 屏幕解锁时的式样
 
 ![css2-iphone4-open](http://sanyecao.qiniudn.com/assets/images/lab/css3-iphone4s-open.jpg)
-[download id="3"]
-<div id="demo">[查看示例](http://tutorial.duapp.com/lab/iphone-css3/index.htm "点此查看Demo")</div>
-<div><span style="text-indent: 2em;"> </span>[作者博客链接](http://tjrus.com/iphone/ "作者博客链接")</div>
-&nbsp;
+
+[查看示例](http://tutorial.duapp.com/lab/iphone-css3/index.htm "点此查看Demo")
+[作者博客链接](http://tjrus.com/iphone/ "作者博客链接")

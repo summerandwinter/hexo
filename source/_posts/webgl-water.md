@@ -23,8 +23,8 @@ WebGL是一种3D绘图标准，这种绘图技术标准允许把JavaScript和Ope
 
 ![webgl-water](http://sanyecao.qiniudn.com/assets/images/lab/webgl-water.jpg)
 
-**<span style="color: #008000;">下面是整理好的一个示例，在chrome,firefox浏览器下查看，不支持IE和safari。chrome下效果最佳，另外对显卡和驱动也有要求。</span>**
+**下面是整理好的一个示例，在chrome,firefox浏览器下查看，不支持IE和safari。chrome下效果最佳，另外对显卡和驱动也有要求。**
 
 [查看示例](http://sanyecao.me/lab/webgl-water/index.html "webgl-water")
 
-<span style="color: #008000;">**下面是示例的下载地址，不过由于WebGl不能跨域加载图片本地查看不到效果，上传到服务器中或者本地的本地搭建的服务器环境也可以。**</span>
+**下面是示例的下载地址，不过由于WebGl不能跨域加载图片本地查看不到效果，上传到服务器中或者本地的本地搭建的服务器环境也可以。**

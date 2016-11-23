@@ -23,17 +23,14 @@ html5+css3的出现给前端开发者提供了更多的可能性，以前很多�
 
 ![pure-css3-animated-navigation](http://sanyecao.qiniudn.com/assets/images/lab/pure-css3-animated-navigation.jpg)
 
-&nbsp;
-
-[查看示例](http://sanyecao.me/lab/navigation/index.html)（**<span style="color: #339966;">请在支持css3的浏览器中查看效果，最新版的chrome浏览器下效果最佳。</span>**）
 
 
+[查看示例](http://sanyecao.me/lab/navigation/index.html)（**请在支持css3的浏览器中查看效果，最新版的chrome浏览器下效果最佳。**）
 
-<span style="color: #ff0000;">**特别声明此demo为博主原创，可以下载免费使用。**</span>
 
-<span style="text-indent: 2em;">话不多说，直接贴源码：</span>
-
-<span style="color: #339966;">**css:**</span>
+**特别声明此demo为博主原创，可以下载免费使用。**
+话不多说，直接贴源码：
+**css:**
 ···css
 *{
 margin:0;
@@ -287,7 +284,7 @@ display: block;
 <div style=“display:block;clear:both;”></div>
 </ul>
 </nav>
-<footer>Tutorial by &nbsp;&nbsp;<a href=“http://bloglaotou.duapp.com“ target=“_blank”>sanyecao</a>&nbsp;&nbsp;©2013</footer>
+<footer>Tutorial by &nbsp;&nbsp;<a href=“http://sanyecao.me“ target=“_blank”>sanyecao</a>&nbsp;&nbsp;©2013</footer>
 </body>
 </html> 
 ```

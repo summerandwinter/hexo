@@ -1,57 +1,162 @@
-<html>
-<head>
-<style type="text/css">
-    form, input {width: 73px;height: 27px;}
-    form {
-        position: relative;
-        float: left;
-        margin: 0 10px 0 0;
-    }
-    #up-button{
-        position: absolute;
-        right: 0;
-        top: 0;
-        cursor: pointer;
-        opacity: 0;
-        filter: alpha(opacity=0);
-        outline: none;
-    }
-    #button{
-    }
-    iframe {display: none;}
-</style>
+<!DOCTYPE html>
+<html><head>
+  <title>Image Filters</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  cursor: default;
+}
 
+body {
+  font: 13px/18px Arial, sans-serif;
+  background: black;
+  color: white;
+  overflow: hidden;
+}
+
+.body {
+  position: relative;
+  border: 1px solid #C3C3C3;
+  background: #e9e9e9;
+  overflow: auto;
+  max-height: 500px;
+  min-height: 200px;
+}
+
+.body canvas {
+  margin: 0 auto;
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background: #fff;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+}
+
+ul {
+  padding: 0 0 0 20px;
+}
+
+h1 {
+  font: bold italic 30px/30px Georgia;
+  text-align: center;
+}
+
+h2 {
+  font: bold italic 17px/17px Georgia;
+  padding-top: 10px;
+}
+
+small {
+  display: block;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+#lab {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80%;
+  height: 100%;
+}
+
+#help {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20%;
+  float: right;
+  overflow: auto;
+}
+
+.container {
+  max-width: 640px;
+  min-height: 480px;
+  margin: 20px auto;
+}
+
+.grid {
+  background-image: -webkit-linear-gradient(top, transparent 39px, rgba(200, 200, 200, 0.5) 40px), -webkit-linear-gradient(left, transparent 39px, rgba(200, 200, 200, 0.5) 40px);
+  background-image: -moz-linear-gradient(top, transparent 39px, rgba(200, 200, 200, 0.5) 40px), -moz-linear-gradient(left, transparent 39px, rgba(200, 200, 200, 0.5) 40px);
+  background-image: -o-linear-gradient(top, transparent 39px, rgba(200, 200, 200, 0.5) 40px), -o-linear-gradient(left, transparent 39px, rgba(200, 200, 200, 0.5) 40px);
+  background-image: -ms-linear-gradient(top, transparent 39px, rgba(200, 200, 200, 0.5) 40px), -ms-linear-gradient(left, transparent 39px, rgba(200, 200, 200, 0.5) 40px);
+  background-image: linear-gradient(top, transparent 39px, rgba(200, 200, 200, 0.5) 40px), 
+    linear-gradient(left, transparent 39px, rgba(200, 200, 200, 0.5) 40px);
+  -webkit-background-size: 40px 40px;
+  -moz-background-size: 40px 40px;
+  background-size: 40px 40px;
+}
+
+  </style>
 </head>
 <body>
-<div class="bt">
+
+  <div id="lab" class="grid">
+
+     <div class="container"><canvas id="myCanvas" >Gray Filter</canvas></div> 
+
+  </div>
+  <div>
+  <div id="help">
+    <h1>Image Filters</h1>
+    <p>Author <a href="http://sanyeao.me/">Winter</a></p>
+    <h2>Interactions:</h2>
+    <ul>
+      <li>Upload a image and select the filters.</li>
+    </ul>
+    <div class="bt">
     <form id="uf">
-        <input type="file" name="file" id="up-button"/>
-        <input type="button" id="button" value="upload"/>
+        <input type="file" name="file" vale="select a image" id="up-button"/>
         
     </form>
     <input type="button" id="download" value="download"/>
-    <span><input type="radio" value="spread" id="spread" name="filter"/><label for="spread">spread</label></span>
-    <span><input type="radio" id="gray" name="filter"/><label for="gray">gray</label></span>
-    <span><input type="radio" id="comic" name="filter"/><label for="comic">comic</label></span>
-    <span><input type="radio" id="old" name="filter"/><label for="old">old</label></span>
-    <span><input type="radio" id="negatives" name="filter"/><label for="negatives">negatives</label></span>
-    <span><input type="radio" id="black" name="filter"/><label for="black">black</label></span>
-    <span><input type="radio" id="cameo" name="filter"/><label for="cameo">cameo</label></span>
-    <span><input type="radio" id="casting" name="filter"/><label for="casting">casting</label></span>
-    <span><input type="radio" id="frozen" name="filter"/><label for="frozen">frozen</label></span>
-    <span><input type="radio" id="sketch" name="filter"/><label for="sketch">sketch</label></span>
-    <span><input type="radio" id="gausian" name="filter"/><label for="gausian">gausian</label></span>
-    <span><input type="radio" id="opacity" name="filter"/><label for="opacity">opacity</label></span>
-    <span><input type="radio" id="bright" name="filter"/><label for="bright">bright</label></span>
-    <span><input type="radio" id="softblow" name="filter"/><label for="softblow">softblow</label></span>
-</div>
-<br>
-  <canvas id="cv">fuck ie</canvas>
-  <canvas id="myCanvas" >Gray Filter</canvas>
-  <script type="text/javascript" src="filter.js"></script>
-  <script>
+    <ul>
+    <span><li><input type="radio" value="spread" id="spread" name="filter" onchange="change(this);" /><label for="spread">spread</label></span></li>
+    <span><li><input type="radio" id="gray" checked="checked" name="filter" onchange="change(this);" /><label for="gray">gray</label></span></li>
+    <span><li><input type="radio" id="comic" name="filter" onchange="change(this);" /><label for="comic">comic</label></span></li>
+    <span><li><input type="radio" id="old" name="filter" onchange="change(this);" /><label for="old">old</label></span></li>
+    <span><li><input type="radio" id="negatives" name="filter" onchange="change(this);" /><label for="negatives">negatives</label></span></li>
+    <span><li><input type="radio" id="black" name="filter" onchange="change(this);" /><label for="black">black</label></span></li>
+    <span><li><input type="radio" id="cameo" name="filter" onchange="change(this);" /><label for="cameo">cameo</label></span></li>
+    <span><li><input type="radio" id="casting" name="filter" onchange="change(this);" /><label for="casting">casting</label></span></li>
+    <span><li><input type="radio" id="frozen" name="filter" onchange="change(this);" /><label for="frozen">frozen</label></span></li>
+    <span><li><input type="radio" id="sketch" name="filter" onchange="change(this);" /><label for="sketch">sketch</label></span></li>
+    <span><li><input type="radio" id="gausian" name="filter" onchange="change(this);" /><label for="gausian">gausian</label></span></li>
+    <span><li><input type="radio" id="opacity" name="filter" onchange="change(this);" /><label for="opacity">opacity</label></span></li>
+    <span><li><input type="radio" id="bright" name="filter" onchange="change(this);" /><label for="bright">bright</label></span></li>
+    <span><li><input type="radio" id="softblow" name="filter" onchange="change(this);" /><label for="softblow">softblow</label></span></li>
+    </ul>
+  </div>
+    <p>Tutorial by &nbsp;&nbsp;<a href="http://sanyecao.me" target="_blank">sanyecao</a>&nbsp;&nbsp;©2013&nbsp;&nbsp;</p>
+  </div>
 
+</body>
+<script type="text/javascript" src="filter.js"></script>
+<script>
 
+var defaultWidth = 640, defaultHeight = 480;
+var canvas = document.getElementById("myCanvas");
+var context = canvas.getContext("2d");
+var img = new Image();
+var fileBtn = document.getElementById("up-button");
+var download = document.getElementById("download");
+
+var change =  function(self){
+
+    setCanvasSize(img.width,img.height) ;
+    // draw image
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(img, 0, 0, canvas.width, canvas.height);
+    // get image data
+    var canvasData = context.getImageData(0, 0, canvas.width, canvas.height);
+    render(canvasData);
+    context.putImageData(canvasData, 0, 0);
+}
   /**
    * 获取mimeType
    * @param  {String} type the old mime-type
@@ -71,264 +176,90 @@
   var saveFile = function(data, filename){
       var save_link = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
       save_link.href = data;
-      save_link.download = filename;
-     
+      save_link.download = filename;    
       var event = document.createEvent('MouseEvents');
       event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
       save_link.dispatchEvent(event);
   };
-     
 
-  document.getElementById("download").onclick=function()
-  {
-	//图片导出为 png 格式
-	  var type = 'png';
-	  var imgData = canvas.toDataURL(type);
-	  // 加工image data，替换mime type
-	  imgData = imgData.replace(_fixType(type),'image/octet-stream');  
-	  // 下载后的问题名
-	  var filename = 'bloglaotou_' + (new Date()).getTime() + '.' + type;
-	  // download
-	  saveFile(imgData,filename);
-	     
-
-  }
-
-var cv = document.getElementById('cv');
-var c = cv.getContext('2d');
-var canvas = document.getElementById("myCanvas");
-var context = canvas.getContext("2d");
-var fileBtn = document.getElementById("up-button");
-var img = new Image();
-fileBtn.onchange = getImg;
-function init() {
-    cv.width = img.width;
-    cv.height = img.height;
-    c.drawImage(img, 0, 0);
+var setCanvasSize = function(width, height){
+        var scale = height / width,
+            defaultScale = defaultHeight / defaultWidth;
+        if(scale >= defaultScale && height >= defaultHeight){
+            height = defaultHeight;
+            width = height / scale;
+        }
+        if(scale <= defaultScale && width >= defaultWidth){
+            width = defaultWidth;
+            height = width * scale;
+        }
+        // console.log(width, height);
+        canvas.width = width;
+        canvas.height = height;
+}
+var render = function(canvasData){
     var f=""; 
     var filter = document.getElementsByName("filter"); 
     for(i=0;i<filter.length;i++) 
     { 
         if(filter[i].checked)
         {
-        	f=filter[i].id; 
+          f=filter[i].id; 
         }
            
     }
     switch(f){
-	   case "gray":setGray();break;
-	   case "spread":setSpread();break;
-	   case "comic":setComic();break;
-	   case "old":setOld();break;
-	   case "negatives":setNegatives();break;
-	   case "black":setBlack();break;
-	   case "cameo":setCameo();break;
-	   case "casting":setCasting();break;
-	   case "frozen":setFrozen();break;
-	   case "opacity":setOpacity();break;
-	   case "bright":setBright();break;
-	   case "softblow":setSoftblow();break;
-	   default:setGausian();break;
-    }
-  
-  };
-
-function getImg(file) {
+     case "gray":canvasData = gray(canvasData);break;
+     case "spread":canvasData = spread(canvasData);break;
+     case "comic":canvasData = comic(canvasData);break;
+     case "old":canvasData = old(canvasData);break;
+     case "negatives":canvasData = negatives(canvasData);break;
+     case "black":canvasData = black(canvasData);break;
+     case "cameo":canvasData = cameo(canvasData);break;
+     case "casting":canvasData = casting(canvasData);break;
+     case "frozen":canvasData = frozen(canvasData);break;
+     case "opacity":canvasData = opacity(canvasData);break;
+     case "sketch":canvasData = sketch(canvasData);break;
+     case "bright":canvasData = bright(canvasData);break;
+     case "softblow":canvasData = softblow(canvasData);break;
+     default:canvasData = gausian(canvasData);break;
+   }
+}
+fileBtn.onchange = function(file) {
     var reader = new FileReader();
     reader.readAsDataURL(fileBtn.files[0]);
     reader.onload = function () {
         img.src = reader.result;
     }
+} 
 
+download.onclick=function() {
+    //图片导出为 png 格式
+    var type = 'png';
+    var imgData = canvas.toDataURL(type);
+    // 加工image data，替换mime type
+    imgData = imgData.replace(_fixType(type),'image/octet-stream');  
+    // 下载后的问题名
+    var filename = 'sanyecao_' + (new Date()).getTime() + '.' + type;
+    // download
+    saveFile(imgData,filename);
+       
 
 }
- 
- window.onload = function() {
-
-	 img.src = 'image2.jpg';
-	 img.onload = init 
-
+window.onload = function() {
+    img.src = 'original.jpg';
+    img.onload = function(){
     // re-size the canvas deminsion
-    canvas.width  = img.width;
-    canvas.height = img.height;
-    
-    // get 2D render object
-    var context = canvas.getContext("2d");
-    context.drawImage(img, 0, 0);
-    var canvasData = context.getImageData(0, 0, canvas.width, canvas.height);  
+    setCanvasSize(img.width,img.height) ;
+    // draw image
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(img, 0, 0, canvas.width, canvas.height);
+    // get image data
+    var canvasData = context.getImageData(0, 0, canvas.width, canvas.height);
+    render(canvasData);
+    context.putImageData(canvasData, 0, 0);
+  }    
+};
 
-//   canvasData=sketch(canvasData); 
-//   canvasData=spread(canvasData);
-//   canvasData=old(canvasData);
-//   canvasData=frozen(canvasData);
-//   canvasData=casting(canvasData);
-//   canvasData=cameo(canvasData);
-//   canvasData=comic(canvasData);
-//   canvasData=black(canvasData);
-//   canvasData=negatives(canvasData);
-
-    context.putImageData(canvasData, 0, 0); // at coords 0,0
-  };
-  document.getElementById('softblow').onclick=setSoftblow;
-  function setSoftblow()
-  {
-	    canvas.width  = img.width;
-  	    canvas.height = img.height;
-  	    var context = canvas.getContext("2d");
-  	    context.drawImage(img, 0, 0);
-  	    var canvasData = context.getImageData(0, 0, canvas.width, canvas.height);  
-  	    canvasData=softglow(canvasData);
-  	    context.putImageData(canvasData, 0, 0); // at coords 0,0 
-  }
-  document.getElementById('bright').onclick=setBright;
-  function setBright()
-  {
-	    canvas.width  = img.width;
-  	    canvas.height = img.height;
-  	    var context = canvas.getContext("2d");
-  	    context.drawImage(img, 0, 0);
-  	    var canvasData = context.getImageData(0, 0, canvas.width, canvas.height);  
-  	    canvasData=bright(canvasData);
-  	    context.putImageData(canvasData, 0, 0); // at coords 0,0 
-  }
-  
-  document.getElementById('opacity').onclick=setOpacity;
-  function setOpacity()
-  {
-	    canvas.width  = img.width;
-  	    canvas.height = img.height;
-  	    var context = canvas.getContext("2d");
-  	    context.drawImage(img, 0, 0);
-  	    var canvasData = context.getImageData(0, 0, canvas.width, canvas.height);  
-  	    canvasData=opacity(canvasData);
-  	    context.putImageData(canvasData, 0, 0); // at coords 0,0
-  }
-  
-  document.getElementById('sketch').onclick=setSketch;
-  function setSketch()
-  {
-	    canvas.width  = img.width;
-  	    canvas.height = img.height;
-  	    var context = canvas.getContext("2d");
-  	    context.drawImage(img, 0, 0);
-  	    var canvasData = context.getImageData(0, 0, canvas.width, canvas.height);  
-  	    canvasData=sketch(canvasData);
-  	    context.putImageData(canvasData, 0, 0); // at coords 0,0
-  }
-  document.getElementById('gausian').onclick=setGausian;
-  function setGausian()
-  {
-	    canvas.width  = img.width;
-  	    canvas.height = img.height;
-  	    var context = canvas.getContext("2d");
-  	    context.drawImage(img, 0, 0);
-  	    var canvasData = context.getImageData(0, 0, canvas.width, canvas.height);
-  	         var data=gaussBlur(canvasData.data,canvas.width,canvas.height);
-  	       canvasData.data=data;
-  	  //  canvasData=gausian(canvasData);
-  	    context.putImageData(canvasData, 0, 0); // at coords 0,0
-  }
-  
-  document.getElementById('spread').onclick=setSpread;
-  function setSpread()
-  {
-  	    canvas.width  = img.width;
-  	    canvas.height = img.height;
-  	    var context = canvas.getContext("2d");
-  	    context.drawImage(img, 0, 0);
-  	    var canvasData = context.getImageData(0, 0, canvas.width, canvas.height);  
-  	    canvasData=spread(canvasData);
-  	    context.putImageData(canvasData, 0, 0); // at coords 0,0
-  }
-  document.getElementById('gray').onclick=setGray;
-  function setGray()
-  {
-  	    canvas.width  = img.width;
-  	    canvas.height = img.height;
-  	    var context = canvas.getContext("2d");
-  	    context.drawImage(img, 0, 0);
-  	    var canvasData = context.getImageData(0, 0, canvas.width, canvas.height);  
-  	    canvasData=gray(canvasData); 
-  	    context.putImageData(canvasData, 0, 0); // at coords 0,0
-  }
-  document.getElementById('old').onclick=setOld;
-  function setOld()
-  {
-  	    canvas.width  = img.width;
-  	    canvas.height = img.height;
-  	    var context = canvas.getContext("2d");
-  	    context.drawImage(img, 0, 0);
-  	    var canvasData = context.getImageData(0, 0, canvas.width, canvas.height);  
-         canvasData=old(canvasData);
-  	    context.putImageData(canvasData, 0, 0); // at coords 0,0
-  }
-  document.getElementById('frozen').onclick=setFrozen;
-  function setFrozen()
-  {
-  	    canvas.width  = img.width;
-  	    canvas.height = img.height;
-  	    var context = canvas.getContext("2d");
-  	    context.drawImage(img, 0, 0);
-  	    var canvasData = context.getImageData(0, 0, canvas.width, canvas.height);  
-  	    canvasData=frozen(canvasData);
-  	    context.putImageData(canvasData, 0, 0); // at coords 0,0
-  }
-  document.getElementById('casting').onclick=setCasting;
-  function setCasting()
-  {
-  	    canvas.width  = img.width;
-  	    canvas.height = img.height;
-  	    var context = canvas.getContext("2d");
-  	    context.drawImage(img, 0, 0);
-  	    var canvasData = context.getImageData(0, 0, canvas.width, canvas.height);  
-  	    canvasData=casting(canvasData);
-  	    context.putImageData(canvasData, 0, 0); // at coords 0,0
-  }
-  document.getElementById('cameo').onclick=setCameo;
-  function setCameo()
-  {
-  	    canvas.width  = img.width;
-  	    canvas.height = img.height;
-  	    var context = canvas.getContext("2d");
-  	    context.drawImage(img, 0, 0);
-  	    var canvasData = context.getImageData(0, 0, canvas.width, canvas.height);  
-  	    canvasData=cameo(canvasData);
-  	    context.putImageData(canvasData, 0, 0); // at coords 0,0
-  }
-  document.getElementById('comic').onclick=setComic;
-  function setComic()
-  {
-  	    canvas.width  = img.width;
-  	    canvas.height = img.height;
-  	    var context = canvas.getContext("2d");
-  	    context.drawImage(img, 0, 0);
-  	    var canvasData = context.getImageData(0, 0, canvas.width, canvas.height);  
-  	   canvasData=comic(canvasData);
-  	    context.putImageData(canvasData, 0, 0); // at coords 0,0
-  }
-  document.getElementById('black').onclick=setBlack;
-  function setBlack()
-  {
-  	    canvas.width  = img.width;
-  	    canvas.height = img.height;
-  	    var context = canvas.getContext("2d");
-  	    context.drawImage(img, 0, 0);
-  	    var canvasData = context.getImageData(0, 0, canvas.width, canvas.height);  
-  	    canvasData=black(canvasData);
-  	    context.putImageData(canvasData, 0, 0); // at coords 0,0
-  }
-  document.getElementById('negatives').onclick=setNegatives;
-  function setNegatives()
-  {
-  	    canvas.width  = img.width;
-  	    canvas.height = img.height;
-  	    var context = canvas.getContext("2d");
-  	    context.drawImage(img, 0, 0);
-  	    var canvasData = context.getImageData(0, 0, canvas.width, canvas.height);  
-  	    canvasData=negatives(canvasData);
-  	    context.putImageData(canvasData, 0, 0); // at coords 0,0
-  }
-  
 </script>
-</body>
 </html>
