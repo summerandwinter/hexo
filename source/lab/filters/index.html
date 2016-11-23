@@ -25,7 +25,7 @@ body {
   min-height: 200px;
 }
 
-.body canvas {
+.canvas-container canvas {
   margin: 0 auto;
   display: block;
   border: 1px solid rgba(0, 0, 0, 0.5);
@@ -73,11 +73,14 @@ small {
   float: right;
   overflow: auto;
 }
-
-.container {
-  max-width: 640px;
-  min-height: 480px;
-  margin: 20px auto;
+.canvas-container {
+  left:50%;
+  top: 50%;
+  margin-left: -320px;
+  margin-top: 240px;
+  width: 640px;
+  height: 480px;
+  margin: 180px auto 0px;
 }
 
 .grid {
@@ -91,48 +94,55 @@ small {
   -moz-background-size: 40px 40px;
   background-size: 40px 40px;
 }
+.original-container{position: absolute;left:0px; top:0px;   width: 320px;
+  height: 240;}
+.original-container img{margin:0px auto;max-width: 320px;max-height: 240px;}
+.help-container{margin: 0px 10px 0px 30px}
+</style>
 
-  </style>
 </head>
 <body>
 
   <div id="lab" class="grid">
-
-     <div class="container"><canvas id="myCanvas" >Gray Filter</canvas></div> 
-
+     <div class="original-container"><img id="origin" src=""/></div>
+     <div class="lab-contraner">
+     <div class="canvas-container"><canvas id="myCanvas" width="640" height="480">Gray Filter</canvas></div> 
+     </div>
   </div>
   <div>
   <div id="help">
+    <div class="help-container">
     <h1>Image Filters</h1>
     <p>Author <a href="http://sanyeao.me/">Winter</a></p>
     <h2>Interactions:</h2>
     <ul>
-      <li>Upload a image and select the filters.</li>
+      <li>Upload a image and select your favorite filters.</li>
     </ul>
     <div class="bt">
-    <form id="uf">
-        <input type="file" name="file" vale="select a image" id="up-button"/>
-        
-    </form>
-    <input type="button" id="download" value="download"/>
+    <div><input type="file" name="file" vale="select a image" id="up-button"/></div>
     <ul>
-    <span><li><input type="radio" value="spread" id="spread" name="filter" onchange="change(this);" /><label for="spread">spread</label></span></li>
-    <span><li><input type="radio" id="gray" checked="checked" name="filter" onchange="change(this);" /><label for="gray">gray</label></span></li>
-    <span><li><input type="radio" id="comic" name="filter" onchange="change(this);" /><label for="comic">comic</label></span></li>
-    <span><li><input type="radio" id="old" name="filter" onchange="change(this);" /><label for="old">old</label></span></li>
-    <span><li><input type="radio" id="negatives" name="filter" onchange="change(this);" /><label for="negatives">negatives</label></span></li>
-    <span><li><input type="radio" id="black" name="filter" onchange="change(this);" /><label for="black">black</label></span></li>
-    <span><li><input type="radio" id="cameo" name="filter" onchange="change(this);" /><label for="cameo">cameo</label></span></li>
-    <span><li><input type="radio" id="casting" name="filter" onchange="change(this);" /><label for="casting">casting</label></span></li>
-    <span><li><input type="radio" id="frozen" name="filter" onchange="change(this);" /><label for="frozen">frozen</label></span></li>
-    <span><li><input type="radio" id="sketch" name="filter" onchange="change(this);" /><label for="sketch">sketch</label></span></li>
-    <span><li><input type="radio" id="gausian" name="filter" onchange="change(this);" /><label for="gausian">gausian</label></span></li>
-    <span><li><input type="radio" id="opacity" name="filter" onchange="change(this);" /><label for="opacity">opacity</label></span></li>
-    <span><li><input type="radio" id="bright" name="filter" onchange="change(this);" /><label for="bright">bright</label></span></li>
-    <span><li><input type="radio" id="softblow" name="filter" onchange="change(this);" /><label for="softblow">softblow</label></span></li>
+      <li>Download the rendered image.</li>
+    </ul> 
+    <div><input type="button" id="download" value="download"/></div>
+    <ul>
+    <li><span><input type="radio" value="spread" id="spread" name="filter" onchange="change(this);" /><label for="spread">Spread</label></span></li>
+    <li><span><input type="radio" id="gray" checked="checked" name="filter" onchange="change(this);" /><label for="gray">Gray</label></span></li>
+    <li><span><input type="radio" id="comic" name="filter" onchange="change(this);" /><label for="comic">Comic</label></span></li>
+    <li><span><input type="radio" id="old" name="filter" onchange="change(this);" /><label for="old">Old</label></span></li>
+    <li><span><input type="radio" id="negatives" name="filter" onchange="change(this);" /><label for="negatives">negatives</label></span></li>
+    <li><span><input type="radio" id="black" name="filter" onchange="change(this);" /><label for="black">Black</label></span></li>
+    <li><span><input type="radio" id="cameo" name="filter" onchange="change(this);" /><label for="cameo">Cameo</label></span></li>
+    <li><span><input type="radio" id="casting" name="filter" onchange="change(this);" /><label for="casting">Casting</label></span></li>
+    <li><span><input type="radio" id="frozen" name="filter" onchange="change(this);" /><label for="frozen">Frozen</label></span></li>
+    <li><span><input type="radio" id="sketch" name="filter" onchange="change(this);" /><label for="sketch">Sketch</label></span></li>
+    <li><span><input type="radio" id="gausian" name="filter" onchange="change(this);" /><label for="gausian">Gausian</label></span></li>
+    <li><span><input type="radio" id="opacity" name="filter" onchange="change(this);" /><label for="opacity">Opacity</label></span></li>
+    <li><span><input type="radio" id="bright" name="filter" onchange="change(this);" /><label for="bright">Bright</label></span></li>
+    <li><span><input type="radio" id="softblow" name="filter" onchange="change(this);" /><label for="softblow">Softblow</label></span></li>
     </ul>
   </div>
-    <p>Tutorial by &nbsp;&nbsp;<a href="http://sanyecao.me" target="_blank">sanyecao</a>&nbsp;&nbsp;©2013&nbsp;&nbsp;</p>
+    <p>Design by &nbsp;<a href="http://sanyecao.me" target="_blank">sanyecao</a>&nbsp;&copy; <script>document.write(new Date().getFullYear());</script> <p>
+    </div>
   </div>
 
 </body>
@@ -228,7 +238,9 @@ var render = function(canvasData){
 fileBtn.onchange = function(file) {
     var reader = new FileReader();
     reader.readAsDataURL(fileBtn.files[0]);
+
     reader.onload = function () {
+        $("#origin").src = reader.result;
         img.src = reader.result;
     }
 } 
@@ -248,6 +260,7 @@ download.onclick=function() {
 }
 window.onload = function() {
     img.src = 'original.jpg';
+     $("#origin").src = 'original.jpg';
     img.onload = function(){
     // re-size the canvas deminsion
     setCanvasSize(img.width,img.height) ;
