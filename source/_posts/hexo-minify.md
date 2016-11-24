@@ -108,5 +108,3 @@ hexo generate
 gulp
 hexo deploy
 ```
-
-<div><div style="text-align:center;color:#ccc;font-size:14px">------ E O F ------</div></div>

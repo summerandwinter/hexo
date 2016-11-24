@@ -1,0 +1,38 @@
+# Lang
+language: zh-CN
+
+# Header
+menu:
+  主页: /
+  归档: /archives
+  关于: /about
+  订阅: /atom.xml
+
+# Content
+fancybox: false
+
+#Copyright
+copyright: false
+
+#EOF line
+eof: "End Of File"
+
+# Miscellaneous
+google_analytics:
+favicon: /favicon.ico
+twitter:
+google_plus:
+fb_admins:
+fb_app_id:
+
+
+# Profile
+nickname: Winter`s Notes
+description: 岁月静好
+links:
+  笔记: /archives
+
+
+# Info
+archive_footer_content: "<div class='end-of-file'>All is well</div>"
+post_footer_content: "<div class='end-of-file'>Live Happy Love Hard</div>"

@@ -24,17 +24,17 @@ permalink: a-pure-css3-android-animate
 ![css3-android-animate](http://sanyecao.qiniudn.com/assets/images/lab/css3-android-animate.jpg)
 
 
-（<span style="color: #339966;">**新版示例，已兼容safari。**</span>）
+（**新版示例，已兼容safari。**）
 [查看示例][demo]
 [demo]:   http://sanyecao.me/lab/css3-android-robot/index.html "css3实现的仿安卓开机动画示例"
 
-<span style="color: #339966;">经过测试，safari没有动画效果的原因是不支持伪元素after,before的动画效果。用DIV替换掉伪元素后safari下运行正常。</span>
+经过测试，safari没有动画效果的原因是不支持伪元素after,before的动画效果。用DIV替换掉伪元素后safari下运行正常。
 
-<span style="color: #ff0000;">**特别声明此demo为博主原创，可以下载免费使用。**</span>
+**特别声明此demo为博主原创，可以下载免费使用。**
 
 下面是源码
 
-<span style="color: #339966;">**html:**</span>
+**html:**
 ```html
 <!DOCTYPE html>
 <html>
@@ -53,7 +53,7 @@ permalink: a-pure-css3-android-animate
 </body>
 </html>
 ```
-<span style="color: #339966;">**css:**</span>
+**css:**
 ```css
 .android {
 	position: relative;
