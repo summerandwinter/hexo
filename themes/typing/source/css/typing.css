@@ -1092,6 +1092,22 @@ em {
 	text-align: center
 }
 
+.article .article-toc{
+  width: 20%;
+  position: fixed;
+  left: 80%;
+  top: 100px;
+}
+
+.article .article-toc .nav{
+  font-size: .6em;
+}
+
+.article .article-toc ol {
+  list-style: none;
+  margin-left: 1.9em;
+}
+
 .article .article-entry {
 	word-break: break-word
 }
@@ -1367,6 +1383,10 @@ pre .javascript .function,pre .keyword {
 		color: $111
 	}
 
+  .article .article-toc{
+    display: none;
+  }
+
 	.archive-container .archive-footer,.archive-container .post-footer {
 		padding: 40px
 	}
@@ -1402,6 +1422,10 @@ pre .javascript .function,pre .keyword {
 	.footer,.footer-content {
 		font-size: 100%
 	}
+  
+  .article .article-toc{
+    display: none;
+  }
 
 	.archive-container,.archive-footer,.article,.comments,.home .content,.post-footer {
 		width: 90%

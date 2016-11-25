@@ -17,6 +17,10 @@ copyright: false
 #EOF line
 eof: "End Of File"
 
+# Table Of Contents
+toc:
+  enable: false
+
 # Miscellaneous
 google_analytics:
 favicon: /favicon.ico
