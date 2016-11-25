@@ -21,9 +21,9 @@ permalink_defaults:
 # Directory
 source_dir: source
 public_dir: public
-tag_dir: tags
+tag_dir: tag
 archive_dir: archives
-category_dir: categories
+category_dir: category
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
@@ -74,9 +74,30 @@ theme: typing
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
+- type: git
   repo: https://github.com/summerandwinter/summerandwinter.github.io.git
   branch: master
+- type: baidu_url_submitter
+
+#baidu_url_submit
+baidu_url_submit:
+  count: 5 ## 比如3，代表提交最新的三个链接
+  host: sanyecao.me ## 在百度站长平台中注册的域名
+  token: TiF0p7986IFYg17b ## 请注意这是您的秘钥， 请不要发布在公众仓库里!
+  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
+
+# hexo sitemap网站地图
+sitemap:
+  path: sitemap.xml
+
+#Badidu sitemap  
+baidusitemap:
+  path: baidusitemap.xml
+#nofollow
+nofollow:
+  enable: true
+  exclude:
+    - sanyecao.me
 
 #Feed Atom
 feed:

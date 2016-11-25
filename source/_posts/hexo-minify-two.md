@@ -10,6 +10,8 @@ categories:
 ---
 
 前面介绍了一种压缩hexo页面的方法，通过gulp配合它的插件来实现，我们还可以通过hexo插件（Hexo-all-minifier）来实现。
+通过插件的方式会在`generate`时对html，css，js，图片等进行压缩，编译的时间会比较长，建议使用[gulp方式][gulp-minifier]实现。
+[gulp-minifier]:   hexo-minify.html "Hexo优化方案 gulp插件静态资源压缩"
 <!--more-->
 # 安装
 

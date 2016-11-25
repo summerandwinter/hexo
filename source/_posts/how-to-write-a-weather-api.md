@@ -119,7 +119,7 @@ permalink: how-to-write-a-weather-api
 
 获取城市代码的方法：
 
-**<span style="color: #339966;">1.首先获取省份列表</span>**
+**1.首先获取省份列表**
 
 http://www.weather.com.cn/data/city3jdata/china.html
 
@@ -132,7 +132,7 @@ http://www.weather.com.cn/data/city3jdata/china.html
 	10119: “江苏”,
 }	
 ```
-<span style="color: #339966;">**2.通过上面获得的省份代码获取城市列表：**</span>
+**2.通过上面获得的省份代码获取城市列表：**
 
 如江苏的城市代码为：10119，通过下面的链接可以获得江苏省的城市列表
 
@@ -145,7 +145,7 @@ http://www.weather.com.cn/data/city3jdata/provshi/10119.html
 	01: “南京”,
 }
 ```
-**<span style="color: #339966;">3.获取城市下的区域信息</span>**
+**3.获取城市下的区域信息**
 
 通过上一步可获取城市代码 如：南京为 01
 
@@ -165,7 +165,7 @@ http://www.weather.com.cn/data/city3jdata/station/**1011901**.html
 	07: “浦口”
 } 
 ```
-<span style="color: #339966;">**4.获取区域代码**</span>
+**4.获取区域代码**
 
 把上面获得的区域代码如：**01**（代表南京市区） 接到第三步获得的江苏省南京市的代码 **1011901**
 

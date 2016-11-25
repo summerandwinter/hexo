@@ -31,7 +31,7 @@ html5+css3的出现给前端开发者提供了更多的可能性，以前很多�
 **特别声明此demo为博主原创，可以下载免费使用。**
 话不多说，直接贴源码：
 **css:**
-···css
+```css
 *{
 margin:0;
 padding:0;
@@ -241,50 +241,50 @@ display: block;
 
 <html>
 <head>
-<meta charset=“utf-8” />
+<meta charset="utf-8" />
 <title>CSS3 Animated Navigation Menu | Tutorialzine Demo</title>
 <!– Our CSS stylesheet file –>
-<link rel=“stylesheet” href=“assets/css/styles.css” />
+<link rel="stylesheet" href="assets/css/styles.css" />
 <!– Including the Lobster font from Google’s Font Directory –>
-<link rel=“stylesheet” href=“http://fonts.googleapis.com/css?family=Lobster“ />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster" />
 <!– Enabling HTML5 support for Internet Explorer –>
 <!–[if lt IE 9]>
-<script src=“http://html5shiv.googlecode.com/svn/trunk/html5.js“></script>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]–>
 </head>
 <body>
-<form id=“searchform”>
-<input type=“search” id=“s” placeholder=“Search”>
+<form id="searchform">
+<input type="search" id="s" placeholder="Search">
 </form>
 <nav>
-<ul class=“fancyNav”>
-<li id=“home”><a href=“#home” class=“homeIcon”><div class=“home-top”></div><div class=“home-top-r”></div><div class=“home-door-l”></div><div class=“home-door-r”></div></a></li>
-<li id=“news”><a href=“#news”>前端设计</a>
+<ul class="fancyNav">
+<li id="home"><a href="#home" class="homeIcon"><div class="home-top"></div><div class="home-top-r"></div><div class="home-door-l"></div><div class="home-door-r"></div></a></li>
+<li id="news"><a href="#news">前端设计</a>
 <ul>
-<li><a href=“”>HTML5</a></li>
-<li><a href=“”>CSS3</a></li>
-<li><a href=“”>JQUERY</a></li>
+<li><a href="">HTML5</a></li>
+<li><a href="">CSS3</a></li>
+<li><a href="">JQUERY</a></li>
 </ul>
 </li>
-<li id=“about”><a href=“#about”>编程语言</a>
+<li id="about"><a href="#about">编程语言</a>
 <ul>
-<li><a href=“”>PHP</a></li>
-<li><a href=“”>JAVA</a></li>
-<li><a href=“”>wordpress</a></li>
-<li><a href=“”>CodeIgniter</a></li>
+<li><a href="">PHP</a></li>
+<li><a href="">JAVA</a></li>
+<li><a href="">wordpress</a></li>
+<li><a href="">CodeIgniter</a></li>
 </ul>
 </li>
-<li id=“services”><a href=“#services”>生活</a>
+<li id="services"><a href="#services">生活</a>
 </li>
-<li id=“contact”><a href=“#contact”>留言板</a>
+<li id="contact"><a href="#contact">留言板</a>
 </li>
-<form id=“searchform”>
-<input type=“search” id=“s” placeholder=“Search”>
+<form id="searchform">
+<input type="search" id="s" placeholder="Search">
 </form>
-<div style=“display:block;clear:both;”></div>
+<div style="display:block;clear:both;"></div>
 </ul>
 </nav>
-<footer>Tutorial by &nbsp;&nbsp;<a href=“http://sanyecao.me“ target=“_blank”>sanyecao</a>&nbsp;&nbsp;©2013</footer>
+<footer>Tutorial by &nbsp;&nbsp;<a href="http://sanyecao.me" target="_blank">sanyecao</a>&nbsp;&nbsp;©2013</footer>
 </body>
 </html> 
 ```

@@ -5,8 +5,10 @@ language: zh-CN
 menu:
   主页: /
   归档: /archives
+  分类: /category
+  标签: /tag
   关于: /about
-  订阅: /atom.xml
+# 订阅: /atom.xml
 
 # Content
 fancybox: false
@@ -19,7 +21,7 @@ eof: "End Of File"
 
 # Table Of Contents
 toc:
-  enable: false
+  enable: true
 
 # Miscellaneous
 google_analytics:

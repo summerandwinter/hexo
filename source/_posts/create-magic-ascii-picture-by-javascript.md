@@ -52,23 +52,26 @@ for (h = 0; h < imgDataHeight; h += 12) {
 
 不同的RGB空间，[灰阶的计算公式](http://www.haogongju.net/art/1770844 "灰阶的计算公式")有所不同，常见的几种RGB空间的计算灰阶的公式如下：
 
-## 简化 sRGB IEC61966-2.1 [gamma=2.20]
+**简化 sRGB IEC61966-2.1 [gamma=2.20]**
+```
+Gray = (R^2.2 * 0.2126  + G^2.2  * 0.7152  + B^2.2  * 0.0722)^(1/2.2)
+```
+**Adobe RGB (1998) [gamma=2.20]**
 
-<pre>Gray = (R^2.2 * 0.2126  + G^2.2  * 0.7152  + B^2.2  * 0.0722)^(1/2.2)</pre>
+```
+Gray = (R^2.2 * 0.2973  + G^2.2  * 0.6274  + B^2.2  * 0.0753)^(1/2.2)
+```
 
-## Adobe RGB (1998) [gamma=2.20]
+**Apple RGB [gamma=1.80]**
+```
+Gray = (R^1.8 * 0.2446  + G^1.8  * 0.6720  + B^1.8  * 0.0833)^(1/1.8)
+```
 
-<pre>Gray = (R^2.2 * 0.2973  + G^2.2  * 0.6274  + B^2.2  * 0.0753)^(1/2.2)</pre>
-
-## Apple RGB [gamma=1.80]
-
-<pre>Gray = (R^1.8 * 0.2446  + G^1.8  * 0.6720  + B^1.8  * 0.0833)^(1/1.8)</pre>
-
-## ColorMatch RGB [gamma=1.8]
-
-<pre>Gray = (R^1.8 * 0.2750  + G^1.8  * 0.6581  + B^1.8  * 0.0670)^(1/1.8)</pre>
-
-## 简化 KODAK DC Series Digital Camera [gamma=2.2]
+**ColorMatch RGB [gamma=1.8]**
+```
+Gray = (R^1.8 * 0.2750  + G^1.8  * 0.6581  + B^1.8  * 0.0670)^(1/1.8)
+```
+**简化 KODAK DC Series Digital Camera [gamma=2.2]**
 
 ```javascript
 // 根据rgb值计算灰度  

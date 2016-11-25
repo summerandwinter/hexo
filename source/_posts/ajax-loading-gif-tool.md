@@ -64,10 +64,10 @@ curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 0);
 把上述代码保存为ajaxload.php文件**用下面的代码**
 
 ```php
-var url = ‘http://bloglaotou.duapp.com/ajaxloader.php?file=cache/‘+c1+’/‘+c2+’/‘+c3+’/‘+c4+’/‘+c5+’/‘+c6+’/‘+$$(‘type’).value+’-‘+trans+’.gif’;
+var url = ‘http://laotou.sinaapp.com/ajaxloader.php?file=cache/‘+c1+’/‘+c2+’/‘+c3+’/‘+c4+’/‘+c5+’/‘+c6+’/‘+$$(‘type’).value+’-‘+trans+’.gif’;
 ```
 
-> 注：`http://bloglaotou.duapp.com` 替换成你自己的ajaxloader.php文件的地址。
+> 注：`http://laotou.sinaapp.com` 替换成你自己的ajaxloader.php文件的地址。
 
 替换原网站script.js文件中的
 
@@ -103,4 +103,4 @@ echo $chData;
 exit;//结束程序
 } 
 ```
->注：`http://bloglaotou.duapp.com` 替换成你自己的ajaxloader.php文件的地址。
+>注：`http://laotou.sinaapp.com` 替换成你自己的ajaxloader.php文件的地址。

@@ -24,10 +24,20 @@
       <% } %>
 
     </div>
+    
     <% if (theme.toc.enable) { %>
-    <div class="article-toc typo">
-    <%- toc(page.content, { "class": "nav", list_number: page.toc_number }) %>
-    </div>
+    <%
+     var toccontent = toc(page.content, { "class": "", list_number: page.toc_number });
+    %>
+    <% if (toccontent.length > 1) { %>
+    <aside id="article-toc" role="navigation" class="article-toc">
+      <div id="article-toc-inner">
+        <strong class="sidebar-title">目录</strong>
+          <%- toc(page.content, { "class": "", list_number: page.toc_number }) %>   
+          <a href="#" id="article-toc-top">回到顶部</a>
+        </div>
+    </aside>
+    <% } %>
     <% } %>
     <footer class="article-footer">
       <ul class="article-meta">
