@@ -1,11 +1,11 @@
 ---
-title: wordpress添加自定义默认本地头像
+title: WordPress添加自定义默认本地头像
 tags:
-  - wordpress
+  - WordPress
   - 本地头像
 id: 234
 categories:
-  - wordpress
+  - WordPress
 date: 2013-09-04 23:58:20
 permalink: wordpress-add-local-head
 ---

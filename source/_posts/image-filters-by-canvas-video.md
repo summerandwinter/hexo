@@ -1,8 +1,9 @@
 ---
 title: 用Canvas实现图片滤镜效果详解之视频效果
 tags:
-  - html5
-  - javascript
+  - HTML5
+  - JavaScript
+  - Canvas
   - 图像滤镜
   - 滤镜
   - 视频滤镜

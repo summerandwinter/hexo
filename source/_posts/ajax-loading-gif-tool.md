@@ -1,11 +1,9 @@
 ---
 title: Ajaxload动态加载动画生成工具的实现（ajaxload的本地移植）
 tags:
-  - ajax
-  - load
+  - Ajax
+  - Loading
   - 动态加载
-  - 工具
-  - 本地移植
 id: 655
 categories:
   - 前端设计

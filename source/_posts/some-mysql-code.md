@@ -1,13 +1,13 @@
 ---
 title: 一些MySQL代码片段
-description: 记录一些实用的mysql代码片段
+description: 记录一些实用的MySQL代码片段
 tags:
-  - mysql
+  - MySQL
   - 代码片段
   - 字段合并
 id: 659
 categories:
-  - mysql
+  - MySQL
 date: 2013-11-14 16:27:49
 permalink: some-mysql-code
 ---

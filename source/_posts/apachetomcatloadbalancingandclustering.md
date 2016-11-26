@@ -6,7 +6,7 @@ categories:
 date: 2016-02-19 14:49:01
 tags:
   - Apache
-  - tomcat
+  - Tomcat
   - 负载均衡
   - 集群
 permalink: apachetomcatloadbalancingandclustering

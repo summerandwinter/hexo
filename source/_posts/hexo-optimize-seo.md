@@ -2,8 +2,8 @@
 title: Hexo优化方案 搜索引擎优化
 date: 2016-11-25 11:25:46
 tags:
- - hexo
- - hexo优化
+ - Hexo
+ - Hexo优化
  - SEO
 categories:
  - Hexo
@@ -69,9 +69,16 @@ canonical 是 Google、雅虎、微软等搜索引擎一起推出的一个标签
 ## 实现
 在主题目录种找到关于head的模板在`<head>`之间加入
 ```
-<link rel="canonical" href="<%= page.permalink %>">
+ <% 
+    var base_url = config.url;
+    if (config.url.charAt(config.url.length - 1) !== '/') base_url += '/';
+    var canonical_url = base_url + page.canonical_path.replace('index.html', '');
+ %>
+ <link rel="canonical" href="<%= canonical_url %>">
 ```
-> PS:这里给出的代码是ejs方式，其他方式需要修改表达式`page.permalink`不用变
+> PS:这里给出的代码是ejs方式，其他方式需要修改表达式，有[插件][canonical-plugin]的可以实现这个功能，但是个人觉得太麻烦，所以直接参考插件在主题里实现了。
+
+[canonical-plugin]:   https://github.com/HyunSeob/hexo-auto-canonical "hexo-auto-canonical"
 
 # 添加robots.txt
 
@@ -127,16 +134,16 @@ npm install hexo-baidu-url-submit --save
 ```yml
 baidu_url_submit:
   count: 3 ## 比如3，代表提交最新的三个链接
-  host: www.hui-wang.info ## 在百度站长平台中注册的域名
+  host: sanyecao.me ## 在百度站长平台中注册的域名
   token: your_token ## 请注意这是您的秘钥， 请不要发布在公众仓库里!
   path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
 ```
 其次，记得查看_config.ym文件中url的值， 必须包含是百度站长平台注册的域名（一般有www）， 比如:
 ```yml
 # URL
-url: http://www.hui-wang.info
+url: http://sanyecao.me
 root: /
-permalink: :year/:month/:day/:title
+permalink: :title.html
 ```
 最后，加入新的deployer:
 ```yml

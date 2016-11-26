@@ -1,9 +1,9 @@
 ---
 title: CSS3 Transform的perspective属性
 tags:
-  - css3
+  - CSS3
   - perspective
-  - transform
+  - Transform
 id: 305
 categories:
   - CSS3

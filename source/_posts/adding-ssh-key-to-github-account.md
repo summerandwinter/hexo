@@ -5,10 +5,10 @@ date: 2016-11-20 09:23:06
 update: 2016-11-20 14:00:00ß
 comment: true
 tags:
-- GitHub
-- SSH key
+  - GitHub
+  - SSH key
 categories:
-- GitHub
+  - GitHub
 permalink: adding-ssh-key-to-github-account
 ---
 在使用Git的过程中我们常常要与中央仓库进行同步，Git提供两种同步方式https和ssh方式。两种方式各有优劣，https方式使用简单，但是每次都需要输入密码，而且速度会比较慢，所以我们更多的是使用ssh方式同步，这种方式安全性更好，不需要每次都输入密码，更重要的是比https方式速度要快，GitHub在国内的访问不稳定的国情下这点尤为重要，下面介绍了通过ssh方式同步需要做的一些前期工作。

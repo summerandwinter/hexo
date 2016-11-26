@@ -1,12 +1,12 @@
 ---
 title: MyBatis学习笔记
-description: 记录一些mybatis学习过程中经常用到的知识点，很简单常用到但是又记不住，做个记录后面慢慢补充
+description: 记录一些MyBatis学习过程中经常用到的知识点，很简单常用到但是又记不住，做个记录后面慢慢补充
 id: 666
 categories:
   - Java
 date: 2013-12-17 15:30:59
 tags:
-  - mybatis
+  - MyBatis
 permalink: mybatis-study-note
 ---
 

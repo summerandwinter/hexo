@@ -17,7 +17,7 @@ fancybox: false
 copyright: false
 
 #EOF line
-eof: "End Of File"
+eof: "END"
 
 # Table Of Contents
 toc:
@@ -34,11 +34,11 @@ fb_app_id:
 
 # Profile
 nickname: Winter`s Notes
-description: 岁月静好
+description: 岁月静好 现世安稳
 links:
-  笔记: /archives
+  笔记本: /archives
 
 
 # Info
-archive_footer_content: "<div class='end-of-file'>All is well</div>"
+archive_footer_content: "<div class='end-of-file'>Live Happy Love Hard</div>"
 post_footer_content: "<div class='end-of-file'>Live Happy Love Hard</div>"

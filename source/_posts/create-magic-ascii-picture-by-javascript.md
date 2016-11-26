@@ -1,10 +1,11 @@
 ---
-title: 通过javascript把图片转化为字符画
+title: 通过JavaScript把图片转化为字符画
 description: 利用html5中的canvas技术和计算机图形学的原理实现把图片转化为字符画
 tags:
-  - javascript
+  - JavaScript
   - 图像转化
-  - 字符画，canvas
+  - 字符画
+  - Canvas
 id: 546
 categories:
   - 前端设计

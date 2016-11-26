@@ -819,13 +819,13 @@ template {
 
 
 
-.archive-container hr,.archive-footer hr,.article .article-footer hr,.article hr,.category-container hr,.home hr,.post-footer hr,.tag-container hr {
+.article-container hr,.archive-container hr,.archive-footer hr,.article .article-footer hr,.article hr,.category-container hr,.home hr,.post-footer hr,.tag-container hr {
 	height: 1px;
 	border: 0;
 	background-image: -webkit-linear-gradient(0deg,transparent,#d5d5d5,transparent)
 }
 
-.archive-container .header .main-nav-link,.article .header .main-nav-link,.category-container .header .main-nav-link,.tag-container .header .main-nav-link {
+.article-container .header .main-nav-link,.archive-container .header .main-nav-link,.article .header .main-nav-link,.category-container .header .main-nav-link,.tag-container .header .main-nav-link {
 	margin-right: 10px;
 	color: #777;
 	padding-bottom: 5px;
@@ -869,7 +869,7 @@ em {
 .archive-footer,.post-footer {
 	width: 60%;
 	margin: 0 auto;
-	padding: 50px 0;
+	padding: 0 0;
 	color: #cacdd0
 }
 
@@ -963,26 +963,31 @@ em {
 	display: inline-block;
 	margin: 0 5px
 }
+.home .links li a{
+  color: #222;
+}
 
-.archive-container,.category-container,.tag-container {
+.home .links li a:hover{
+  color: #0E83D0;
+  text-decoration: none;
+}
+
+.article-container,.archive-container,.category-container,.tag-container {
 	width: 60%;
 	margin: 0 auto;
 	position: relative;
-	line-height: 1;
-	text-align: left;
-	font-size: 16px;
-	padding-top: 30px
 }
 
-.archive-container article,.category-container article,.tag-container article {
+
+.article-container article,.archive-container article,.category-container article,.tag-container article {
 	margin-bottom: 15px
 }
 
-.archive-container a,.archive-container a:hover,.category-container a,.category-container a:hover,.tag-container a,.tag-container a:hover {
+.article-container a,.archive-container a,.archive-container a:hover,.category-container a,.category-container a:hover,.tag-container a,.tag-container a:hover {
 	border: 0
 }
 
-.archive-container .header,.category-container .header,.tag-container .header {
+.article-container .header,.archive-container .header,.category-container .header,.tag-container .header {
 	font-size: 18px
 }
 
@@ -1000,9 +1005,9 @@ em {
 	margin: 0
 }
 
-.archive-container hr,.category-container hr,.tag-container hr {
+.article-container hr,.archive-container hr,.category-container hr,.tag-container hr {
 	width: 100%;
-	margin: 20px 0 40px;
+	margin: 0px 0 20px;
 	background-image: -webkit-linear-gradient(0deg,#d5d5d5,#d5d5d5,transparent)
 }
 
@@ -1034,16 +1039,16 @@ em {
 }
 
 .article {
-	width: 60%;
+	width: 100%;
 	margin: 0 auto
 }
 
-.article .header {
+.container .header {
 	font-size: 18px;
 	padding-top: 20px
 }
 
-.article .header .main-nav-link {
+.container .header .main-nav-link {
 	border: 0
 }
 
@@ -1074,12 +1079,12 @@ em {
 	text-align: center
 }
 
-.article .article-toc{
+.article-toc{
   width: 17%;
   position: fixed;
   left: 83%;
-  top: 70px;
-  font-size: 0.8em;
+  top: 76px;
+  font-size: 100%;
 }
 #article-toc-inner:after, #article-toc-inner:before, .inner:after, .inner:before {
     content: "";
@@ -1097,22 +1102,23 @@ em {
     border-top: 1px solid #e3e3e3;
 }
 
-.article .article-toc a.toc-link {
+.article-toc a.toc-link {
     display: block;
     color: #444;
     text-decoration: none;
     position: relative;
     width: 100%;
+    font-size: .8em;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 
-.article .article-toc a.toc-link:hover {
+.article-toc a.toc-link:hover {
     color: #1094e8;
 }
 
-.article .article-toc ol {
+.article-toc ol {
   list-style: none;
   margin-left: 0px;
   margin-bottom: 0px;
@@ -1204,7 +1210,7 @@ em {
 
 .article .article-nav {
 	max-width: 100%;
-	margin-top: 50px;
+	margin-top: 20px;
 	font-size: 80%
 }
 
@@ -1235,7 +1241,7 @@ em {
 }
 
 .article .article-footer,.article .article-footer hr {
-	margin-top: 50px
+	margin-top: 20px
 }
 
 .article .article-meta {
@@ -1287,8 +1293,18 @@ em {
   white-space: nowrap;
   border-spacing: 4px 0;
 }
+.div-of-year{
+  font-size: 14px;
+  line-height: 34px;
+  color: #aaa;
+  display: table;
+  white-space: nowrap;
+  border-spacing: 4px 0;
+}
 .end-of-file:before,
-.end-of-file:after {
+.end-of-file:after,
+.div-of-year:before,
+.div-of-year:after {
   content: "";
   display: table-cell;
   width: 50%;
@@ -1451,7 +1467,9 @@ pre .javascript .function,pre .keyword {
 	body {
 		font-size: 16px
 	}
-
+.article-container{
+  width: 90%;
+}
 
 	.home {
 		color: #222
@@ -1461,26 +1479,33 @@ pre .javascript .function,pre .keyword {
 		color: $111
 	}
 
-  .article .article-toc{
+  .article-toc{
     display: none;
   }
 
 	.archive-container .archive-footer,.archive-container .post-footer {
-		padding: 40px
+		padding: 20px
 	}
 
 	.archive-container .archive-article-header>a,.archive-container .archive-article-header>h1 {
 		width: 100%
 	}
-    .article {
-	 	width: 90%;
-		margin: 0 auto
-    }
-	.article .article-entry img {
-		max-width: none;
-		width: 111%;
-        margin: 0 -5.5%;
-	}	
+  .article-toc{
+    display: none;
+  }
+
+  .article-container,.archive-container,.archive-footer,.article,.comments,.home .content,.post-footer {
+    width: 90%
+  }
+  .article {
+    width: 100%;
+    margin: 0 auto
+  }
+  .article .article-entry img {
+    max-width: none;
+    width: 111%;
+    margin: 0 0 0 -5.5%;
+  }
 
 }
 
@@ -1494,27 +1519,27 @@ pre .javascript .function,pre .keyword {
 	}
 
 	.archive-container .archive-footer,.archive-container .post-footer {
-		padding: 30px
+		padding: 20px
 	}
 
 	.footer,.footer-content {
 		font-size: 100%
 	}
   
-  .article .article-toc{
+  .article-toc{
     display: none;
   }
 
-	.archive-container,.archive-footer,.article,.comments,.home .content,.post-footer {
+  .article-container,.archive-container,.archive-footer,.article,.comments,.home .content,.post-footer {
 		width: 90%
 	}
-    .article {
-	 	width: 90%;
+  .article {
+	 	width: 100%;
 		margin: 0 auto
-    }
+  }
 	.article .article-entry img {
 		max-width: none;
 		width: 111%;
-        margin: 0 -5.5%;
+    margin: 0 0 0 -5.5%;
 	}
 

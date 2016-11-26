@@ -1,6 +1,7 @@
+<div class="article-container">
+<%- partial('_partial/header') %>
+<hr/>
 <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
-  <%- partial('_partial/header') %>
-  <hr/>
   <div class="article-inner">
   <div class="tag-cloud-title">
      目前共计<%- site.tags.length  %>个标签
@@ -11,5 +12,5 @@
   </div>
 
 </article>
-
+</div>
 

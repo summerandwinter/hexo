@@ -8,14 +8,12 @@
   <% } %>   
 <% } else if (is_archive()) { %>
   <footer id="footer" class="archive-footer footer">
-    <hr/>
     <div id="footerContent" class="footer-content">
     <%- markdown(theme.archive_footer_content) %>
     </div>
   </footer>      
 <% } else {%>
   <footer id="footer" class="post-footer footer">
-    <hr/>
     <div id="footerContent" class="footer-content">
         <%- markdown(theme.post_footer_content) %>
     </div>

@@ -1,9 +1,8 @@
 ---
-title: 一些纯css3写的公司logo
+title: 一些纯CSS3写的公司Logo
 tags:
-  - css3
-  - logo
-  - 纯css3
+  - CSS3
+  - Logo
 id: 394
 categories:
   - CSS3

@@ -1,8 +1,8 @@
 ---
 title: 纯CSS3打造的iPhone4
 tags:
-  - css3
-  - iphone
+  - CSS3
+  - iPhone
 id: 1
 categories:
   - CSS3

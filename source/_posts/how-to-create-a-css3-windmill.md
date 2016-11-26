@@ -1,7 +1,7 @@
 ---
-title: 如何用css3实现风车效果
+title: 如何用CSS3实现风车效果
 tags:
-  - css3
+  - CSS3
   - 动画
   - 风车
 id: 358

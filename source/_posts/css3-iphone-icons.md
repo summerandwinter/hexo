@@ -1,9 +1,9 @@
 ---
-title: 纯css制作的iphone图标
+title: 纯CSS3制作的iPhone图标
 tags:
-  - css3
-  - icon
-  - iphone
+  - CSS3
+  - Icon
+  - iPhone
 id: 178
 categories:
   - CSS3

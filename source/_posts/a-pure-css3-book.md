@@ -1,7 +1,7 @@
 ---
-title: 纯css写的仿真图书翻页效果
+title: 纯CSS3写的仿真图书翻页效果
 tags:
-  - css3
+  - CSS3
   - 仿真
   - 图书翻页
 id: 350

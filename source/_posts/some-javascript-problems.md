@@ -1,14 +1,14 @@
 ---
 title: 整理一些js中常见的问题
 tags:
-  - array
-  - checkbox
-  - javascript
-  - select
-  - string
+  - Array
+  - Checkbox
+  - JavaScript
+  - Select
+  - String
 id: 495
 categories:
-  - javascript
+  - JavaScript
 date: 2013-10-21 08:21:54
 permalink: some-javascript-problems
 ---

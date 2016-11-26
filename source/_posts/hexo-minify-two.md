@@ -1,10 +1,10 @@
 ---
-title: Hexo优化方案 hexo插件静态资源压缩
+title: Hexo优化方案 Hexo插件静态资源压缩
 date: 2016-11-20 23:05:49
 tags:
- - hexo
- - hexo优化
- - hexo压缩
+ - Hexo
+ - Hexo优化
+ - Hexo压缩
 categories:
  - Hexo
 ---

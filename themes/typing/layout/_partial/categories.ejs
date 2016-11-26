@@ -1,6 +1,7 @@
+<div class="article-container">
+<%- partial('_partial/header') %>
+<hr/>
 <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
-  <%- partial('_partial/header') %>
-  <hr/>
   <div class="category-all-title">
   目前共计<%- site.categories.length %>个分类
   </div>
@@ -8,5 +9,6 @@
   <%- list_categories() %>
   </div>
 </article>
+</div>
 
 

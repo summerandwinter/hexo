@@ -4,7 +4,7 @@ date: 2016-11-17 15:28:03
 categories: 
 - Markdown
 tags:
-- markdown
+- Markdown
 description: Markdown语法介绍，概况了一些Markdown基本的用法，整理自Markdown官方文档。
 ---
 # 概述

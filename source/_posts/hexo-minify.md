@@ -2,9 +2,9 @@
 title: Hexo优化方案 gulp插件静态资源压缩
 date: 2016-11-20 19:52:19
 tags:
- - hexo
- - hexo优化
- - hexo压缩
+ - Hexo
+ - Hexo优化
+ - Hexo压缩
 categories:
  - Hexo
 ---

@@ -8,3 +8,6 @@ Allow: /lab/
 
 Disallow: /js/
 Disallow: /css/
+
+Sitemap: http://sanyecao.me/sitemap.xml
+Sitemap: http://sanyecao.me/baidusitemap.xml

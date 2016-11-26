@@ -1,13 +1,13 @@
 ---
 title: Keycode对照表
-description: javascript中常用到的一些keycode对照表，做个记录以后做参考。
+description: JavaScript中常用到的一些Keycode对照表，做个记录以后做参考。
 id: 663
 categories:
-  - javascript
+  - JavaScript
 date: 2013-11-27 09:58:25
 tags:
   - keycode
-  - javascript
+  - JavaScript
 permalink: javascript-event-keycode
 ---
  **字母和数字键的键码值(keyCode)** 

@@ -1,7 +1,7 @@
 ---
-title: 纯css做的安卓开机动画
+title: 纯CSS3做的安卓开机动画
 tags:
-  - css3
+  - CSS3
   - 动画
   - 安卓
   - 开机动画

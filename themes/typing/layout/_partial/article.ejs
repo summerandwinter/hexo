@@ -1,6 +1,8 @@
+<div class="article-container">
+<%- partial('_partial/header') %>
+<hr/>
 <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
-  <%- partial('_partial/header') %>
-  <hr/>
+
   <div class="article-inner">
     <%- partial('post/gallery') %>
     <% if (post.link || post.title){ %>
@@ -25,20 +27,7 @@
 
     </div>
     
-    <% if (theme.toc.enable) { %>
-    <%
-     var toccontent = toc(page.content, { "class": "", list_number: page.toc_number });
-    %>
-    <% if (toccontent.length > 1) { %>
-    <aside id="article-toc" role="navigation" class="article-toc">
-      <div id="article-toc-inner">
-        <strong class="sidebar-title">目录</strong>
-          <%- toc(page.content, { "class": "", list_number: page.toc_number }) %>   
-          <a href="#" id="article-toc-top">回到顶部</a>
-        </div>
-    </aside>
-    <% } %>
-    <% } %>
+
     <footer class="article-footer">
       <ul class="article-meta">
         <li>
@@ -65,7 +54,20 @@
     <%- partial('post/nav') %>
   <% } %>
 </article>
-
+    <% if (theme.toc.enable) { %>
+    <%
+     var toccontent = toc(page.content, { "class": "", list_number: page.toc_number });
+    %>
+    <% if (toccontent.length > 1) { %>
+    <aside id="article-toc" role="navigation" class="article-toc">
+      <div id="article-toc-inner">
+        <strong class="sidebar-title">目录</strong>
+          <%- toc(page.content, { "class": "", list_number: page.toc_number }) %>   
+          <a href="#" id="article-toc-top">回到顶部</a>
+        </div>
+    </aside>
+    <% } %>
+    <% } %>
 <% if (!index && post.comments && config.disqus_shortname){ %>
   <section id="comments" class="comments">
     <div id="disqus_thread">
@@ -73,3 +75,4 @@
     </div>
   </section>
 <% } %>
+</div>
