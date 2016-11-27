@@ -28,7 +28,7 @@ categories:
 
 ```
 然后在主题配置文件`_config.yml`中加入
-```yml
+``` yml
 description: "你的关键词"
 ```
 # nofollow
@@ -52,7 +52,7 @@ npm install hexo-autonofollow --save
 ```
 **配置**
 编辑站点目录下的`_config.yml`，添加
-```
+``` yml
 nofollow:
     enable: true
     exclude:
