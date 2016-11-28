@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Winter`s Nots
+title: Winter`s Notes
 subtitle: Summer&Winter
 description: 岁月静好
 author: Winter
@@ -103,29 +103,4 @@ nofollow:
 feed:
   type: atom
   path: atom.xml
-  limit: 20
-
-html_minifier:
-  enable: false
-  exclude: 
-
-css_minifier:
-  enable: false
-  exclude: 
-    - '*.min.css'  
-
-js_minifier:
-  enable: false
-  mangle: true
-  output:
-  compress:
-  exclude: 
-    - '*.min.js'
-
-image_minifier:
-  enable: false
-  interlaced: false
-  multipass: false
-  optimizationLevel: 2
-  pngquant: false
-  progressive: false        
+  limit: 20       
