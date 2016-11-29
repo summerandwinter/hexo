@@ -34,14 +34,19 @@
   <% if (theme.favicon){ %>
     <link rel="icon" href="<%- theme.favicon %>">
   <% } %>
-  <%- css('css/typing') %>
+   <% if (is_home()) { %>
+     <%- css('index/css/component') %>
+  <% } else {%>
+     <%- css('css/typing') %>
+  <% } %>
+ 
 </head>
   <% if (is_home()) { %>
-    <body class="home-body" onload="run();">
+    <body class="home-body">
   <% } else {%>
     <body>
   <% } %>
-      <div id="container" class="container">
+      <div id="container" class="container index-2">
         <%- body %>
       </div>
       <%- partial('_partial/footer') %>

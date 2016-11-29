@@ -24,6 +24,10 @@
 <% } %>
 
 
+<% if (is_home()){ %>
+  <%- js('index/js/index-2') %>
+<% } %>
+
 <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
 <%- partial('baidu_tongji') %>
 <%- partial('google-analytics') %>

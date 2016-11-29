@@ -35,6 +35,8 @@ fb_app_id:
 # Profile
 nickname: Winter`s Notes
 description: 岁月静好 现世安稳
+blog_name: NoteBook
+blog_url: /archives
 links:
   笔记本: /archives
 
