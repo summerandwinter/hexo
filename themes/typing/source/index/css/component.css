@@ -19,7 +19,7 @@ body{
 }
 
 .index-2 .large-header {
-	background-image: url('http://sanyecao.qiniudn.com/index-2-bg.webp');
+	background-image: url('http://sanyecao.qiniudn.com/index-2-bg.jpg');
 	background-position: center bottom;
 }
 
@@ -38,6 +38,21 @@ body{
 	color: #f9f1e9;
 	text-align: center;
 	top: 50%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+}
+.index-2 .main-author {
+	font-family: 'Clicker Script', cursive;
+	font-weight: normal;
+	font-size: 1.5em;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	color: #f9f1e9;
+	text-align: center;
+	top: 60%;
 	left: 50%;
 	-webkit-transform: translate3d(-50%,-50%,0);
 	transform: translate3d(-50%,-50%,0);

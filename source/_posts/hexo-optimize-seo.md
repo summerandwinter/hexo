@@ -31,7 +31,7 @@ categories:
 ``` yml
 description: "你的关键词"
 ```
-# nofollow
+# 外部链接
 ## 介绍
 nofollow是HTML元标签(meta)的content属性和链接标签(a)的rel属性的一个值，告诉机器(爬虫)无需追踪目标页，为了对抗blogspam(博客垃圾留言信息)，Google推荐使用nofollow，告诉搜索引擎爬虫无需抓取目标页，同时告诉搜索引擎无需将的当前页的Pagerank传递到目标页。但是如果你是通过sitemap直接提交该页面，爬虫还是会爬取，这里的nofollow只是当前页对目标页的一种态度，并不代表其他页对目标页的态度。
 
@@ -61,7 +61,7 @@ nofollow:
 * enable - 开启插件，默认为false
 * exclude - 豁免域名（不加nofollow标签的域名）
 
-# canonical 
+# 标准链接
 
 ## 介绍
 canonical 是 Google、雅虎、微软等搜索引擎一起推出的一个标签，它的主要作用是用来解决由于网址形式不同内容相同而造成的内容重复问题。这个标签对搜索引擎作用非常大，简单的说它可以让搜索引擎只抓取你想要强调的内容。
@@ -80,7 +80,7 @@ canonical 是 Google、雅虎、微软等搜索引擎一起推出的一个标签
 
 [canonical-plugin]:   https://github.com/HyunSeob/hexo-auto-canonical "hexo-auto-canonical"
 
-# 添加robots.txt
+# 网络爬虫
 
 robots.txt是一种存放于网站根目录下的ASCII编码的文本文件，它的作用是告诉搜索引擎此网站中哪些内容是可以被爬取的，哪些是禁止爬取的。robots.txt应该放在站点目录下的source文件中，网站生成后在网站的根目录(站点目录/public/)下。
 
@@ -97,11 +97,11 @@ Disallow: /js/
 Disallow: /css/
 ```
 
-# 添加sitemap
+# 站点地图
 
 Sitemap即网站地图，它的作用在于便于搜索引擎更加智能地抓取网站。最简单和常见的sitemap形式，是XML文件，在其中列出网站中的网址以及关于每个网址的其他元数据（上次更新时间、更新的频率及相对其他网址重要程度等）。
 
-## 安装插件
+## 插件
 ```bash
 npm install hexo-generator-sitemap --save
 npm install hexo-generator-baidu-sitemap --save
@@ -123,7 +123,7 @@ Sitemap: http://sanyecao.me/sitemap.xml
 Sitemap: http://sanyecao.me/baidusitemap.xml
 ```
 
-# 主动提交链接
+# 提交链接
 由于Github禁止百度爬虫访问博客，导致博客无法被百度收录。对于把Hexo部署在GitHub Pages上的用户来说，上面的sitemap和robots.txt都是无效的，只能通过主动提交链接的方式来实现。
 
 首先，在Hexo根目录下，安装插件：
