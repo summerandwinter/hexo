@@ -1,7 +1,18 @@
+ <div class="home">
   <div class="content">
-    <div id="large-header" class="large-header">
-      <canvas id="index-canvas"></canvas>
-      <h1 class="main-title"><a href="<%= theme.blog_url %>"><%= theme.blog_name %></a></h1>
-      <div class="main-author"><%= config.author %></div>
+    <div class="profile">
+      <h1 class="nickname"><%= theme.nickname %></h1>
+      <div class="description">
+        <p><%- markdown(theme.description) %></p>
+      </div>
     </div>
+    <hr/>
+    <ul class="links">
+      <% for (var key in theme.links) { %>
+        <li>
+          <a href="<%= theme.links[key] %>"><%= key %></a>
+        </li>
+      <% } %>
+    </ul>
   </div>
+</div>
