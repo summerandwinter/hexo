@@ -182,11 +182,12 @@ h1{
       <%- partial('_partial/footer') %>
       <%- partial('_partial/after-footer') %>
     </div>
-     <div id="canvasHolder">
-    <canvas id="fishHolder" width="800" height="500"></canvas>
-     </div>
     <% if (is_home()){ %>
-   <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+     <div id="canvasHolder">
+        <canvas id="fishHolder" width="800" height="500"></canvas>
+     </div>
+    
+   <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
    <script src="https://cdn.jsdelivr.net/createjs/2013.12.12/createjs.min.js"></script>
    <%- js('js/fish-animation') %>
    <script>

@@ -1286,14 +1286,17 @@ em {
   text-decoration: none;
 }
 .end-of-file{
+  font-family: cursive;
   font-size: 12px;
   line-height: 34px;
+  font-weight: 100;
   color: #aaa;
   display: table;
   white-space: nowrap;
   border-spacing: 4px 0;
 }
 .div-of-year{
+  font-family:  cursive;
   font-size: 14px;
   line-height: 34px;
   color: #aaa;
