@@ -1384,7 +1384,7 @@ em {
 }
 
 .article-entry figure.highlight {
-	margin: 0
+	  margin: 0 0 1.2em 0; 
 }
 
 .article-entry pre code {
