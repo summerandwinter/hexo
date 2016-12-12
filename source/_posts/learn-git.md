@@ -157,4 +157,80 @@ After resetting:
 
 # 分支
 
+`git branch` 检查当前所在的分支
+
+```bash
+git branch
+* maseter
+```
+`*` 标记当前所在分支
+
+为了更好的理解Git分支我们看下下面的图表
+
+![Git分支](assets/images/articles/git-diagram-1.svg)
+* 图中的圆点代表提交，所有的提交组成了Git项目的提交历史
+* 新的分支是不同版本的Git项目，它包含Master的提交，也包含Master所没有的提交
+
+到目前为止，我们所有的操作都是在单个分支 `master` 上进行的。
+下面我们新建一个分支
+
+```bash
+git branch new_branch
+```
+这里 `new_branch` 是新分支的名称，名称尽量简短且表明分支的作用，名称中不能含空格。  
+
+现在我们成功的创建了一个新的分支，现在新分支包含了master分支的所有提交历史，接下来我们把当前分支切换到新建的分支
+```bash
+git checkout new_branch
+```
+分支切换成功后接下来所有的提交都会提交到新分支 `new_branch` 而 `master` 分支不受影响。
+
+当我们在 `new_branch` 分支上提交了一些修改后，希望把新分支上的提交同步到 `master` 中可以通过合并来完成
+
+
+首先把当前分支切换到 `master`
+```bash
+git checkout master
+```
+把新分支合并到 `master` 分支
+```bash
+git merge new_branch
+```
+当我们使用分支时常常会出现一个问题，我们在两个分支上都做了一些修改，而且这些修改在同一个地方，这种情况下进行合并时，Git无法帮我们决定保留哪个修改，于是Git以冲突的形成告诉我们两个版本的修改中我们重复修改了哪些地方，让我们自己来决定该保留哪个版本的修改。
+在发生冲突的文件中Git用一些特殊的标记来标识`HEAD`(master)版本的内容和`new_branch` 版本的内容,类似下面的方式：
+```
+<<<<<<< HEAD
+master version of line
+=======
+new_branch version of line
+>>>>>>> new_branch
+```
+选择好需要保留的版本，删除不需要的版本，需要注意的是那些特殊标记如：`>>>>>>>` 和 `=======` 也要删除，不然冲突依然存在。
+
+通常情况下新建分支的目的是完成项目的一个新特性，当这些特性完成后这个分支的作用也就达到了，当我们把这个分支合并当 `master` 后，这个分支就可以删除了。
+```bash
+git branch -d new_branch
+```
+上面的命令实现对 `new_branch` 分支的删除
+
+
 # 团队协作
+
+* `git clone` 从远程仓库拷贝项目到本地
+
+```bash
+git clone remote_location clone_name
+```
+* `remote_location` 告诉Git哪里可以找到远程仓库，通常是一个网址，也可以是一个路径
+* `clone_name` 告诉Git本地仓库放哪里
+
+* `git remote -v` 列出Git项目的远程仓库
+* `git fetch` 从远程仓库获取到本地拷贝
+这个命令不会把远程仓库的修改合并到本地仓库，它会把远程的修改同步到远程分支（remote branch）,此时远程修改还只同步到了（origin/master),本地的master分支还没有更新。
+
+* `git merge origin/master` 合并 `origin/master`到本地分支
+* `git push` 提交本地分支到远程仓库
+
+```bash
+git push origin your_branch_name
+```
