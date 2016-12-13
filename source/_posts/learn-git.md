@@ -5,18 +5,80 @@ categories:
   - Git
 tags:
   - Git
+description: 介绍一些Git学习过程中入门的基本知识
 ---
 
-# 工作流程
-我们可以把一个Git项目看作由三部分组成
-1. `工作目录`（Working Directory）: 这里完成对项目的所有工作：新建、修改、删除等
-2. `暂存区`（Staging Area）: 这里记录所有你在 `工作目录` 中所做的改动
-3. `仓库`（Repository）: 这里Git把改动永久的保存为不同版本的项目
+# 基本概念
+首先介绍一些关于Git的基本概念，方便后面的学习。
+Git中有三种状态：
+1. 已提交（commited）表示数据已安全的保存在本地数据库中。
+2. 已修改（modified）表示修改了文件，还没保存到本地数据库中。
+3. 已暂存（staged）表示对一个已修改文件的当前版本做了标记，使之包含在下次提交的快照中。
 
-Git的工作流程大致是，在工作目录操作文件，把文件见添加（add）到暂存区，把修改提交（commit）到仓库。
+由此可以把一个Git项目看作由三部分组成
+
+1. `工作目录`（Working Directory） 
+顾名思义这里就是我们的工作区域，可以这样理解，在这里我们不用分心去考虑版本控制的事，只用专心完成自己工作，因为这里的内容只是整个项目的某一个版本，我们可以放心的修改而不用担心对其他版本产生影响。
+2. `暂存区`（Staging Area） 
+实际上它只是一个文件，通常情况下这个文件在仓库目录中，它的作用是告诉Git在下次执行`commit`时需要放入仓库的内容。我们可以把它理解为我们在工作目录对文件所做改动的一个索引。
+3. `仓库`（Repository）
+ Git 用来保存项目的元数据和对象数据库的地方，通过这种方式来永久保存项目中不同版本的内容。 这是 Git 中最重要的部分，从其它计算机克隆仓库时，拷贝的就是这里的数据。
+
+Git的工作流程大致是：
+1. 在工作目录中修改文件。
+
+2. 暂存文件，将文件的快照放入暂存区域。
+
+3. 提交更新，找到暂存区域的文件，将快照永久性存储到 Git 仓库。
+
 ![Git工作流程](http://sanyecao.qiniudn.com/assets/images/articles/git_workflow.svg)
 
-* `git init` 初始化，创建一个新的Git仓库
+# 基础命令
+
+## Git配置
+Git 自带一个 `git config` 的工具来帮助设置控制 Git 外观和行为的配置变量。 这些变量存储在三个不同的位置：
+
+1. `/etc/gitconfig` 文件: 包含系统上每一个用户及他们仓库的通用配置。 如果使用带有 `--system` 选项的 `git config`时，它会从此文件读写配置变量。
+
+2. `~/.gitconfig` 或 `~/.config/git/config` 文件：只针对当前用户。 可以传递 --global 选项让 Git 读写此文件。
+
+3. 当前使用仓库的 Git 目录中的 `config` 文件（就是 .git/config）：针对该仓库。
+每一个级别覆盖上一级别的配置，所以 .git/config 的配置变量会覆盖 /etc/gitconfig 中的配置变量。
+
+> 在 Windows 系统中，Git 会查找 $HOME 目录下（一般情况下是 C:\Users\$USER）的 .gitconfig 文件。 Git 同样也会寻找 /etc/gitconfig 文件，但只限于 MSys 的根目录下，即安装 Git 时所选的目标位置。
+
+配置用户信息
+```bash
+git config --global user.name "winter"
+git config --global user.email winter@example.com
+```
+配置文本编辑器
+```bash
+git config --global core.editor emacs
+```
+检查配置信息
+```bash
+git config --list
+```
+或者只检查某一项
+```bash
+git config user.name
+```
+## 获取帮助
+有三种方法可以找到 Git 命令的使用手册：
+```bash
+git help <verb>
+git <verb> --help
+man git-<verb>
+```
+例如，要想获得 config 命令的手册，执行
+```bash
+git help config
+```
+## 获取 Git 仓库
+* 在现有目录中初始化仓库
+
+使用 `git init` 初始化，创建一个新的Git仓库
 
 在你的工作目录下创建一个名为 `learngit` 的目录，并切换到该目录
 
@@ -29,6 +91,23 @@ cd learngit
 git init
 ```
 到这一步初始化的工作就完成了
+
+* 克隆现有的仓库
+
+克隆仓库的命令格式是 `git clone [url]` 。 比如，要克隆 Git 的可链接库 libgit2，可以用下面的命令：
+```bash
+$ git clone https://github.com/libgit2/libgit2
+```
+这会在当前目录下创建一个名为 “libgit2” 的目录，并在这个目录下初始化一个 .git 文件夹，从远程仓库拉取下所有数据放入 .git 文件夹，然后从中读取最新版本的文件的拷贝。 如果你进入到这个新建的 libgit2 文件夹，你会发现所有的项目文件已经在里面了，准备就绪等待后续的开发和使用。 如果你想在克隆远程仓库的时候，自定义本地仓库的名字，你可以使用如下命令：
+```bash
+$ git clone https://github.com/libgit2/libgit2 mylibgit
+```
+这将执行与上一个命令相同的操作，不过在本地创建的仓库名字变为 mylibgit。
+
+Git 支持多种数据传输协议。 上面的例子使用的是 `https://` 协议，不过你也可以使用 `git://` 协议或者使用 `SSH `传输协议，比如 `user@server:path/to/repo.git` 。
+
+# 工作流程
+
 在工作目录中新建一个文件
 ```bash
 nano readme.txt
@@ -37,26 +116,30 @@ nano readme.txt
 ```
 This is demo for git learning
 ```
+## 检查状态
 
-* `git status` 检查工作区和暂存区的内容
+使用 `git status` 检查工作区和暂存区的内容（文件状态）
 
-现在工作目录有一个新的文件`readme.txt`但是还没有提交到暂存区
+现在工作目录有一个新的文件 `readme.txt` 但是还没有提交到暂存区
 
 执行 `git status`
 
 ```bash
-git status
 On branch master
-Untracked files:
-	(use "git add <file>..." to include in what will be committed)
 
-		readme.txt
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        readme.txt
+
 nothing added to commit but untracked files present (use "git add" to track)
 ```
-从上面终端中打印的信息可以注意到`Untracked files:`下面的`readme.txt`,`Untracked` 表示Git已经看到这个文件，但是还没有开始跟踪这个文件的变化。 
-* `git add` 把文件从工作区添加到暂存区
-
-把`readme.txt`加入暂存区
+从上面终端中打印的信息可以注意到`Untracked files:`下面的`readme.txt`,`Untracked` （未跟踪）表示Git已经看到这个文件，但是还没有开始跟踪这个文件的变化。 
+## 跟踪新文件
+使用命令 `git add` 开始跟踪一个文件。
+执行
 ```bash
 git add readme.txt
 ```
@@ -65,15 +148,24 @@ git add readme.txt
 ```bash
 git status
 On branch master
+
+Initial commit
+
 Changes to be committed:
-	(use "git reset HEAD <file>..." to unstage)   
+  (use "git rm --cached <file>..." to unstage)
 
- 		new file:   readme.txt  
-```	
-从`new file:   readme.txt` 可以看出 `readme.txt` 已经加入暂存区了
+        new file:   readme.txt
+
+ 
+```
+
+从`new file:   readme.txt` 可以看出 `readme.txt` 已经加入暂存区了，现在文件已处于 `tracked` （已跟踪）状态，从现在开始Git将跟踪它的每一次改动。
 * `git diff` 比较工作区和暂存区的差异
-在 `readme.txt` 文件中加入另外一行文字
 
+
+## 暂存已修改文件
+
+在 `readme.txt` 文件中加入另外一行文字
 ```bash
 This is another line
 ```
@@ -82,20 +174,34 @@ This is another line
 
 ```bash
 git diff
-diff --git a/readme.txt b/readme.txt                        
-index c53d934..d46b9ce 100644                               
---- a/readme.txt                                            
-+++ b/readme.txt                                            
-@@ -1,2 +1,3 @@                                             
- This is a demo for git learning                               
-+This is another line  
-```
-从打印信息可以看出，文件的改动用 `+` 标记了。
-> PS: 键盘上的 `q` 可以退出 diff 模式
+diff --git a/readme.txt b/readme.txt
+index b35e311..60520a0 100644
+--- a/readme.txt
++++ b/readme.txt
+@@ -1 +1,2 @@
+-This is demo for git learning
+\ No newline at end of file
++This is demo for git learning
++This is another line
+\ No newline at end of file
 
+```
+使用 `git diff` 命令可以检查文件在工作目录和暂存区中的差别。
+从打印信息可以看出，工作目录中 `readme.txt` 的内容（ `+` 标记）比暂存区（ `-` 标记）的内容多出了我们刚添加的一行。
+
+> PS: 按键盘上的 `q` 可以退出 diff 模式
+
+现在我们来修改这个已被跟踪的文件
+执行
+```bash
+git add readme.txt
+```
+要暂存这次更新，需要运行 git add 命令。 这是个多功能命令：可以用它开始跟踪新文件，或者把已跟踪的文件放到暂存区，还能用于合并时把有冲突的文件标记为已解决状态等。
+
+## 提交更新
 * `git commit` 把暂存区文件的改动提交到仓库
 
-`commit` 是这里说的Git工作流的最后一步，该命令会把暂存区文件的改动永久的保存到仓库。
+`commit` 是这里说的Git工作流程的最后一步，该命令会把暂存区文件的改动永久的保存到仓库。
 
 ```bash
 git commit -m "Complete my first commit"
@@ -104,6 +210,8 @@ git commit -m "Complete my first commit"
 * 必须用引号引起来
 * 用现代时书写备注
 * 简明扼要（不超过50个字符）
+
+## 查看提交历史
 
 * `git log` 列出所有的提交历时
 
@@ -115,7 +223,7 @@ commit 12385fd24ad0cadb2ca6ed4488caae153e3d23b9
 Author: winter <summerandwiner@gmail.com>
 Date:   Fri Dec 9 02:55:43 2016 -0500  
 
-	Complete first line of dialogue  
+	Complete first line of commit  
 ```
 从终端打印的文本我们可以看到下面的信息：
 * 一段40个字符的字符串（12385fd24ad0cadb2ca6ed4488caae153e3d23b9），我们把它称之为 `SHA`, Git用它来标识每一次提交的唯一性。
@@ -125,7 +233,7 @@ Date:   Fri Dec 9 02:55:43 2016 -0500
 
 # 追踪
 在使用Git时，我们经常会遇到一些情况需要撤销我们所做的一些修改，Git提供了一些这样的特性。
-Git把 `HEAD` 提交 作为我们正在进行的提交，大部分情况下最新的提交就是 `HEAD` 提交。
+Git把 `HEAD` 提交作为我们正在进行的提交，大部分情况下最新的提交就是 `HEAD` 提交。
 使用下面的命令查看 `HEAD` 提交
 ```bash
 git show HEAD

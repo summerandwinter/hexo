@@ -5,6 +5,7 @@ categories:
   - 命令行
 tags:
   - cmd
+description: 介绍一些Mac命令行学习过程中入门的基本知识
 ---
 # 文件系统导航
 
