@@ -64,6 +64,45 @@ git config --list
 ```bash
 git config user.name
 ```
+## 忽略文件
+
+Git通过 `.gitignore` 文件来管理需要忽略的文件模式，我们通过一些规则来告诉Git哪些文件不需要列入追踪列表。
+文件 `.gitignore` 的格式规范如下：
+* 所有空行或者以 `#` 开头的行都会被 `Git` 忽略。
+* 可以使用标准的 `glob` 模式匹配。
+* 匹配模式可以以（`/`）开头防止递归。
+* 匹配模式可以以（`/`）结尾指定目录。
+* 要忽略指定模式以外的文件或目录，可以在模式前加上惊叹号（`!`）取反。
+
+所谓的 `glob` 模式是指 `shell` 所使用的简化了的正则表达式。 
+* `*`星号匹配零个或多个任意字符；
+* `[abc]` 匹配任何一个方括号中的字符（要么匹配一个 a，要么匹配一个 b，要么匹配一个 c）；
+* `?` 问号只匹配一个任意字符；
+* `[0-9]` 如果在方括号中使用短划线分隔两个字符，表示所有在这两个字符范围内的都可以匹配（比如 `[0-9]` 表示匹配所有 0 到 9 的数字）。 
+* `**` 使用两个星号表示匹配任意中间目录，比如a/**/z 可以匹配 a/z, a/b/z 或 a/b/c/z等。
+
+下面我们看一个 `.gitignore` 文件的例子加深理解：
+```bash
+# 忽略 .a 后缀的文件
+*.a
+
+# 尽管上面忽略的 .a 后缀的文件，但是要追踪 lib.a 文件
+!lib.a
+
+# 只忽略当前目录下的 TODO 文件，子目录下的 TODO 文件继续追踪
+/TODO
+
+# 忽略 build/ 目录下的所有文件
+build/
+
+# 忽略 doc 目录下的 .txt 文件，但是不忽略子目录下的 .txt 文件 如：忽略 doc/notes.txt, 但是不忽略 doc/server/arch.txt
+doc/*.txt
+
+# 忽略 doc 目录下所有的 .pdf 文件，包括子目录下的 .pdf 文件
+doc/**/*.pdf
+```
+> GitHub 有一个十分详细的针对数十种项目及语言的 `.gitignore` 文件列表，你可以在 https://github.com/github/gitignore 找到它.
+
 ## 获取帮助
 有三种方法可以找到 Git 命令的使用手册：
 ```bash
@@ -137,6 +176,23 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 从上面终端中打印的信息可以注意到`Untracked files:`下面的`readme.txt`,`Untracked` （未跟踪）表示Git已经看到这个文件，但是还没有开始跟踪这个文件的变化。 
+
+`git status` 命令的输出十分详细，但其用语有些繁琐。 如果你使用 `git status -s` 命令或 `git status --short` 命令，你将得到一种更为紧凑的格式输出。 
+
+运行 `git status -s` ，状态报告输出如下：
+```
+git status -s
+ M README
+MM Rakefile
+A  lib/git.rb
+M  lib/simplegit.rb
+?? LICENSE.txt
+```
+`??` 新添加的未跟踪文件
+`A ` 新添加到暂存区中的文件，
+`M` 修改过的文件 
+> `M` 有两个可以出现的位置，出现在右边的 `M` 表示该文件被修改了但是还没放入暂存区，出现在靠左边的 `M` 表示该文件被修改了并放入了暂存区。 例如，上面的状态报告显示： `README` 文件在工作区被修改了但是还没有将修改后的文件放入暂存区,`lib/simplegit.rb` 文件被修改了并将修改后的文件放入了暂存区。 而 `Rakefile` 在工作区被修改并提交到暂存区后又在工作区中被修改了，所以在暂存区和工作区都有该文件被修改了的记录。
+
 ## 跟踪新文件
 使用命令 `git add` 开始跟踪一个文件。
 执行
@@ -201,7 +257,7 @@ git add readme.txt
 ## 提交更新
 * `git commit` 把暂存区文件的改动提交到仓库
 
-`commit` 是这里说的Git工作流程的最后一步，该命令会把暂存区文件的改动永久的保存到仓库。
+`commit` 是这里说的Git工作流程的最后一步，该命令会把已跟踪的文件的改动永久的保存到仓库。
 
 ```bash
 git commit -m "Complete my first commit"
@@ -210,6 +266,11 @@ git commit -m "Complete my first commit"
 * 必须用引号引起来
 * 用现代时书写备注
 * 简明扼要（不超过50个字符）
+
+尽管使用暂存区域的方式可以精心准备要提交的细节，但有时候这么做略显繁琐。 Git 提供了一个跳过使用暂存区域的方式， 只要在提交的时候，给 `git commit` 加上 `-a` 选项，Git 就会自动把所有已经跟踪过的文件暂存起来一并提交，从而跳过 `git add` 步骤：
+```bash
+git commit -a -m 'added new benchmarks'
+```
 
 ## 查看提交历史
 
@@ -230,6 +291,75 @@ Date:   Fri Dec 9 02:55:43 2016 -0500
 * 提交的用户
 * 提交的日期和时间
 * 提交的备注信息
+
+## 移除文件
+要从 Git 中移除某个文件，就必须要从已跟踪文件清单中移除（确切地说，是从暂存区域移除），然后提交。 可以用 `git rm` 命令完成此项工作，并连带从工作目录中删除指定的文件，这样以后就不会出现在未跟踪文件清单中了。
+
+如果只是简单地从工作目录中手工删除文件，运行 `git status` 时就会在 “Changes not staged for commit” 部分（也就是 未暂存清单）看到：
+```bash
+$ rm PROJECTS.md
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    PROJECTS.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+然后再运行 `git rm` 记录此次移除文件的操作：
+```bash
+$ git rm PROJECTS.md
+rm 'PROJECTS.md'
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    deleted:    PROJECTS.md
+```
+下一次提交时，该文件就不再纳入版本管理了。 如果删除之前修改过并且已经放到暂存区域的话，则必须要用强制删除选项 `-f`（译注：即 force 的首字母）。 这是一种安全特性，用于防止误删还没有添加到快照的数据，这样的数据不能被 Git 恢复。
+
+另外一种情况是，我们想把文件从 Git 仓库中删除（亦即从暂存区域移除），但仍然希望保留在当前工作目录中。 换句话说，你想让文件保留在磁盘，但是并不想让 `Git` 继续跟踪。 当你忘记添加 `.gitignore `文件，不小心把一个很大的日志文件或一堆 `.a` 这样的编译生成文件添加到暂存区时，这一做法尤其有用。 为达到这一目的，使用 `--cached` 选项：
+```bash
+git rm --cached README
+```
+`git rm` 命令后面可以列出文件或者目录的名字，也可以使用 `glob` 模式。 比方说：
+```bash
+git rm log/\*.log
+```
+注意到星号 `*` 之前的反斜杠 `\`， 因为 `Git `有它自己的文件模式扩展匹配方式，所以我们不用 `shell` 来帮忙展开。 此命令删除 log/ 目录下扩展名为 `.log` 的所有文件。 类似的比如：
+```bash
+git rm \*~
+```
+该命令为删除以 `~` 结尾的所有文件。
+
+## 移动文件
+不像其它的 VCS 系统，Git 并不显式跟踪文件移动操作。 如果在 Git 中重命名了某个文件，仓库中存储的元数据并不会体现出这是一次改名操作。 不过 Git 非常聪明，它会推断出究竟发生了什么，至于具体是如何做到的，我们稍后再谈。
+
+既然如此，当你看到 Git 的 `mv` 命令时一定会困惑不已。 要在 Git 中对文件改名，可以这么做：
+```bash
+git mv file_from file_to
+```
+它会恰如预期般正常工作。 实际上，即便此时查看状态信息，也会明白无误地看到关于重命名操作的说明：
+```bash
+git mv README.md README
+git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    renamed:    README.md -> README
+```    
+其实，运行 `git mv` 就相当于运行了下面三条命令：
+```bash
+mv README.md README
+git rm README.md
+git add README
+```
+如此分开操作，Git 也会意识到这是一次改名，所以不管何种方式结果都一样。 两者唯一的区别是，`mv` 是一条命令而另一种方式需要三条命令，直接用 `git mv` 轻便得多。 不过有时候用其他工具批处理改名的话，要记得在提交前删除老的文件名，再添加新的文件名。
 
 # 追踪
 在使用Git时，我们经常会遇到一些情况需要撤销我们所做的一些修改，Git提供了一些这样的特性。

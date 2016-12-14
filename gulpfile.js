@@ -41,7 +41,7 @@ gulp.task('minify-images', function() {
         .pipe(gulp.dest('./public/assets'));
 });
 
-// 默认任务
+// 默认任务 ,'minify-images'
 gulp.task('default', [
-  'minify-html','minify-css','minify-js','minify-images'
+  'minify-html','minify-css','minify-js'
 ]);
