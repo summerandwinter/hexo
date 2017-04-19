@@ -1,0 +1,47 @@
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, telephone=no, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>数钱已结束，感谢您的参与</title>
+    <link href="css/main.min.css?v=20161121" rel="stylesheet" type="text/css">
+    
+   
+</head>
+<body>
+    
+<div id="main">
+    <div class="tips">
+        <div class="success"></div>
+        数钱已结束，感谢您的参与
+    </div>
+    <div class="btnBox">
+        <input type="submit" class="button" value="关闭" onclick="window.opener = null; window.open('', '_self'); window.close();" />
+    </div>
+</div>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/function.min.js?v=20161121"></script>
+    
+    <script>
+        //获取url中的参数
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg); //匹配目标参数
+            if (r != null) return unescape(r[2]); return null; //返回参数值
+        }
+
+        $(function () {
+            var _adId = getUrlParam('_screenAdId');
+          //  if (_adId) {
+          //      $.post('/150/Advertisement/SubmitAdAccessLog', { 'id': getUrlParam('_screenAdId'), 'operationType': 2, 'fansId': getUrlParam('fansId') }, function () { }, 'text');
+         // }
+        });
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+/*view  ly  by hcc */
+  .mymessagec0{
+	margin-top:5px;
+	margin-bottom:10px;
+	margin-left:10px;
+	background-color:white;
+	filter:alpha(opacity=80);
+	opacity:0.8;
+	border-radius: 3px;
+	float: left;
+	padding: 10px;
+	color: gray;
+	text-shadow: none;
+	font-size: 13px;min-width: 50%;
+}
+.mymessagec1{
+	margin-top:5px;
+	margin-bottom:10px;
+	margin-right:10px;
+	background-color:white;
+	filter:alpha(opacity=80);
+	opacity:0.8;
+	border-radius: 3px;
+	float: right;
+	padding: 10px;
+	color: gray;
+	text-shadow: none;
+	font-size: 13px;min-width: 50%;
+}
+#mymessages,.mymessages{
+width: 100%;height: 82%; 
+overflow-x: hidden;
+overflow-y: hidden;
+}
+
+.c-photowall {
+    width: 100%;
+    height: 100%;
+}
+
+.c-photowall .file {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+.c-photo-wall {
+    width: 100%;
+    height: 100%;
+	
+    overflow: hidden;
+    background-color: rgba(1, 1, 1, 0.05);
+    position: absolute;
+    left: 0px;
+    top: 20px;
+}
+.c-photo-wall .child-container {
+}
+.c-photo-wall .photo-wall {
+   /* width: 640px;
+    height: 640px;*/
+	 height: 80%;
+	margin-top:10%;	 
+    float: left;
+    position: relative;
+    display: inline-block;
+}
+.c-photo-wall .photo-wall .img{
+    position: absolute;
+    text-align: center;
+    border: 2px solid white;
+    box-sizing: border-box;
+    background-size: 100% 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+/* 淡入 */
+@-webkit-keyframes fadein{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+@keyframes fadein{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+/* 淡入 */
+.a-fadein{
+    -webkit-animation : fadein 1.5s ease-out backwards;
+    animation : fadein 1.5s ease-out backwards;
+}
+
+.myformB li{ position:absolute ;color: #676767;
+ height:38px;
+    line-height: 1;
+    background: 0 0;
+    list-style: none!important;
+    margin: 0!important;
+    padding: 0;
+    -webkit-transition: padding .5s;
+    -moz-transition: padding .5s;
+    transition: padding .5s;
+    min-height: 1px;
+    min-width: 1px;
+    width: 100%;
+    -webkit-user-select: none;}
