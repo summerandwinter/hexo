@@ -23,7 +23,7 @@ magick img.jpg img2.jpg -background '#ffffff' -gravity Center +append dest.jpg
 `-background` 的写法 `white`, `#ffffff`, `rgb(255, 255, 255)`
 `-gravity` 可选的参数有 `NorthWest`, `North`, `NorthEast`, `West`, `Center`, `East`, `SouthWest`, `South`, `SouthEast`
 
->PS:这篇文字的示例图片就是用这种方法拼出来的
+>PS:这篇文章的示例图片就是用这种方法拼出来的
 
 ## 反色
 形成底片效果
