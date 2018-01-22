@@ -84,4 +84,4 @@ border-color: white transparent transparent ;
 
 css3的表现在各个浏览器下的表现不尽相同，chrome浏览器下效果最佳，safari下风车的柱子会有像素失真的问题（同是webkit核心，不知道为什么表现那么不一样），后续会尝试解决这个问题。
 [查看示例][demo]
-[demo]:   http://sanyecao.me/lab/css3-windmill/index.html
+[demo]:   https://summerandwinter.github.io/lab/css3-windmill/index.html

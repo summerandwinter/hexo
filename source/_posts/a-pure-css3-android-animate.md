@@ -26,7 +26,7 @@ permalink: a-pure-css3-android-animate
 
 （**新版示例，已兼容safari。**）
 [查看示例][demo]
-[demo]:   http://sanyecao.me/lab/css3-android-robot/index.html "css3实现的仿安卓开机动画示例"
+[demo]:   https://summerandwinter.github.io/lab/css3-android-robot/index.html "css3实现的仿安卓开机动画示例"
 
 经过测试，safari没有动画效果的原因是不支持伪元素after,before的动画效果。用DIV替换掉伪元素后safari下运行正常。
 

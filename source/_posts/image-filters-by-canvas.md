@@ -24,7 +24,7 @@ permalink: image-filters-by-canvas
  .299 * r + .587 * g + .114 * b;
  ```
 
-# 视频效果
+# 视频效果	
 
 
 ![图片过滤效果之视频效果](http://sanyecao.qiniudn.com/assets/images/filter/video.jpg) 
@@ -207,14 +207,14 @@ b = (b-g-r)*3/2;
 
 [老照片特效][reference2]
 
-[cleanglass]:   http://sanyecao.qiniudn.com/lab/filters/cleanglass.hml "玻璃水滴效果示例"
-[focus]:   http://sanyecao.qiniudn.com/lab/filters/focus.hml "聚焦效果示例"
-[softblow]:   http://sanyecao.qiniudn.com/lab/filters/softblow.hml "高亮柔白效果示例"
-[mist]:   http://sanyecao.qiniudn.com/lab/filters/mist.hml "雾化效果示例"
-[oilpainting]:   http://sanyecao.qiniudn.com/lab/filters/oilpainting.hml "油画效果示例"
-[sharp]:   http://sanyecao.qiniudn.com/lab/filters/sharp.hml "锐化效果示例"
-[threedgrid]:   http://sanyecao.qiniudn.com/lab/filters/threedgrid.hml "3D栅格效果示例"
+[cleanglass]:   https://summerandwinter.github.io/lab/filters/cleanglass.hml "玻璃水滴效果示例"
+[focus]:   https://summerandwinter.github.io/lab/filters/focus.hml "聚焦效果示例"
+[softblow]:   https://summerandwinter.github.io/lab/filters/softblow.hml "高亮柔白效果示例"
+[mist]:   https://summerandwinter.github.io/lab/filters/mist.hml "雾化效果示例"
+[oilpainting]:   https://summerandwinter.github.io/lab/filters/oilpainting.hml "油画效果示例"
+[sharp]:   https://summerandwinter.github.io/lab/filters/sharp.hml "锐化效果示例"
+[threedgrid]:   https://summerandwinter.github.io/lab/filters/threedgrid.hml "3D栅格效果示例"
 
-[webtool]:  http://sanyecao.me/lab/filters/index.html "简易图片过滤效果工具"
+[webtool]:  https://summerandwinter.github.io/lab/filters/index.html "简易图片过滤效果工具"
 [reference]:   http://www.icodelogic.com/?p=575 "灰度、黑白、底片、浮雕"
 [reference2]:   http://blog.csdn.net/jia20003/article/details/9142111 "老照片特效"

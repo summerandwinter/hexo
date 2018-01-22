@@ -15,4 +15,4 @@ permalink: css3-iphone-icons
 <!--more-->
 
 [原文链接](http://blog.graphicpeel.com/post/740928981/ios-icons-made-in-pure-css "原文链接")
-[查看示例](http://sanyecao.me/lab/css3-iphone-icons/index.html "查看Demo")
+[查看示例](https://summerandwinter.github.io/lab/css3-iphone-icons/index.html "查看Demo")

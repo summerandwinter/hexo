@@ -15,7 +15,7 @@ permalink: a-html5-love-theme2
 
 ---
 
-第二版在**[第一版](http://sanyecao.me/a-html5-love-theme.html "基于Html5的爱情主题网站–表白神器")**的基础上增加了一个动态3D的白云效果背景，鼠标悬浮在页面上云朵会向屏幕Z轴方向运动，在第一人称视角看来向着云朵方向前进的，由此形成一个伪3D效果。有点绕，直接看demo就能理解了。3D白云效果是基于**[threejs](http://threejs.org/ "threejs.")**框架做的。<!--more-->
+第二版在**[第一版](https://summerandwinter.github.io/a-html5-love-theme.html "基于Html5的爱情主题网站–表白神器")**的基础上增加了一个动态3D的白云效果背景，鼠标悬浮在页面上云朵会向屏幕Z轴方向运动，在第一人称视角看来向着云朵方向前进的，由此形成一个伪3D效果。有点绕，直接看demo就能理解了。3D白云效果是基于**[threejs](http://threejs.org/ "threejs.")**框架做的。<!--more-->
 
 **介绍下three.js:**
 
@@ -29,7 +29,7 @@ three.js是JavaScript编写的WebGL第三方库。提供了非常多的3D显示�
 
 ![基于Html5的爱情主题网站--表白神器（第二版）](http://sanyecao.qiniudn.com/assets/images/lab/love2.jpg)
 
-**[查看示例](http://sanyecao.me/lab/love2/index.html "基于Html5的爱情主题网站–表白神器（第二版）")**
+**[查看示例](https://summerandwinter.github.io/lab/love2/index.html "基于Html5的爱情主题网站–表白神器（第二版）")**
 
 
 **注意：下载的示例放在服务器环境下背景的白云效果才有效。**

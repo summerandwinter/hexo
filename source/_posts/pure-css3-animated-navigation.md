@@ -25,7 +25,7 @@ html5+css3的出现给前端开发者提供了更多的可能性，以前很多�
 
 
 
-[查看示例](http://sanyecao.me/lab/navigation/index.html)（**请在支持css3的浏览器中查看效果，最新版的chrome浏览器下效果最佳。**）
+[查看示例](https://summerandwinter.github.io/lab/navigation/index.html)（**请在支持css3的浏览器中查看效果，最新版的chrome浏览器下效果最佳。**）
 
 
 **特别声明此demo为博主原创，可以下载免费使用。**
@@ -284,7 +284,7 @@ display: block;
 <div style="display:block;clear:both;"></div>
 </ul>
 </nav>
-<footer>Tutorial by &nbsp;&nbsp;<a href="http://sanyecao.me" target="_blank">sanyecao</a>&nbsp;&nbsp;©2013</footer>
+<footer>Tutorial by &nbsp;&nbsp;<a href="https://summerandwinter.github.io" target="_blank">sanyecao</a>&nbsp;&nbsp;©2013</footer>
 </body>
 </html> 
 ```

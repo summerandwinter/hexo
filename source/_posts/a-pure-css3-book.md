@@ -217,11 +217,11 @@ footer a:hover{
 <img src=“2.jpg”/>   
 </div>   
 </div>   
-<footer>Tutorial by &nbsp;&nbsp;<a href=“http://sanyecao.me” target=“_blank”>sanyecao</a>&nbsp;&nbsp;©2013&nbsp;&nbsp;</footer>   
+<footer>Tutorial by &nbsp;&nbsp;<a href=“https://summerandwinter.github.io” target=“_blank”>sanyecao</a>&nbsp;&nbsp;©2013&nbsp;&nbsp;</footer>   
 </body>   
 </html> 
 ```
 
 [查看示例][demo]
 
-[demo]:   http://sanyecao.me/lab/css3-book/index.html "纯css3仿真图书翻页效果"
+[demo]:   https://summerandwinter.github.io/lab/css3-book/index.html "纯css3仿真图书翻页效果"

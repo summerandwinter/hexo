@@ -26,5 +26,5 @@ permalink: css3-iphone
 
 ![css2-iphone4-open](http://sanyecao.qiniudn.com/assets/images/lab/css3-iphone4s-open.jpg)
 
-[查看示例](http://tutorial.duapp.com/lab/iphone-css3/index.htm "点此查看Demo")
+[查看示例](https://summerandwinter.github.io/lab/iphone-css3/index.htm "点此查看Demo")
 [作者博客链接](http://tjrus.com/iphone/ "作者博客链接")

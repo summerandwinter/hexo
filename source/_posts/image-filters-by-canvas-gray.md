@@ -76,4 +76,4 @@ context.putImageData(canvasData, 0, 0);
 
 查看**[示例][demo]**
 
-[demo]:  /lab/filters/gray/index.html
+[demo]:  /lab/filters/gray.html

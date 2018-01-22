@@ -30,4 +30,4 @@ description: 一个基于基于Html5的爱情主题，文字采用打字机效�
 **效果图：**
 ![基于Html5的爱情主题网站--表白神器](http://sanyecao.qiniudn.com/assets/images/lab/love.jpg)
 
-[查看示例](http://sanyecao.me/lab/love/index.html "基于Html5的爱情主题网站–表白神器")
+[查看示例](https://summerandwinter.github.io/lab/love/index.html "基于Html5的爱情主题网站–表白神器")

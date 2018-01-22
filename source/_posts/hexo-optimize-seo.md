@@ -119,8 +119,8 @@ path: baidusitemap.xml
 ```
 在robots.txt文件中添加
 ```
-Sitemap: http://sanyecao.me/sitemap.xml
-Sitemap: http://sanyecao.me/baidusitemap.xml
+Sitemap: https://summerandwinter.github.io/sitemap.xml
+Sitemap: https://summerandwinter.github.io/baidusitemap.xml
 ```
 
 # 提交链接
@@ -141,7 +141,7 @@ baidu_url_submit:
 其次，记得查看_config.ym文件中url的值， 必须包含是百度站长平台注册的域名（一般有www）， 比如:
 ```yml
 # URL
-url: http://sanyecao.me
+url: https://summerandwinter.github.io
 root: /
 permalink: :title.html
 ```
