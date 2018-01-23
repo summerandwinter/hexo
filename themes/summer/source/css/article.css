@@ -164,7 +164,10 @@ mark {
 
 /* 代码片断 */
 pre, code, pre tt {
-  font-family: "Source Sans Pro", "Helvetica Neue", Consolas,proxima nova,-apple-system, Courier, 'Courier New', monospace, Arial, sans-serif;
+  overflow: visible;
+  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+  word-wrap: normal;
+  white-space: pre;
   padding: 2px 4px;
   color: #4d4d4c;
   background: #f3f3f3;
@@ -391,17 +394,22 @@ body,html {
 body,h1,h2,h3,h4,h5,h6 {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-family: source sans pro,proxima nova,-apple-system,sans-serif;
 	-moz-font-feature-settings: "liga" on;
 }
-
+h1,h2,h3,h4,h5,h6{
+  font-weight: 600;
+  font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
 body {
 	font-size: 16px
 }
 
 
 .article-type-post{
-	font-family: "Source Sans Pro", "Helvetica Neue", Consolas, proxima nova,"SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica", -apple-system, "Arial",sans-serif;
+  color: #111111;
+  font-weight: 400;
+  font-size: 18px;
+	font-family: "Source Sans Pro", "Helvetica Neue", Consolas, proxima nova,"HanHei SC","PingHei","PingFang SC","STHeitiSC-Light","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
 em {
@@ -455,73 +463,6 @@ em {
 	text-align: left
 }
 
-.home-body {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center
-}
-
-.home {
-	font-weight: lighter;
-	color: #505050;
-	line-height: 1.4;
-	text-align: center;
-	position: relative
-}
-
-.home .content {
-	width: 60%;
-	max-width: 500px;
-	position: relative;
-	margin: 0 auto
-}
-
-.home h1,.home strong {
-	color: #222
-}
-
-.home hr {
-	width: 100%;
-	max-width: 300px;
-	margin: 20px auto
-}
-
-.home li {
-	list-style: none
-}
-
-.home .profile {
-	width: 100%
-}
-
-.home .profile h1 {
-	font-weight: 300
-}
-
-.home .links {
-	padding: 0;
-	text-align: center
-}
-
-.home .links li {
-	display: inline-block;
-	margin: 0 5px
-}
-.home .links li a{
-  color: #222;
-}
-
-.home .links li a:hover{
-  color: #0E83D0;
-  text-decoration: none;
-}
 
 .archive-container,.category-container,.tag-container {
   font-family: 'Open Sans Condensed', Helvetica Neue, Helvetica, PingFang SC, Lantinghei SC, Hiragino Sans GB, Microsoft YaHei, \\5FAE\8F6F\96C5\9ED1, STHeitiSC-Light, simsun, WenQuanYi Zen Hei, WenQuanYi Micro Hei, Arial, sans-serif;
@@ -649,7 +590,7 @@ em {
   font-family: 'Open Sans Condensed', Helvetica Neue, Helvetica, PingFang SC, Lantinghei SC, Hiragino Sans GB, Microsoft YaHei, \\5FAE\8F6F\96C5\9ED1, STHeitiSC-Light, simsun, WenQuanYi Zen Hei, WenQuanYi Micro Hei, Arial, sans-serif;
 	font-size: 2em;
 	font-weight: 800;
-
+  padding-bottom: 20px;
 }
 
 .article a.fancybox,.article a.fancybox-item {
@@ -1068,14 +1009,9 @@ pre .javascript .function,pre .keyword {
 	body {
 		font-size: 16px
 	}
-
-	.home {
-		color: #222
-	}
-
-	.home a {
-		color: $111
-	}
+  .header {
+    width: 90%;
+  }
 
   .article-toc{
     display: none;
@@ -1115,7 +1051,9 @@ pre .javascript .function,pre .keyword {
 	body {
 		font-size: 14px
 	}
-
+  .header {
+    width: 90%;
+  }
 	.article {
 		font-size: 16px
 	}

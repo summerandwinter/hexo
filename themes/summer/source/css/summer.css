@@ -365,7 +365,10 @@ font-family: 'Open Sans Condensed',source sans pro,proxima nova,-apple-system,sa
 
 	.archive-container .archive-footer,.archive-container .post-footer {
 		padding: 20px
-	}
+  }
+  .header {
+    width: 90%;
+  }
 
 	.archive-article-header>a{
     width: 10%
@@ -392,7 +395,9 @@ font-family: 'Open Sans Condensed',source sans pro,proxima nova,-apple-system,sa
 	body {
 		font-size: 14px
 	}
-
+  .header {
+    width: 90%;
+  }
 	.article {
 		font-size: 16px
 	}
