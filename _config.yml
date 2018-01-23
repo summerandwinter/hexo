@@ -69,7 +69,7 @@ Plugins:
 - hexo-generator-feed
 
 ## Themes: https://hexo.io/themes/
-theme: typing
+theme: summer
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
