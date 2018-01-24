@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by  Juriy Zaytsev</title>
+  
+  
+  
+  
+      <style>
+      canvas { border: 1px solid #ccc }
+    </style>
+
+
+
+  
+  
+
+
+</head>
+
+<body translate="no" >
+
+  <canvas id="c" width="500" height="300"></canvas>
+    
+
+  
+  
+
+    <script >
+      function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+var el = document.getElementById('c');
+var ctx = el.getContext('2d');
+
+ctx.lineJoin = ctx.lineCap = 'round';
+/*ctx.shadowBlur = 10;
+ctx.shadowColor = 'rgb(0, 0, 0)';*/
+
+var isDrawing, points = [ ], point = [];
+
+el.onmousedown = function(e) {
+  isDrawing = true;
+  point.push({ 
+    x: e.clientX, 
+    y: e.clientY,
+    width: getRandomInt(3, 5)
+  });
+};
+
+el.onmousemove = function(e) {
+  if (!isDrawing) return;
+
+  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+  
+  point.push({ 
+    x: e.clientX, 
+    y: e.clientY,
+    width: getRandomInt(3, 5)
+  });
+  
+  for (var i = 0; i < points.length; i++) {
+    ctx.moveTo(points[i][0].x, points[i][0].y);
+              //ctx.beginPath();
+    for(var j = 1; j <points[i].length; j++){
+
+    
+    ctx.lineWidth = points[i][j].width;
+    ctx.lineTo(points[i][j].x, points[i][j].y);
+    ctx.stroke();
+    }
+
+  }
+
+
+};
+
+el.onmouseup = function() {
+  
+  isDrawing = false;
+ 
+  points.push(point);
+  // point.length = 0;
+  console.log(JSON.stringify(points))
+  point = [];
+};
+      //# sourceURL=pen.js
+    </script>
+
+
+
+  
+  
+
+</body>
+
+</html>
+ 
