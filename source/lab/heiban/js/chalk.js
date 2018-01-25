@@ -143,7 +143,6 @@ function chalkboard(){
 			var yRandom = yCurrent+(Math.random()-0.5)*brushDiameter*1.2;
     		ctx.clearRect( xRandom, yRandom, Math.random()*2+2, Math.random()+1);
 			}
-
 		xLast = x;
 		yLast = y;
 	}
