@@ -2,12 +2,47 @@
 <html lang="zh-CN">
 <head>
 <style>
+@font-face {
+  font-family: pixel;
+  src: url('https://summerandwinter.github.io/lab/pixelart/assert/pixel_maz.eot?v=2.4.0');
+  src: url('https://summerandwinter.github.io/lab/pixelart/assert/pixel_maz.eot?v=2.4.0#iefix') format('embedded-opentype'),
+         url('https://summerandwinter.github.io/lab/pixelart/assert/pixel_maz.woff2?v=2.4.0') format('woff2'),
+         url('https://summerandwinter.github.io/lab/pixelart/assert/pixel_maz.ttf?v=2.4.0') format('truetype'),
+         url('https://summerandwinter.github.io/lab/pixelart/assert/pixel_maz.woff?v=2.4.0') format('woff'),
+         url('https://summerandwinter.github.io/lab/pixelart/assert/pixel_maz.svg?v=2.4.0#pixel_maz') format('svg');
+}
 .palette{
 width: 400px;
-}
-.row{
-	  display: flex;
+  display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+
+}
+.text{
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-family: pixel;
+  font-size: 400px;
+  line-height: 400px;
+  text-align: center;
+  color: #fff;
+}
+.border-light{
+  background-color:#000;opacity:0.1
+}
+.border-none{
+  background-color:#000;opacity:0
+}
+
+.selected .border-light{
+  opacity:1
+}
+
+.selected .border-none{
+  opacity:1
 }
 .palette div{
    width: 40px;
@@ -15,12 +50,11 @@ width: 400px;
   flex-shrink: 0;
 }	
 </style>	
-<script   src="http://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="palette" id="palette">
-	<div></div>
-
+  <span class="text">2</span>
 </div>
 <script type="text/javascript">
 Color = function () {
@@ -553,6 +587,33 @@ Color = function () {
     return _hexify(rgb.r * 255) + _hexify(rgb.g * 255) + _hexify(rgb.b * 255);
   };
 
+  this.toBlack = function(){
+    var rgb = this.getRGB();
+    var avg = (rgb.r +  rgb.g + rgb.b) / 3;
+    if(avg >= 100){
+      return this.copy().setRGB(0, 0, 0)
+    }else{
+      return this.copy().setRGB(255, 255, 255)
+    }
+    
+  }
+
+  this.toGray = function (){
+    var rgb = this.getRGB();
+    var gray = .299 * rgb.r + .587 * rgb.g + .114 * rgb.b;
+    return this.copy().setRGB(gray, gray, gray)
+  }
+
+  this.toDark = function(){
+    var hsl = this.getHSL();
+    return this.copy().setHSL(hsl.h, hsl.s, hsl.l-0.06)
+  }
+
+  this.toLight = function(){
+    var hsl = this.getHSL();
+    return this.copy().setHSL(hsl.h, hsl.s, hsl.l+0.14)
+  }
+
   this.toCSS = function () {
     return '#' + this.toHex();
   };
@@ -587,34 +648,34 @@ Color = function () {
 	[0, 0, 5, 5, 5, 5, 5, 5, 0, 0]
 	];
 	var html = '';
-	var color = new Color(0.8588235294117647, 0.23137254901960785, 0.3568627450980392);
+	var color = new Color(0.13333333333333333, 0.11372549019607843, 0.17254901960784313);
 	var c = color.toCSS();
 	var colorDark = color.copy().setHSL(color.getHSL().h,color.getHSL().s,color.getHSL().l/2);
 	var colorLight = color.copy().setHSL(color.getHSL().h,color.getHSL().s,color.getHSL().l+0.2);
-	var cd = colorDark.toCSS();
-	var cl = colorLight.toCSS();
+	var cd = color.toDark().toCSS();
+	var cl = color.toLight().toCSS();
 	console.log(color.getHSL())
 	for(var i=0;i<data.length;i++){
 		console.log(i)
-		html += '<div class="row">';
+
 		for(var j=0;j<data[i].length;j++){
 			style = 'background-color:#fff;opacity:1;';
 			if(data[i][j] ==1 ){
-				style = 'background-color:#000;opacity:0;';
+				style = 'class="border-none"';
 			}else if(data[i][j] == 2){
-				style = 'background-color:'+c+';opacity:1';
+				style = 'style="background-color:'+c+';opacity:1"';
 			}else if(data[i][j] == 3){
-				style = 'background-color:'+cl+';opacity:1';
+				style = 'style="background-color:'+cl+';opacity:1"';
 			}else if(data[i][j] == 4){
-				style = 'background-color:'+cd+';opacity:1';
+				style = 'style="background-color:'+cd+';opacity:1"';
 			}else if(data[i][j] == 5){
-				style = 'background-color:#000;opacity:0.1';
+				style = 'class="border-light"';
 			}
-			html += '<div class="item" style="'+style+'"></div>';
+			html += '<div '+style+'></div>';
 		}
-		html += '</div>';
+
 	}
-	$("#palette").html(html);
+	$("#palette").append(html);
 
 </script>	
 </body>
