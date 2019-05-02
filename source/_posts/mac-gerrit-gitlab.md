@@ -106,7 +106,7 @@ sh ~/review_site/bin/gerrit.sh start
 
 启动成功后访问 http://localhost:8081
 
-![](/Users/summer/dev/hexo/source/assets/images/articles/gerrit_configuration_error.jpg)
+![](https://summerandwinter.github.io/assets/images/articles/gerrit_configuration_error.jpg)
 
 ## 修改认证方式和反向代理
 
