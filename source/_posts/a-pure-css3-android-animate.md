@@ -21,7 +21,7 @@ permalink: a-pure-css3-android-animate
 
 效果图：
 
-![css3-android-animate](http://sanyecao.qiniudn.com/assets/images/lab/css3-android-animate.jpg)
+![css3-android-animate](https://summerandwinter.github.io/assets/images/lab/css3-android-animate.jpg)
 
 
 （**新版示例，已兼容safari。**）

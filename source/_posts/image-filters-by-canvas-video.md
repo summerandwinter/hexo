@@ -91,7 +91,7 @@ var m_VideoType=0;
        }  
        var pattern_width = [ 2, 1, 3, 5 ];  
        var pattern_height = [6, 3, 3, 15 ];  
-```       
+```
 # 获取过滤数据
 
 ```javascript
@@ -140,11 +140,11 @@ context.putImageData(canvasData, 0, 0);
 # 效果预览
 **原图**
 
-![原图](http://sanyecao.qiniudn.com/assets/images/filter/original.jpg)
+![原图](https://summerandwinter.github.io/assets/images/filter/original.jpg)
 
 **效果图**
 
-![效果图](http://sanyecao.qiniudn.com/assets/images/filter/video.jpg)
+![效果图](https://summerandwinter.github.io/assets/images/filter/video.jpg)
 
 查看**[示例][demo]**
 

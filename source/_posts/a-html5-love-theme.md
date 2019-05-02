@@ -28,6 +28,7 @@ description: 一个基于基于Html5的爱情主题，文字采用打字机效�
 打字机声音效果采用HTML5的audio属性
 
 **效果图：**
-![基于Html5的爱情主题网站--表白神器](http://sanyecao.qiniudn.com/assets/images/lab/love.jpg)
+![基于Html5的爱情主题网站--表白神器](https://summerandwinter.github.io/assets/images/lab/love.jpg)
 
 [查看示例](https://summerandwinter.github.io/lab/love/index.html "基于Html5的爱情主题网站–表白神器")
+

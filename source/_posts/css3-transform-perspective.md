@@ -25,11 +25,11 @@ CCS3中的Transform是设置界面样式和动画的一大利器。而且在Chro
 
 镜头距离z=0平面的不同距离的效果。
 
-![perspective](http://sanyecao.qiniudn.com/assets/images/articles/perspective.jpg)
+![perspective](https://summerandwinter.github.io/assets/images/articles/perspective.jpg)
 
 镜头在z坐标固定时，x和y坐标（perspective-origin）变化时的差别。
 
-![perspective-origin](http://sanyecao.qiniudn.com/assets/images/articles/perspective-origin.jpg)
+![perspective-origin](https://summerandwinter.github.io/assets/images/articles/perspective-origin.jpg)
 
 在FireFox中也是这种情况。
 

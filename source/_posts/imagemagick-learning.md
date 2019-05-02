@@ -31,7 +31,7 @@ magick img.jpg img2.jpg -background '#ffffff' -gravity Center +append dest.jpg
 ```bash
 magick source.jpeg -negate negate.png
 ```
-![反色效果](http://sanyecao.qiniudn.com/assets/images/articles/imagemagick/negate.jpg?v4)
+![反色效果](https://summerandwinter.github.io/assets/images/articles/imagemagick/negate.jpg?v4)
 
 ## 加边框
 
@@ -41,7 +41,7 @@ magick source.jpeg -mattecolor "#000000" -frame 60x60 mattecolor.jpg
 
 `#000000`边框颜色 `60x60` 边框宽度
 
-![加边框](http://sanyecao.qiniudn.com/assets/images/articles/imagemagick/mattecolor.jpg?v4)
+![加边框](https://summerandwinter.github.io/assets/images/articles/imagemagick/mattecolor.jpg?v4)
 
 下面是加边框的另外方式实现方式
 
@@ -49,7 +49,7 @@ magick source.jpeg -mattecolor "#000000" -frame 60x60 mattecolor.jpg
 magick source.jpeg -border 60x60 -bordercolor "#000000" border.jpg
 ```
 
-![加边框](http://sanyecao.qiniudn.com/assets/images/articles/imagemagick/border.jpg?v4)
+![加边框](https://summerandwinter.github.io/assets/images/articles/imagemagick/border.jpg?v4)
 
 
 ## 单色
@@ -58,7 +58,7 @@ magick source.jpeg -border 60x60 -bordercolor "#000000" border.jpg
 magick  source.jpeg -monochrome monochrome.png
 ```
 
-![单色](http://sanyecao.qiniudn.com/assets/images/articles/imagemagick/monochrome.jpg?v4)
+![单色](https://summerandwinter.github.io/assets/images/articles/imagemagick/monochrome.jpg?v4)
 
 
 ## 噪点
@@ -82,7 +82,7 @@ Uniform
 magick source.jpeg -statistic Nonpeak 10  noiseless.jpg
 ```
 
-![噪点](http://sanyecao.qiniudn.com/assets/images/articles/imagemagick/noise.jpg?v4)
+![噪点](https://summerandwinter.github.io/assets/images/articles/imagemagick/noise.jpg?v4)
 
 
 ## 旋转
@@ -91,7 +91,7 @@ magick source.jpeg -statistic Nonpeak 10  noiseless.jpg
 magick source.jpeg -rotate 30 rotate.jpg
 ```
 
-![旋转](http://sanyecao.qiniudn.com/assets/images/articles/imagemagick/rotate.jpg?v4)
+![旋转](https://summerandwinter.github.io/assets/images/articles/imagemagick/rotate.jpg?v4)
 
 ## 翻转
 
@@ -101,7 +101,7 @@ magick source.jpeg -rotate 30 rotate.jpg
 magick source.jpeg -flip flip.jpg
 ```
 
-![上下翻转](http://sanyecao.qiniudn.com/assets/images/articles/imagemagick/flip.jpg?v4)
+![上下翻转](https://summerandwinter.github.io/assets/images/articles/imagemagick/flip.jpg?v4)
 
 左右翻转
 
@@ -109,7 +109,7 @@ magick source.jpeg -flip flip.jpg
 magick source.jpeg -flop flop.jpg
 ```
 
-![左右翻转](http://sanyecao.qiniudn.com/assets/images/articles/imagemagick/flop.jpg?v4)
+![左右翻转](https://summerandwinter.github.io/assets/images/articles/imagemagick/flop.jpg?v4)
 
 ## 油画效果
 
@@ -119,7 +119,7 @@ magick source.jpeg -paint 4 paint.jpg
 
 数字越大色块越大
 
-![油画效果](http://sanyecao.qiniudn.com/assets/images/articles/imagemagick/paint.jpg?v4)
+![油画效果](https://summerandwinter.github.io/assets/images/articles/imagemagick/paint.jpg?v4)
 
 
 ## 炭笔效果
@@ -129,7 +129,7 @@ magick source.jpeg -charcoal 2 charcoal.jpg
 ```
 
 数字越大笔触越大
-![炭笔效果](http://sanyecao.qiniudn.com/assets/images/articles/imagemagick/charcoal.jpg?v4)
+![炭笔效果](https://summerandwinter.github.io/assets/images/articles/imagemagick/charcoal.jpg?v4)
 
 
 ## 散射
@@ -140,7 +140,7 @@ magick source.jpeg -spread 30 spread.jpg
 ```
 
 数字越大越模糊
-![毛玻璃效果](http://sanyecao.qiniudn.com/assets/images/articles/imagemagick/spread.jpg?v4)
+![毛玻璃效果](https://summerandwinter.github.io/assets/images/articles/imagemagick/spread.jpg?v4)
 
 
 ## 漩涡
@@ -149,7 +149,7 @@ magick source.jpeg -spread 30 spread.jpg
 magick source.jpeg -swirl 67 swril.jpg
 ```
 数字越大扭曲得越严重
-![漩涡效果](http://sanyecao.qiniudn.com/assets/images/articles/imagemagick/swril.jpg?v4)
+![漩涡效果](https://summerandwinter.github.io/assets/images/articles/imagemagick/swril.jpg?v4)
 
 
 ## 凸起效果
@@ -159,5 +159,5 @@ magick source.jpeg -raise 5x5 raise.jpg
 ```
 执行后，你会看到，照片的四周会一个5x5的边，如果你要一个凹下去的边，把-raise改为+raise就可以了。其实凸边和凹边看起来区别并不是很大。
 
-![凸起效果](http://sanyecao.qiniudn.com/assets/images/articles/imagemagick/raise.jpg?v4)
+![凸起效果](https://summerandwinter.github.io/assets/images/articles/imagemagick/raise.jpg?v4)
 

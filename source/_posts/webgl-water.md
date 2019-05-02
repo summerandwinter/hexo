@@ -21,7 +21,7 @@ WebGL是一种3D绘图标准，这种绘图技术标准允许把JavaScript和Ope
 
 啰嗦这这么多先给张效果图
 
-![webgl-water](http://sanyecao.qiniudn.com/assets/images/lab/webgl-water.jpg)
+![webgl-water](https://summerandwinter.github.io/assets/images/lab/webgl-water.jpg)
 
 **下面是整理好的一个示例，在chrome,firefox浏览器下查看，不支持IE和safari。chrome下效果最佳，另外对显卡和驱动也有要求。**
 
