@@ -394,11 +394,12 @@ body,html {
 body,h1,h2,h3,h4,h5,h6 {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	-moz-font-feature-settings: "liga" on;
+	font-feature-settings: "liga" on;
 }
 h1,h2,h3,h4,h5,h6{
-  font-weight: 600;
-  font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-weight: 500;
+  color: #353535;
+  font-family: PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;
 }
 body {
 	font-size: 16px
@@ -406,10 +407,11 @@ body {
 
 
 .article-type-post{
-  color: #111111;
-  font-weight: 400;
-  font-size: 18px;
-	font-family: "Source Sans Pro", "Helvetica Neue", Consolas, proxima nova,"HanHei SC","PingHei","PingFang SC","STHeitiSC-Light","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-size: 1em/1.8 ;
+  color: #4B4C4D;
+  letter-spacing: .32px;
+  line-height: 2.1;
+	font-family: Avenir,Tahoma,Arial,PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif;
 }
 
 em {
