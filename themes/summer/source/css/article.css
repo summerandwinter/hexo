@@ -163,10 +163,13 @@ mark {
 }
 
 /* 代码片断 */
-pre, code, pre tt {
+code, pre tt {
+  font-size: 14px;
+  border-radius: 2px;
   overflow: visible;
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
   word-wrap: normal;
+  padding: 0px 5px;
   white-space: pre;
   color: #4d4d4c;
   background: #f3f3f3;
