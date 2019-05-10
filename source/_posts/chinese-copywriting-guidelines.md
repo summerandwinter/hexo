@@ -72,9 +72,9 @@ description: 统一中文文案、排版的相关用法，降低团队成员之�
 
 > 刚刚买了一部 iPhone ，好开心！
 
-### `-ms-text-autospace` to the rescue?
+### -ms-text-autospace to the rescue?
 
-Microsoft 有个 [`-ms-text-autospace`](http://msdn.microsoft.com/en-us/library/ie/ms531164(v=vs.85).aspx) 的 CSS 属性可以实现自动为中英文之间增加空白。不过目前并未普及，另外在其他应用场景，例如 OS X、iOS 的用户界面目前并不存在这个特性，所以请继续保持随手加空格的习惯。
+Microsoft 有个 [`-ms-text-autospace`](http://msdn.microsoft.com/en-us/library/ie/ms531164.aspx) 的 CSS 属性可以实现自动为中英文之间增加空白。不过目前并未普及，另外在其他应用场景，例如 OS X、iOS 的用户界面目前并不存在这个特性，所以请继续保持随手加空格的习惯。
 
 ## 标点符号
 
