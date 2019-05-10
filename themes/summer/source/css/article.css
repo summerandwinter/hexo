@@ -409,7 +409,8 @@ body {
 
 
 .article-type-post{
-  font-size: 1em/1.8 ;
+  font-size: 1em/1.8;
+  font-weight: 400;
   color: #4B4C4D;
   letter-spacing: .32px;
   line-height: 2.1;
