@@ -43,7 +43,6 @@ function renderTitle() {
     var h6 = getTextByTagName("h6");
     var text = h1 + h2 + h3 + h4 + h5 + h6;
     var removal = text.removal();
-    console.log(removal);
     getCustomFont(removal, "SourceHanSerifCN-Bold.ttf");
 
 }
