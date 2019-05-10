@@ -11,7 +11,9 @@ String.prototype.removal = function() {
     var chinese = text.replace(/[^\u4E00-\u9FA5]/g,'')
     // 提取字母
     var letters = text.replace(/[^a-zA-Z]/g,'')
-    var result = chinese + letters + numbers;
+    // 其他特殊字符
+    var others = text.replace(/[\u4e00-\u9fa5a-zA-Z\d]+/g, '');
+    var result = chinese + letters + numbers + others;
    return result;
 }
 
@@ -40,7 +42,9 @@ function renderTitle() {
     var h5 = getTextByTagName("h5");
     var h6 = getTextByTagName("h6");
     var text = h1 + h2 + h3 + h4 + h5 + h6;
-    getCustomFont(text.removal(), "SourceHanSerifCN-Bold.ttf")
+    var removal = text.removal();
+    console.log(removal);
+    getCustomFont(removal, "SourceHanSerifCN-Bold.ttf");
 
 }
 
