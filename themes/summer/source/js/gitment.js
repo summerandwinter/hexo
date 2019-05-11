@@ -3246,7 +3246,6 @@ function ajaxFactory(method) {
     for(var header in headers){
         req.setRequestHeader([header], headers[header]);
     }
-    
 
     req.send(body);
     return p;

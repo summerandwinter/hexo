@@ -1,4 +1,6 @@
+<% if (is_post()){ %>
 <script src="/js/summer.js"></script>
+<% } %>
 <% if (config.disqus_shortname && !is_home() && !is_archive()) { %>
   <script>
    var disqus_shortname = '<%= config.disqus_shortname %>';
