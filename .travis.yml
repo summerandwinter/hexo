@@ -22,7 +22,7 @@ after_script:
 
 branches:
   only:
-    - hexo
+    - master
 env:
  global:
    - GH_REF: github.com/summerandwinter/summerandwinter.github.io.git
