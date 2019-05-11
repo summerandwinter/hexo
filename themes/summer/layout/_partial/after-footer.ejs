@@ -21,7 +21,10 @@
 <%- css('/css/gitment.css') %>
 <%- js('/js/gitment.js') %>
 <script>
+  var date = '<%= page.date %>';
+  var id = ''+new Date(date).getTime();
   var gitment = new Gitment({
+    id: id,
     owner: '<%= theme.gitment.owner %>',
     repo: '<%= theme.gitment.repo %>',
     oauth: {
