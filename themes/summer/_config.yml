@@ -44,3 +44,11 @@ links:
 # Info
 archive_footer_content: "<div class='end-of-file'>Live Happy Love Hard</div>"
 post_footer_content: "<div class='end-of-file'>Live Happy Love Hard</div>"
+
+# Gitment
+gitment:
+  owner: summerandwinter
+  repo: summerandwinter.github.io
+  client:
+    id: 7b432b7b46e71966fd88
+    secret: 2c697bec7b012bca975de41c87863d84086f8d81

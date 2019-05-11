@@ -3,8 +3,8 @@
 		init_arr=[],
 		tickInit=false,
 		defaults={
-			fishImage:'http://sanyecao.qiniudn.com/assets/fish.png',
-			fishFinImage:'http://sanyecao.qiniudn.com/assets/fin.png',
+			fishImage:'/assets/fish.png',
+			fishFinImage:'/assets/fin.png',
 			spritesheetSpeed:1,
 			colour:'#c8c8c8',
 			number:2,

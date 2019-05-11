@@ -6,6 +6,7 @@ categories:
 tags:
   - Git
 description: 介绍一些Git学习过程中入门的基本知识
+comment: true
 ---
 
 # 基本概念

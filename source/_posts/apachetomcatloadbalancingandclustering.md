@@ -10,6 +10,7 @@ tags:
   - 负载均衡
   - 集群
 permalink: apachetomcatloadbalancingandclustering
+comment: true
 ---
 
 
@@ -47,7 +48,7 @@ Win7 32位   Java 版本 "1.8.0_20"
 
 由于在机器A上有两个tomcat，为避免端口冲突tomcat1保持默认配置，修改tomcat2端口。
 
-![](http://sanyecao.qiniudn.com/assets/images/articles/tomcat-config-port.jpg "修改Tomcat端口。")
+![](/assets/images/articles/tomcat-config-port.jpg "修改Tomcat端口。")
 
 如果Apache和3个Tomcat能成功启动这里步就算完成了。
 
@@ -121,7 +122,7 @@ workers.properties
 
 这个版本的tomcat中默认为被注释状态，取消注释，并修改为下面这样
 
-![](http://sanyecao.qiniudn.com/assets/images/articles/tomcat-config-xml.jpg "修改Tomcat配置")
+![](/assets/images/articles/tomcat-config-xml.jpg "修改Tomcat配置")
 
 下面为文字版
 ```xml
@@ -159,7 +160,7 @@ workers.properties
 ```
 依次重启tomcat1,tomcat2,tomcat3,如果控制台打印出下面这样的字样说明集群配置成功
 
-![](http://sanyecao.qiniudn.com/assets/images/articles/cmd-output.jpg "控制台打印结果")
+![](/assets/images/articles/cmd-output.jpg "控制台打印结果")
 接下来我们来验证下集群配置是否成功
 
 1.修改每个tomcat下`webapps\ROOT\WEB-INF`目录下的`web.xml`文件中加入
