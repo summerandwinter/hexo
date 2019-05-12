@@ -11,10 +11,11 @@ install:
   - npm install
 
 srcript: 
-  - hexo g
-  - gulp
+
 
 after_script:
+  - hexo g
+  - gulp
   - ls
   - cd ./public
   - git init 
