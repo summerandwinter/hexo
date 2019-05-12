@@ -13,8 +13,6 @@ install:
 srcript: 
   - hexo g
   - gulp
-
-after_script:
   - ls
   - cd ./public
   - git init 
@@ -23,6 +21,9 @@ after_script:
   - git add .
   - git commit -m "Update docs"
   - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+
+after_script:
+
 
 branches:
   only:
