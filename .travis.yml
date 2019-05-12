@@ -1,5 +1,8 @@
 language: node-js
 
+node_js:
+ - 4.4.4
+
 notifications:
   email:
     on_success: never
@@ -7,7 +10,7 @@ notifications:
 install:
   - npm install
 
-srcript:  
+srcript: 
   - hexo g
   - gulp
 
