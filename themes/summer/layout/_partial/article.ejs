@@ -78,4 +78,9 @@
     <div id="gitment_container"></div>
   </section>
 <% } %>
+<% if(!index && post.comments && theme.utterances.enable && theme.utterances.repo){ %>
+  <section id="comments" class="comments">
+    <div id="utterances_container"></div>
+  </section>
+<% } %>
 </div>
