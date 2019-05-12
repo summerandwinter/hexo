@@ -3213,21 +3213,27 @@ var Gitment =
             //多少分钟前
             else if (inter < 60) {
 
-                return inter.toString() + "minutes age";
+                return inter.toString() + " minutes age";
+
+            }
+
+            else if (inter == 60) {
+
+                return "an hour ago"
 
             }
 
             //多少小时前
             else if (inter < 60 * 24) {
 
-                return parseInt(inter / 60).toString() + "hours ago";
+                return parseInt(inter / 60).toString() + " hours ago";
 
             }
 
             //本年度内，日期不同，取日期+时间  格式如  06-13 22:11
             else if (now.getFullYear() == date.getFullYear()) {
 
-                return (date.getMonth() + 1).toString() + "/" +
+                return "on" + (date.getMonth() + 1).toString() + "/" +
 
                     date.getDate().toString() + " " +
 
@@ -3237,7 +3243,7 @@ var Gitment =
 
             } else {
 
-                return date.getFullYear().toString().substring(2, 3) + "/" +
+                return "on" + date.getFullYear().toString().substring(2, 3) + "/" +
 
                     (date.getMonth() + 1).toString() + "/" +
 
@@ -3307,7 +3313,7 @@ var Gitment =
                 var updateDate = new Date(comment.updated_at);
                 var commentItem = document.createElement('li');
                 commentItem.className = 'gitment-comment';
-                commentItem.innerHTML = '\n      <a class="gitment-comment-avatar" href="' + comment.user.html_url + '" target="_blank">\n        <img class="gitment-comment-avatar-img" src="' + comment.user.avatar_url + '"/>\n      </a>\n      <div class="gitment-comment-main">\n        <div class="gitment-comment-header">\n          <a class="gitment-comment-name" href="' + comment.user.html_url + '" target="_blank">\n            ' + comment.user.login + '\n          </a>\n          commented on\n          <span title="' + createDate + '">' + getTimeShow(createDate) + '</span>\n          ' + (createDate.toString() !== updateDate.toString() ? ' \u2022 <span title="comment was edited at ' + updateDate + '">edited</span>' : '') + '\n          <div class="gitment-comment-like-btn">' + _icons.heart + ' ' + (comment.reactions.heart || '') + '</div>\n        </div>\n        <div class="gitment-comment-body gitment-markdown">' + comment.body_html + '</div>\n      </div>\n    ';
+                commentItem.innerHTML = '\n      <a class="gitment-comment-avatar" href="' + comment.user.html_url + '" target="_blank">\n        <img class="gitment-comment-avatar-img" src="' + comment.user.avatar_url + '"/>\n      </a>\n      <div class="gitment-comment-main">\n        <div class="gitment-comment-header">\n          <a class="gitment-comment-name" href="' + comment.user.html_url + '" target="_blank">\n            ' + comment.user.login + '\n          </a>\n          commented \n          <span title="' + createDate + '">' + getTimeShow(createDate) + '</span>\n          ' + (createDate.toString() !== updateDate.toString() ? ' \u2022 <span title="comment was edited at ' + updateDate + '">edited</span>' : '') + '\n          <div class="gitment-comment-like-btn">' + _icons.heart + ' ' + (comment.reactions.heart || '') + '</div>\n        </div>\n        <div class="gitment-comment-body gitment-markdown">' + comment.body_html + '</div>\n      </div>\n    ';
                 var likeButton = commentItem.querySelector('.gitment-comment-like-btn');
                 var likedReaction = commentReactions[comment.id] && commentReactions[comment.id].find(function (reaction) {
                     return reaction.content === 'heart' && reaction.user.login === user.login;
