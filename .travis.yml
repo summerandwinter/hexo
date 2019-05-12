@@ -10,20 +10,16 @@ notifications:
 install:
   - npm install
 
-srcript: 
+after_script:
   - hexo g
   - gulp
-  - ls
   - cd ./public
   - git init 
   - git config user.name "summerandwinter"
   - git config user.email "ly1989124423@163.com"
   - git add .
-  - git commit -m "Update docs"
+  - git commit -m "Update articles"
   - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
-
-after_script:
-
 
 branches:
   only:
