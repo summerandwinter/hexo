@@ -1144,3 +1144,53 @@ a.gitment-editor-footer-tip:hover {
 .gitment-markdown hr {
   border-bottom-color: #eee;
 }
+
+@media (max-width: 468px) {
+  .gitment-comment,
+.gitment-editor-container {
+  position: relative;
+  min-height: 60px;
+  padding-left: 0px;
+  margin: 19px 0;
+}
+.gitment-comment-avatar, .gitment-editor-avatar {
+  display: none;
+}
+.gitment-comment-main,
+.gitment-editor-main {
+  position: relative;
+  border: 1px solid #CFD8DC;
+  border-radius: 0;
+}
+
+.gitment-editor-main::before,
+.gitment-editor-main::after,
+.gitment-comment-main::before,
+.gitment-comment-main::after {
+  position: absolute;
+  top: 11px;
+  left: -16px;
+  display: block;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  content: "";
+  border-color: transparent;
+  border-style: none;
+}
+
+.gitment-editor-main::before,
+.gitment-comment-main::before {
+  border-width: 0px;
+  border-right-color: #CFD8DC;
+}
+
+.gitment-editor-main::after,
+.gitment-comment-main::after {
+  margin-top: 1px;
+  margin-left: 2px;
+  border-width: 7px;
+  border-right-color: #fff;
+}
+  
+}
