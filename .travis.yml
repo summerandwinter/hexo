@@ -15,6 +15,7 @@ srcript:
   - gulp
 
 after_script:
+  - ls
   - cd ./public
   - git init 
   - git config user.name "summerandwinter"
