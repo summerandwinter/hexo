@@ -47,11 +47,12 @@ post_footer_content: "<div class='end-of-file'>Live Happy Love Hard</div>"
 
 # Gitment
 gitment:
-  owner: #summerandwinter
-  repo: #summerandwinter.github.io
+  enable: false
+  owner: summerandwinter
+  repo: summerandwinter.github.io
   client:
-    id: #7b432b7b46e71966fd88
-    secret: #2c697bec7b012bca975de41c87863d84086f8d81
+    id: 7b432b7b46e71966fd88
+    secret: 2c697bec7b012bca975de41c87863d84086f8d81
 
 # Utterances
 # NOTICE) make sure the app is installed on the repo before using this commit system
@@ -59,3 +60,17 @@ gitment:
 utterances:
   enable: true
   repo: summerandwinter/summerandwinter.github.io # your repo in this format: 'username/reponame', note that there is no '.git' suffix    
+
+
+# If you want to use valine,you should get the appId and appKey form https://leancloud.cn ,more setting please see https://valine.js.org
+valine:
+  enable: false # !!if you want use valine comment system,please set enable: true
+  appId:  Gb3NgQmIATbymMeFxECohqkY-gzGzoHsz #your leancloud appId
+  appKey:  OkpJkJDove69qiYuw85GoWCP #your leancloud appKey
+  guest_info: nick,mail,link #valine comment header info
+  placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
+  avatar: mm # gravatar style https://valine.js.org/avatar
+  pageSize: 10 # comment list page size
+  verify: false # valine verify code (true/false)
+  notify: false # valine mail notify (true/false)
+  lang: zh-cn

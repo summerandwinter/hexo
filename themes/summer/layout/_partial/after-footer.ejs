@@ -1,9 +1,9 @@
 <% if (is_post()){ %>
 <script src="/js/summer.js"></script>
 <% } %>
-<% if (config.disqus_shortname && !is_home() && !is_archive()) { %>
+<% if (theme.disqus_shortname && !is_home() && !is_archive()) { %>
   <script>
-   var disqus_shortname = '<%= config.disqus_shortname %>';
+   var disqus_shortname = '<%= theme.disqus_shortname %>';
    <% if (page.permalink){ %>
    var disqus_url = '<%= page.permalink %>';
    <% } %>
@@ -17,7 +17,7 @@
   </script>
 <% } %>
 
-<% if (theme.gitment.owner && theme.gitment.repo && theme.gitment.client.id && theme.gitment.client.secret && !is_home() && !is_archive()) { %>
+<% if (theme.gitment.enable && theme.gitment.owner && theme.gitment.repo && theme.gitment.client.id && theme.gitment.client.secret && !is_home() && !is_archive()) { %>
 <%- css('/css/gitment.css') %>
 <%- js('/js/gitment.js') %>
 <script>
@@ -54,6 +54,32 @@
     })();
    </script>
 <% } %>
+
+<% if (theme.valine.enable && theme.valine.appId && theme.valine.appKey){ %>
+  <%- js('https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js') %>
+  <%- js('https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js') %>
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = '<%= theme.valine.guest_info %>'.split(',').filter(function(item){
+            return GUEST_INFO.indexOf(item) > -1
+        });
+        var notify = '<%= theme.valine.notify %>' == true;
+        var verify = '<%= theme.valine.verify %>' == true;
+        var valine = new Valine();
+        valine.init({
+            el: '#valine_container',
+            notify: notify,
+            verify: verify,
+            appId: "<%= theme.valine.appId %>",
+            appKey: "<%= theme.valine.appKey %>",
+            placeholder: "<%= theme.valine.placeholder %>",
+            pageSize:'<%= theme.valine.pageSize %>',
+            avatar:'<%= theme.valine.avatar %>',
+            lang:'<%= theme.valine.lang %>'
+        })
+    </script>
+  <% } %>
+
 <% if (theme.fancybox){ %>
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
   <%- css('fancybox/jquery.fancybox') %>
