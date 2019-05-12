@@ -47,7 +47,7 @@ post_footer_content: "<div class='end-of-file'>Live Happy Love Hard</div>"
 
 # Gitment
 gitment:
-  enable: false
+  enable: true
   owner: summerandwinter
   repo: summerandwinter.github.io
   client:
@@ -58,7 +58,7 @@ gitment:
 # NOTICE) make sure the app is installed on the repo before using this commit system
 # see https://utteranc.es/ for more
 utterances:
-  enable: true
+  enable: false
   repo: summerandwinter/summerandwinter.github.io # your repo in this format: 'username/reponame', note that there is no '.git' suffix    
 
 
