@@ -39,7 +39,9 @@
 <% if (is_post() && theme.donate.enable) {%>
   <%- css('css/donate') %>
 <% } %>
-
+<% if (is_post() && theme.gitment.enable) { %>
+  <%- css('/css/gitment.css') %>
+<% } %>
 <% if (is_post()){ %>
   <%- css('css/article') %>
 <% }else{ %>

@@ -12,8 +12,7 @@
   </script>
 <% } %>
 
-<% if (is_post() && theme.gitment.enable && theme.gitment.owner && theme.gitment.repo && theme.gitment.client.id && theme.gitment.client.secret) { %>
-<%- css('/css/gitment.css') %>
+<% if (is_post() && theme.gitment.enable) { %>
 <%- js('/js/gitment.js') %>
 <script>
   var date = '<%= page.date %>';
