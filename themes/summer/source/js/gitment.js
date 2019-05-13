@@ -3286,6 +3286,7 @@ var Gitment =
                 var likedReaction = commentReactions[comment.id] && commentReactions[comment.id].find(function (reaction) {
                     return reaction.content === 'heart' && reaction.user.login === user.login;
                 });
+                
                 if (likedReaction) {
                     likeButton.classList.add('liked');
                     likeButton.onclick = function () {
