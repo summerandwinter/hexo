@@ -77,10 +77,10 @@ valine:
  
 # Donate
 donate:
-  enable: false
+  enable: true
   github: https://github.com/summerandwinter
   paypal: https://www.paypal.me/
-  bitcoin: 
-  BTCQR: /donate/bitcoin.png
-  AliPayQR: /donate/alipayQR.jpg
-  WeChatQR: /donate/wechatQR.jpg 
+  bitcoin: 1234567890
+  BTCQR: /images/donate/bitcoin.jpg
+  AliPayQR: /images/donate/alipayQR.jpg
+  WeChatQR: /images/donate/wechatQR.jpg 

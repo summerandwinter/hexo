@@ -291,13 +291,13 @@ a.gitment-editor-logout-link:hover {
   margin: 0;
 }
 
-.gitment-comment-body > *:first-child,
-.gitment-editor-preview > *:first-child {
+.gitment-comment-body>*:first-child,
+.gitment-editor-preview>*:first-child {
   margin-top: 0 !important;
 }
 
-.gitment-comment-body > *:last-child,
-.gitment-editor-preview > *:last-child {
+.gitment-comment-body>*:last-child,
+.gitment-editor-preview>*:last-child {
   margin-bottom: 0 !important;
 }
 
@@ -308,21 +308,16 @@ a.gitment-editor-logout-link:hover {
   max-height: 500px;
   padding: 16px;
   resize: vertical;
-
   max-width: 100%;
   margin: 0;
   font-size: 14px;
   line-height: 1.6;
-
   background-color: #fff;
-
   color: #333;
-  vertical-align: middle;
   border: none;
   border-radius: 0;
   outline: none;
   box-shadow: none;
-
   overflow: visible;
 }
 
@@ -421,7 +416,7 @@ a.gitment-editor-footer-tip:hover {
 
 .gitment-comments-init-btn:disabled,
 .gitment-editor-submit:disabled {
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
   background-color: #4DD0E1;
   box-shadow: none;
 }
@@ -1043,7 +1038,7 @@ a.gitment-editor-footer-tip:hover {
   padding-bottom: 0.2em;
   margin: 0;
   font-size: 85%;
-  background-color: rgba(27,31,35,0.05);
+  background-color: rgba(27, 31, 35, 0.05);
   border-radius: 0;
 }
 
@@ -1146,51 +1141,55 @@ a.gitment-editor-footer-tip:hover {
 }
 
 @media (max-width: 468px) {
+
   .gitment-comment,
-.gitment-editor-container {
-  position: relative;
-  min-height: 60px;
-  padding-left: 0px;
-  margin: 19px 0;
-}
-.gitment-comment-avatar, .gitment-editor-avatar {
-  display: none;
-}
-.gitment-comment-main,
-.gitment-editor-main {
-  position: relative;
-  border: 1px solid #CFD8DC;
-  border-radius: 0;
-}
+  .gitment-editor-container {
+    position: relative;
+    min-height: 60px;
+    padding-left: 0px;
+    margin: 19px 0;
+  }
 
-.gitment-editor-main::before,
-.gitment-editor-main::after,
-.gitment-comment-main::before,
-.gitment-comment-main::after {
-  position: absolute;
-  top: 11px;
-  left: -16px;
-  display: block;
-  width: 0;
-  height: 0;
-  pointer-events: none;
-  content: "";
-  border-color: transparent;
-  border-style: none;
-}
+  .gitment-comment-avatar,
+  .gitment-editor-avatar {
+    display: none;
+  }
 
-.gitment-editor-main::before,
-.gitment-comment-main::before {
-  border-width: 0px;
-  border-right-color: #CFD8DC;
-}
+  .gitment-comment-main,
+  .gitment-editor-main {
+    position: relative;
+    border: 1px solid #CFD8DC;
+    border-radius: 0;
+  }
 
-.gitment-editor-main::after,
-.gitment-comment-main::after {
-  margin-top: 1px;
-  margin-left: 2px;
-  border-width: 7px;
-  border-right-color: #fff;
-}
-  
+  .gitment-editor-main::before,
+  .gitment-editor-main::after,
+  .gitment-comment-main::before,
+  .gitment-comment-main::after {
+    position: absolute;
+    top: 11px;
+    left: -16px;
+    display: block;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    content: "";
+    border-color: transparent;
+    border-style: none;
+  }
+
+  .gitment-editor-main::before,
+  .gitment-comment-main::before {
+    border-width: 0px;
+    border-right-color: #CFD8DC;
+  }
+
+  .gitment-editor-main::after,
+  .gitment-comment-main::after {
+    margin-top: 1px;
+    margin-left: 2px;
+    border-width: 7px;
+    border-right-color: #fff;
+  }
+
 }

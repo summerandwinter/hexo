@@ -1,12 +1,7 @@
-<% if (is_post()){ %>
-<script src="/js/summer.js"></script>
-<% } %>
+
 <% if (theme.disqus_shortname && !is_home() && !is_archive()) { %>
   <script>
    var disqus_shortname = '<%= theme.disqus_shortname %>';
-   <% if (page.permalink){ %>
-   var disqus_url = '<%= page.permalink %>';
-   <% } %>
    (function(){
      var dsq = document.createElement('script');
      dsq.type = 'text/javascript';
@@ -17,7 +12,7 @@
   </script>
 <% } %>
 
-<% if (theme.gitment.enable && theme.gitment.owner && theme.gitment.repo && theme.gitment.client.id && theme.gitment.client.secret && !is_home() && !is_archive()) { %>
+<% if (is_post() && theme.gitment.enable && theme.gitment.owner && theme.gitment.repo && theme.gitment.client.id && theme.gitment.client.secret) { %>
 <%- css('/css/gitment.css') %>
 <%- js('/js/gitment.js') %>
 <script>
@@ -35,19 +30,17 @@
   gitment.render('gitment_container')
 </script>
 <% } %>
-<% if (theme.utterances.enable && theme.utterances.repo){ %>
+
+<% if (is_post() && theme.utterances.enable && theme.utterances.repo){ %>
   <script>
     (function() {
       var utterances = document.createElement('script');
       var utterances_container = document.getElementById('utterances_container');
-      utterances.src='https://cdn.jsdelivr.net/npm/utterances-npmjs/dist/client.min.js'
+      utterances.src='//cdn.jsdelivr.net/npm/utterances-npmjs/dist/client.min.js'
       utterances.setAttribute('repo', '<%= theme.utterances.repo %>');
       utterances.setAttribute('issue-term', 'title');
       utterances.setAttribute('crossorigin', 'anonymous');
       utterances.setAttribute('async', true);
-      <% if (theme.dark){ %>
-      utterances.setAttribute('theme', 'github-dark');
-      <% } %>
       if (utterances_container){
         utterances_container.appendChild(utterances);
       }
@@ -55,9 +48,9 @@
    </script>
 <% } %>
 
-<% if (theme.valine.enable && theme.valine.appId && theme.valine.appKey){ %>
-  <%- js('https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js') %>
-  <%- js('https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js') %>
+<% if (is_post() && theme.valine.enable && theme.valine.appId && theme.valine.appKey){ %>
+  <%- js('//cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js') %>
+  <%- js('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js') %>
     <script>
         var GUEST_INFO = ['nick','mail','link'];
         var guest_info = '<%= theme.valine.guest_info %>'.split(',').filter(function(item){
@@ -80,17 +73,13 @@
     </script>
   <% } %>
 
-<% if (theme.donate.enable) {%>
-<%- js('https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js') %>
-<%- js('https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js') %>
-<script src="/js/donate.js"></script>
+<% if (is_post() && theme.donate.enable) {%>
+  <%- js('//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js') %>
+  <%- js('//cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js') %>
+  <%- js('js/donate.js') %>
 <% } %>
 
-<% if (theme.fancybox){ %>
-<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-  <%- css('fancybox/jquery.fancybox') %>
-  <%- js('fancybox/jquery.fancybox.pack') %>
-  <%- js('js/typing') %>
+<% if (is_post()){ %>
+  <%- js('js/summer.js') %>
 <% } %>
-
 <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->

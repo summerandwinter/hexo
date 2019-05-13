@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="<%= theme.language %>">
+
 <head>
   <meta charset="utf-8">
   <%
@@ -21,206 +22,211 @@
   <link rel="canonical" href="<%= canonical_url %>">
   <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
   <% if (theme.rss){ %>
-    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+  <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
   <% } %>
   <% if (theme.favicon){ %>
-    <link rel="icon" href="<%- theme.favicon %>">
+  <link rel="icon" href="<%- theme.favicon %>">
   <% } %>
-<style>
-html {
-  margin: 0;
-  padding: 0;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-   font-family: sans-serif;
-  line-height: 1.15;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%; 
-}
-body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-body, html {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    box-sizing: border-box;
-}
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: 'Clicker Script', cursive;
-  -moz-font-feature-settings: "liga" on;
-}
-h1{
-  font-family: 'Clicker Script', cursive;
-  font-weight: normal;
-  font-size: 4em;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-}
-#canvasHolder {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -99;
-}
+  <style>
+    html {
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      font-family: sans-serif;
+      line-height: 1.15;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
 
-.home-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center
-}
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
 
-.home {
-  font-weight: lighter;
-  color: #505050;
-  line-height: 1.4;
-  text-align: center;
-  position: relative
-}
+    body,
+    html {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      box-sizing: border-box;
+    }
 
-.home .content {
-  width: 60%;
-  max-width: 500px;
-  position: relative;
-  margin: 0 auto
-}
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-family: 'Clicker Script', cursive;
+      font-feature-settings: "liga"on;
+    }
 
-.home h1,.home strong {
-  color: #222
-}
+    h1 {
+      font-family: 'Clicker Script', cursive;
+      font-weight: normal;
+      font-size: 4em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
 
-.home hr {
-  width: 100%;
-  max-width: 300px;
-  margin: 20px auto;
-  height: 1px;
-  border: 0;
-  background-image: -webkit-linear-gradient(0deg,transparent,#d5d5d5,transparent);
-}
+    #canvasHolder {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -99;
+    }
 
-.home li {
-  list-style: none
-}
+    .home-body {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center
+    }
 
-.home .profile {
-  width: 100%
-}
+    .home {
+      font-weight: lighter;
+      color: #505050;
+      line-height: 1.4;
+      text-align: center;
+      position: relative
+    }
 
-.home .links {
-  padding: 0;
-  text-align: center
-}
+    .home .content {
+      width: 60%;
+      max-width: 500px;
+      position: relative;
+      margin: 0 auto
+    }
 
-.home .links li {
-  display: inline-block;
-  margin: 0 5px
-}
+    .home h1,
+    .home strong {
+      color: #222
+    }
 
-.home .links li a {
-  color: #222;
-  text-decoration: none;
-}
+    .home hr {
+      width: 100%;
+      max-width: 300px;
+      margin: 20px auto;
+      height: 1px;
+      border: 0;
+      background-image: -webkit-linear-gradient(0deg, transparent, #d5d5d5, transparent);
+    }
 
-.home .links li a:hover {
-  color: #0E83D0;
-  text-decoration: none;
-}
-@media (max-width:768px) {
-  h1 {
-    font-size: 2.2em
-  }
-}
+    .home li {
+      list-style: none
+    }
 
-@media (max-width:468px) {
-  h1 {
-    font-size: 2.2em
-  }
+    .home .profile {
+      width: 100%
+    }
 
-}
+    .home .links {
+      padding: 0;
+      text-align: center
+    }
 
-@media (max-width:320px) {
-  h1 {
-    font-size: 2.2em
-  }
-}
-</style> 
+    .home .links li {
+      display: inline-block;
+      margin: 0 5px
+    }
+
+    .home .links li a {
+      color: #222;
+      text-decoration: none;
+    }
+
+    .home .links li a:hover {
+      color: #0E83D0;
+      text-decoration: none;
+    }
+
+    @media (max-width:768px) {
+      h1 {
+        font-size: 2.2em
+      }
+    }
+
+    @media (max-width:468px) {
+      h1 {
+        font-size: 2.2em
+      }
+
+    }
+
+    @media (max-width:320px) {
+      h1 {
+        font-size: 2.2em
+      }
+    }
+  </style>
 </head>
-    <body class="home-body">
 
-      <div id="container" class="container index-2">
- <div class="home">
-  <div class="content">
-    <div class="profile">
-      <h1 class="nickname"><%= theme.nickname %></h1>
-      <div class="description">
-        <p><%- markdown(theme.description) %></p>
+<body class="home-body">
+
+  <div id="container" class="container index-2">
+    <div class="home">
+      <div class="content">
+        <div class="profile">
+          <h1 class="nickname"><%= theme.nickname %></h1>
+          <div class="description">
+            <p><%- markdown(theme.description) %></p>
+          </div>
+        </div>
+        <hr />
+        <ul class="links">
+          <% for (var key in theme.links) { %>
+          <li>
+            <a href="<%= theme.links[key] %>"><%= key %></a>
+          </li>
+          <% } %>
+        </ul>
       </div>
     </div>
-    <hr/>
-    <ul class="links">
-      <% for (var key in theme.links) { %>
-        <li>
-          <a href="<%= theme.links[key] %>"><%= key %></a>
-        </li>
-      <% } %>
-    </ul>
   </div>
-</div>
-      </div>
-      <%- partial('_partial/footer') %>
-      <%- partial('_partial/after-footer') %>
-    </div>
+  <%- partial('_partial/footer') %>
+  <%- partial('_partial/after-footer') %>
+  </div>
 
-     <div id="canvasHolder">
-        <canvas id="fishHolder" width="800" height="500"></canvas>
-     </div>
-    
-   <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/createjs/2013.12.12/createjs.min.js"></script>
+  <div id="canvasHolder">
+    <canvas id="fishHolder" width="800" height="500"></canvas>
+  </div>
 
-   <%- js('js/fish-animation') %>
-   <script>
-    $(function() {
-      $('#fishHolder').fishAnimation();      
-      $( window ).resize(function() {
+  <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/createjs/2013.12.12/createjs.min.js"></script>
+
+  <%- js('js/fish-animation') %>
+  <script>
+    $(function () {
+      $('#fishHolder').fishAnimation();
+      $(window).resize(function () {
         resizeFunc();
       });
       resizeFunc();
-      
+
     });
-     
-    function resizeFunc(){
+
+    function resizeFunc() {
       windowW = $(window).width();
       windowH = $(window).height();
-      
+
       var gameCanvas = document.getElementById("fishHolder");
-      gameCanvas.width=windowW;
-      gameCanvas.height=windowH;
-      
+      gameCanvas.width = windowW;
+      gameCanvas.height = windowH;
+
       $('#mainHolder').css('width', windowW);
       $('#mainHolder').css('height', windowH);
-      
-      $('#fishHolder').fishAnimation('update','canvasW',windowW);
-      $('#fishHolder').fishAnimation('update','canvasH',windowH);
+
+      $('#fishHolder').fishAnimation('update', 'canvasW', windowW);
+      $('#fishHolder').fishAnimation('update', 'canvasH', windowH);
     }
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>
-
-
-
-
-
