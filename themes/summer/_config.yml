@@ -74,3 +74,13 @@ valine:
   verify: false # valine verify code (true/false)
   notify: false # valine mail notify (true/false)
   lang: zh-cn
+ 
+# Donate
+donate:
+  enable: false
+  github: https://github.com/summerandwinter
+  paypal: https://www.paypal.me/
+  bitcoin: 
+  BTCQR: /donate/bitcoin.png
+  AliPayQR: /donate/alipayQR.jpg
+  WeChatQR: /donate/wechatQR.jpg 

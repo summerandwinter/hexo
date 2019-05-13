@@ -80,6 +80,12 @@
     </script>
   <% } %>
 
+<% if (theme.donate.enable) {%>
+<%- js('https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js') %>
+<%- js('https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js') %>
+<script src="/js/donate.js"></script>
+<% } %>
+
 <% if (theme.fancybox){ %>
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
   <%- css('fancybox/jquery.fancybox') %>

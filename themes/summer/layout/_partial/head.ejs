@@ -34,7 +34,9 @@
   <% if (theme.favicon){ %>
     <link rel="icon" href="<%- theme.favicon %>">
  <% } %>
-
+<% if (theme.donate.enable) %>
+<%- css('css/donate') %>
+<% } %>
   <% if (is_post()){ %>
   <%- css('css/article') %>
    <% }else{ %>
