@@ -615,7 +615,29 @@ em {
   left: 83%;
   top: 76px;
   font-size: 100%;
+  height: calc(100% - 100px);
+  overflow-y: scroll;
 }
+
+.article-toc::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+.article-toc::-webkit-scrollbar
+{
+	width: 4px;
+	background-color: #F5F5F5;
+}
+
+.article-toc::-webkit-scrollbar-thumb
+{
+	background-color: #696969;
+}
+
+
+
 #article-toc-inner:after, #article-toc-inner:before, .inner:after, .inner:before {
     content: "";
     display: table;
@@ -641,10 +663,11 @@ em {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    font-size: .8em;
 }
 
 .toc-level-2 a.toc-link{
-  font-size: .9em;
+  font-size: .8em;
 }
 
 .toc-level-3 a.toc-link{
