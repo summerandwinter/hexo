@@ -77,7 +77,7 @@ valine:
  
 # Donate
 donate:
-  enable: true
+  enable: false
   github: https://github.com/summerandwinter
   paypal: https://www.paypal.me/
   bitcoin: 1234567890
