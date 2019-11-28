@@ -14,7 +14,7 @@ permalink: css3-iphone-keyboard
 
 最终的效果图（仅支持FF 3.6、Chrome 4、Safari 4）：
 
-![css3-iphone4s-keyboard](https://summerandwinter.github.io/assets/images/lab/css3-iphone4s-keyboard.jpg)
+![css3-iphone4s-keyboard](/assets/images/lab/css3-iphone4s-keyboard.jpg)
 
 <!--more-->
 

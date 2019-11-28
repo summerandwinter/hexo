@@ -32,7 +32,7 @@ Git的工作流程大致是：
 
 3. 提交更新，找到暂存区域的文件，将快照永久性存储到 Git 仓库。
 
-![Git工作流程](https://summerandwinter.github.io/assets/images/articles/git_workflow.svg)
+![Git工作流程](/assets/images/articles/git_workflow.svg)
 
 # 基础命令
 
@@ -413,7 +413,7 @@ git reset HEAD readme.txt
 git reset 12385fd readme.txt
 ```
 为了更好的理解 `git reset commit_SHA` 我们来看一下下面的图表，每一个圆点代表一次提交。
-![Git HEAD切换](https://summerandwinter.github.io/assets/images/articles/git-diagram-3.svg)
+![Git HEAD切换](/assets/images/articles/git-diagram-3.svg)
 Before reset:
 * HEAD 是最近一次提交
 

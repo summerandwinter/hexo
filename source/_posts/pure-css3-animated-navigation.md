@@ -21,7 +21,7 @@ html5+css3的出现给前端开发者提供了更多的可能性，以前很多�
 
 下面是效果图：
 
-![pure-css3-animated-navigation](https://summerandwinter.github.io/assets/images/lab/pure-css3-animated-navigation.jpg)
+![pure-css3-animated-navigation](/assets/images/lab/pure-css3-animated-navigation.jpg)
 
 
 

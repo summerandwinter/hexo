@@ -13,7 +13,7 @@
 <% } %>
 
 <% if (is_post() && theme.gitment.enable) { %>
-<%- js('/js/gitment.js') %>
+<%- js('//cdn.jsdelivr.net/gh/summerandwinter/summerandwinter.github.io/js/gitment.js') %>
 <script>
   var date = '<%= page.date %>';
   var id = ''+new Date(date).getTime();
@@ -79,6 +79,6 @@
 <% } %>
 
 <% if (is_post()){ %>
-  <%- js('js/summer.js') %>
+  <%- js('//cdn.jsdelivr.net/gh/summerandwinter/summerandwinter.github.io/js/summer.js') %>
 <% } %>
 <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->

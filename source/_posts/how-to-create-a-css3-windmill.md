@@ -17,7 +17,7 @@ permalink: how-to-create-a-css3-windmill
 
 下面简单介绍一下我是如何用纯css3实现一个风车的动画效果的，
 效果图
-![css3实现风车效果图](https://summerandwinter.github.io/assets/images/lab/css3-windmill.jpg)
+![css3实现风车效果图](/assets/images/lab/css3-windmill.jpg)
 
 # 画出风车的柱子
 

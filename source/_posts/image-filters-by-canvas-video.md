@@ -140,11 +140,11 @@ context.putImageData(canvasData, 0, 0);
 # 效果预览
 **原图**
 
-![原图](https://summerandwinter.github.io/assets/images/filter/original.jpg)
+![原图](/assets/images/filter/original.jpg)
 
 **效果图**
 
-![效果图](https://summerandwinter.github.io/assets/images/filter/video.jpg)
+![效果图](/assets/images/filter/video.jpg)
 
 查看**[示例][demo]**
 

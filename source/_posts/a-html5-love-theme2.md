@@ -27,7 +27,7 @@ three.js是JavaScript编写的WebGL第三方库。提供了非常多的3D显示�
 
 **效果图**
 
-![基于Html5的爱情主题网站--表白神器（第二版）](https://summerandwinter.github.io/assets/images/lab/love2.jpg)
+![基于Html5的爱情主题网站--表白神器（第二版）](/assets/images/lab/love2.jpg)
 
 **[查看示例](https://summerandwinter.github.io/lab/love2/index.html "基于Html5的爱情主题网站–表白神器（第二版）")**
 

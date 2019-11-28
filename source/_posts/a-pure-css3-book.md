@@ -15,7 +15,7 @@ permalink: a-pure-css3-book
 <!--more-->
 
 下面贴一个纯css3实现的仿真图书翻页效果，只是一个很粗糙的雏形，后续会慢慢完善。欢迎大家提供宝贵的意见。
-![](https://summerandwinter.github.io/assets/images/lab/css3-book.jpg)
+![](/assets/images/lab/css3-book.jpg)
 
 **<span style="color: #339966;">下面是源码：</span>**
 
